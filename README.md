@@ -19,7 +19,7 @@ Scrum Master:
 
 - Outro jeito de fazer o citado acima: clique com o botão direito na pasta e selecione "Git Bash Here" para abrir o terminal do git
 
-- Crie um clone do repositório: git clone <link-para-o-repositorio> sem os símbolos "<>"
+- Crie um clone do repositório: git clone <link-para-o-repositorio> 
 
 - Entre na pasta criada pelo comando clone: cd /caminho/para/a/pasta/nova
 
