@@ -46,6 +46,8 @@ Scrum Master:
 
 - Espera a confirmação do seu SCRUM 
 
+- Volte para a main: git checkout main
+
 - Mescle a main com as alterações enviadas para sua branch (apenas quando solicitado pelo SM): git merge suabranch
 
 - Confirme o merge (apenas quando solicitado pelo SM): git push origin main
