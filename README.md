@@ -34,26 +34,26 @@ Scrum Master:
 - Envie o commit feito para sua branch: git push origin suabranch
 
 ### Quando estiver tudo prontinho
-- Volte para a master: git checkout master
+- Volte para a main: git checkout main
 
-- Atualize a master: git pull
+- Atualize a main: git pull
 
 - Volte para a sua branch: git checkout nomedabranch
 
-- Mescle a master com a sua branch : git merge master
+- Mescle a main com a sua branch : git merge main
 
-- Confirme o merge (apenas quando solicitado pelo SM): git push origin suabranch
+- Confirme o merge (apenas quando solicitado pelo Scrum Master): git push origin suabranch
 
 - Espera a confirmação do seu SCRUM 
 
-- Mescle a master com as alterações enviadas para sua branch (apenas quando solicitado pelo SM): git merge suabranch
+- Mescle a main com as alterações enviadas para sua branch (apenas quando solicitado pelo SM): git merge suabranch
 
-- Confirme o merge (apenas quando solicitado pelo SM): git push origin master
+- Confirme o merge (apenas quando solicitado pelo SM): git push origin main
 
-- Para atualizar a master: git pull
+- Para atualizar a main: git pull
 
 - Para atualizar alguma branch: git pull origin branch
 
-- Para mesclar sua branch com a master (estando dentro da sua branch): git merge master
+- Para mesclar sua branch com a master (estando dentro da sua branch): git merge main
 
 - Para confirmar o merge: git push origin suabranch
