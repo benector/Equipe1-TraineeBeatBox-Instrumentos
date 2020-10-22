@@ -1,0 +1,57 @@
+/* 
+#04B3BB  azul 
+#fefec9  amarelo
+#01233F  azul escuro
+
+#00ffff  azul bebe
+#ff00ff  rosa
+*/
+
+body {
+    background-color: #fefec9;
+}
+
+.carousel_img {
+    width: 100%;
+}
+
+.container_carousel{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.slide_home {
+    width: 800px;
+}
+
+.container_products {
+    width: 100%;
+}
+.col_product{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: khaki;
+}
+
+.col_product img {
+    width: 250px;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .slide_home {
+        width: 100%;
+    }
+
+    .col_product img {
+        width: 120px;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+
+  }
