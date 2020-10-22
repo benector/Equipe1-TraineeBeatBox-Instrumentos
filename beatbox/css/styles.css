@@ -1,0 +1,173 @@
+body{
+    background-color: #04B3BB;
+    text-align: center;
+}
+
+.main{
+    
+}
+.painel_geral{
+   
+    background-color: #01233F;
+    width: 96%;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    display:inline-block;
+    height: 100px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    
+    
+
+}
+
+.painel_geral h1{
+    color: #c420c4;
+    font-family: 'Bungee', cursive;
+    line-height: 100px;
+    
+}
+
+
+.painel_produtos{ 
+    background-color: #ededed;
+    width: 96%;
+    text-align: left;
+    display: inline-flex;
+    margin-bottom: 0;
+   
+   
+    
+}
+.painel_produtos h1{
+    margin-left: 20px;
+    text-align: center;
+
+}
+.filtros{
+    width: 20%;
+    height: 1100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    
+    
+}
+.filtros-res{
+    display: none;
+}
+.filtros h3{
+    text-align: center;
+    font-size: 100px;
+}
+.filtros h4{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.list-group-item{
+    padding-left: 25px;
+}
+.list-group{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+}
+
+
+.lista-produtos{
+
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+    
+
+    
+}
+.card{
+    width: 250px;
+    height: 400px;
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    transition: 0.2s;
+    
+}
+.blackbox{
+    background-color: black;
+    width: 100%;
+    height: 400px;
+    
+}
+.card-img-top{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    
+}
+.card-text {
+    padding-top: 1px;
+    
+}
+
+.card:hover{
+    color:#ff00ff;
+
+    ;
+    transition: 0.2s;
+}
+.card-title a{
+    text-decoration: none;
+    color: black;
+    
+    
+}
+.paginacao{
+    background-color: #ededed;
+    height: 75px;
+    width: 96%;
+    display: inline-block;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    
+}
+.pagination{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+@media (max-width: 500px){
+    
+    .card{
+        width: 80%;
+        height: 500px;
+    }
+    .card-img-top{
+        height: 300px;
+    }
+}
+@media (max-width: 1000px) {
+
+    
+    .filtros
+    {
+        display: none;
+    }
+    .lista-produtos{
+        text-align: center;
+    }
+    .card{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+}
+
+
+
+
+
