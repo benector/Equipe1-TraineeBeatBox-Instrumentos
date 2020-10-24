@@ -8,7 +8,7 @@
 */
 
 body {
-    background-color: #04B3BB;
+    background-color: #21d8d8;
     text-align: center;
 }
 
@@ -53,13 +53,19 @@ body {
     background-color: #ededed;
 }
 
-.footer-temp {
-    height: 80px;
+.spot-products {
     width: 96%;
     margin: auto;
+    padding-top: 30px;
     background-color: #ededed;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    margin: 0px 8px 16px 0px;
 }
 
 @media only screen and (max-width: 600px) {
