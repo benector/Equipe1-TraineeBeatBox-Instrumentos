@@ -2,13 +2,9 @@ body{
     background-color: #21d8d8;
     text-align: center;
     color: #484848;
+    
 }
 
-.nav-bar{
-    height: 100px;
-    width: 100%;
-    background-color: #ededed;
-}
 .painel_geral{
     
     
@@ -16,11 +12,12 @@ body{
     background-color: #04B3BB;
     width: 96%;
     margin-bottom: 0px;
-    margin-top: 30px;
+    margin-top: 75px;
     display:inline-block;
     height: 100px;
     border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-right-radius: 40px; 
+   
     
     
 
@@ -34,15 +31,45 @@ body{
     -webkit-text-stroke-color:#ededed;
     
 }
+.pesquisa{
+    background-color: #ededed;
+    margin: auto;
+    width: 96%;
+    margin-bottom: 0;
+    height: 50px;
+}
 
+.input-group{
+    width: 96%;
+    margin: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ededed;
+    
+   
+    
+}
 
+.btn{
+    background-color: #01233F;
+    color: #ededed;
+    border-style: none;
+    margin-left: 5px;
+}
+.btn:hover{
+    background-color: #04B3BB;
+    
+}
 .painel_produtos{ 
     background-color: #ededed;
     width: 96%;
     text-align: left;
     display: inline-flex;
     margin-bottom: 0;
-  
+   
+    
    
    
     
@@ -195,6 +222,8 @@ body{
         margin-left: 10px;
         
     }
+    
+    
     .lista-produtos{
         
         margin-top: 10px;
