@@ -16,7 +16,7 @@ body {
     width: 96%;
     height: 100%;
     margin:auto;
-    margin-top: 30px;
+    margin-top: 95px;
     background-color: #ededed;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -30,10 +30,15 @@ body {
 
 .img-logo-responsivo {
     display: none;
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    color: #01233F;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #21d8d8;
 }
 
 .title img {
-    width: 100%;
+    width: 92%;
 }
 
 .slide_home {
@@ -60,12 +65,23 @@ body {
     background-color: #ededed;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    display: flex;
-    justify-content: center;
+    
 }
 
 .product {
-    margin: 0px 8px 16px 0px;
+    display: inline-block;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20%;
+}
+
+
+
+.card {
+   width: 100% !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -94,4 +110,24 @@ body {
         padding-top: 30px;
         display: inline-block;
     }
+
+    .product {
+        display: inline-block;
+        margin: auto;
+        margin-top: 8px;
+        width: 40%;
+    }
+    
+    .card {
+       width: 100% !important;
+    }
+
+    .product h3 {
+        font-size: 20px;
+    }
+
+    .product p {
+        font-size: 16px;
+    }
+    
   }
