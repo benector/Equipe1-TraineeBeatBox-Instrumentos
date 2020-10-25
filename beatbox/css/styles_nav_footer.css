@@ -48,13 +48,14 @@ html, body {
     display: flex;
     width: 100%;
     background-color: #ededed;
-    margin: 0;
+
     padding: 0;
     justify-content: center;
     bottom: 0;
 }
 
 .row {
+    margin: 15px 0 0 0;
     width: 100vw;
     justify-content: space-between;
 }
@@ -77,12 +78,24 @@ html, body {
 }
 
 .coluna-footer ul li a{
-    font-family: 'Bungee', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: #01233F;
     text-decoration: none;
 }
 
 .coluna-footer ul li a:hover{
+    font-family: 'Montserrat', sans-serif;
+    color: #04B3BB;
+    text-decoration: none;
+}
+
+.coluna-footer ul li .menu-footer{
+    font-family: 'Bungee', cursive;
+    color: #01233F;
+    text-decoration: none;
+}
+
+.coluna-footer ul li .menu-footer:hover{
     font-family: 'Bungee', cursive;
     color: #04B3BB;
     text-decoration: none;
