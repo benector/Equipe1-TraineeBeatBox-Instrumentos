@@ -1,0 +1,16 @@
+body{
+    background-color:  #21d8d8;;
+}
+
+.main{
+    width: 96%;
+    margin: auto;
+    padding: none;
+    background-color: #ededed;
+    height: 1000px;
+    margin-top: 75px ;
+    margin-bottom: 50px;
+    border-radius: 40px;
+    
+
+}
