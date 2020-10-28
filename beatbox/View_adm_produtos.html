@@ -28,12 +28,233 @@
 
 <body>
     <div class="main">
-        
-        
-
-       
-
+        <div class="painel_geral">
+            <h1>Lista de Produtos</h1>
+        </div>
+        <div class="pesquisa">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Busque seu produto" aria-label="Busque seu produto"
+                    aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
+                </div>
+            </div>
+        </div>
+        <div class="adicionar">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adicionar"> Adicionar
+                Produto</button>
+        </div>
+        <div class="container">
+            <div class="row no-gutter">
+                <div class="col-1">
+                    <div class="lista-produtos">
+                        <ul class="list-group">
+                            <div class="quantidade">
+                                <div class="titulo-produto">
+                                    <li class="list-group-item"><b></b></li>
+                                </div>
+                                <li class="list-group-item">1</li>
+                                <li class="list-group-item">2</li>
+                                <li class="list-group-item">3</li>
+                                <li class="list-group-item">4</li>
+                                <li class="list-group-item">5</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="lista-produtos">
+                        <ul class="list-group">
+                            <div class="titulo-produto">
+                                <li class="list-group-item"><b>Produtos</b></li>
+                            </div>
+                            <li class="list-group-item">Guitarra Tagima</li>
+                            <li class="list-group-item">Guitarra Tagima</li>
+                            <li class="list-group-item">Guitarra Tagima</li>
+                            <li class="list-group-item">Guitarra Tagima</li>
+                            <li class="list-group-item">Guitarra Tagima</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="lista-produtos">
+                        <ul class="list-group">
+                            <div class="quantidade">
+                                <div class="titulo-produto">
+                                    <li class="list-group-item"><b>Qtd</b></li>
+                                </div>
+                                <li class="list-group-item">10 </li>
+                                <li class="list-group-item">10 </li>
+                                <li class="list-group-item">10 </li>
+                                <li class="list-group-item">10 </li>
+                                <li class="list-group-item">10 </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="lista-produtos">
+                        <ul class="list-group">
+                            <div class="quantidade">
+                                <div class="titulo-produto">
+                                    <li class="list-group-item"></li>
+                                </div>
+                                <li class="list-group-item">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#editar"> Editar </button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#excluir"> Excluir </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#editar"> Editar </button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#excluir"> Excluir </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#editar"> Editar </button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#excluir"> Excluir </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#editar"> Editar </button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#excluir"> Excluir </button>
+                                </li>
+                                <li class="list-group-item">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#editar"> Editar </button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#excluir"> Excluir </button>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade " id="adicionar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="TituloModalLongoExemplo">Adicionar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Nome do produto: </label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput"
+                                        placeholder="Insira o nome do produto">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-5">
+                                        <label for="exampleFormControlSelect1">Categoria</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Selecione uma Categoria</option>
+                                            <option>Guitarra</option>
+                                            <option>Guitarra</option>
+                                            <option>Guitarra</option>
+                                            <option>Guitarra</option>
+                                            <option>Guitarra</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="formGroupExampleInput2">Quantidade</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                                            placeholder="Insira a Quantidade">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Descrição do Produto</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar mudanças</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade " id="editar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="TituloModalLongoExemplo">Adicionar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Nome do produto: </label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput"
+                                        placeholder="Insira o nome do produto">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-5">
+                                        <label for="exampleFormControlSelect1">Categoria</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Selecione uma Categoria</option>
+                                            <option>Guitarra</option>
+                                            <option>Guitarra</option>
+                                            <option>Guitarra</option>
+                                            <option>Guitarra</option>
+                                            <option>Guitarra</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="formGroupExampleInput2">Quantidade</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                                            placeholder="Insira a Quantidade">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Descrição do Produto</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Salvar mudanças</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade " id="excluir" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="TituloModalLongoExemplo">Excluir</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Tem certeza que deseja excluir o item selecionado ?</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Excluir e
+                                Salvar
+                                mudanças</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
 </body>
