@@ -1,0 +1,33 @@
+body {
+    background-color: #21d8d8;
+}
+
+.main {
+    width: 96%;
+}
+
+.title {
+    background-color: #04B3BB;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.title h1 {
+    color:#01233F;
+    font-family: 'Bungee', cursive;
+    line-height: 100px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#ededed;
+    width: min-content;
+}
+
+.content {
+    background-color: #ededed;
+    height: 500px;
+}
+
+@media (max-width: 350px) {
+    .title h1 {
+        font-size: 30px;
+    }
+}
