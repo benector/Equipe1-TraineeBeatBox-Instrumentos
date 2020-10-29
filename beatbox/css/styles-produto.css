@@ -15,7 +15,6 @@ body {
   width: 100%;
   margin-bottom: 0px;
   display: inline-block;
-  height: 100px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   text-align: center;
@@ -23,7 +22,8 @@ body {
 .painel_geral h1 {
   color: #01233f;
   font-family: "Bungee", cursive;
-  line-height: 100px;
+  margin-top: 20px;
+  line-height: 70px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #ededed;
 }
@@ -57,10 +57,17 @@ body {
   justify-content: center;
   padding-top: 20px;
 }
+
+.produto h1{
+  font-size: 30px;
+}
+.produto h3{
+  font-size: 20px;
+}
 .img-produto {
   width: 48%;
   height: 400px;
-  background-color: black;
+
 }
 img {
   width: 100%;
@@ -87,4 +94,30 @@ h3 {
 p {
   width: 100%;
   text-align: justify;
+}
+
+
+@media (max-width: 768px)
+{
+.produto{
+  display:block;
+}
+.img-produto{
+  width: 80%;
+  height: 200px;
+  margin: auto;
+}
+.conteudo-produto {
+  width: 96%;
+  margin: auto;
+}
+.descricao-curta{
+  display: none;
+}
+.produto h1{
+  font-size: 25px;
+}
+.produto h3{
+  font-size: 15px;
+}
 }
