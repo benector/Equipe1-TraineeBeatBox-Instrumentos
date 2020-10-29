@@ -1,0 +1,140 @@
+.conteudoqs{
+	border-radius: 40px;
+	padding: 0px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 10px;
+	background-color: #ededed;
+	color: #01233F;
+	width: 95%;
+}
+
+.painel_geral{
+	text-align: center;
+	font-size: 20px;
+	margin-top: -20px;
+	background-color: #04B3BB;
+    width: 100%;
+	padding-bottom: 25px;
+	padding-top: 10px;
+    height: 100px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.painel_geral h1{
+    color:#01233F;
+    font-family: 'Bungee', cursive;
+    line-height: 100px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#ededed;
+}
+.formulario{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	color: black;
+	width: 50%;
+	padding: 60px 30px;
+	text-align: left;
+	display: inline-block;
+	margin-left: 50px;
+}
+.formulario h1{
+	font-size: 30px;
+	font-weight: bold;
+}
+.formulario h2{
+	font-size: 20px;
+	font-weight: bold;
+}
+.formulario h3{
+	font-size: 20px;
+	font-weight: 600;
+}
+.form-group{
+	font-size: 13px;
+	font-weight: bold;
+}
+.col-sm-10{
+	text-align: right;
+	margin-left: 125px;
+}
+.map{
+	display: inline-block;
+	margin-left: 50px;
+	margin-top: 168px;
+	vertical-align: top;
+}
+.map h3{
+	font-size: 20px;
+	font-weight: 600;
+}
+.mapa {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d1d1d1;
+	border-radius: 1.5%;
+}
+.btn{
+	background-color: #01233f;
+	color: white;
+	border-style: none;
+	margin-top: 10px;
+	float: right;
+}
+.btn h4{
+	padding-top: 5px;
+	font-size: 16px;
+	line-height: 16px;
+}
+.btn:hover{
+	background-color: #04B3BB;
+}
+
+@media(max-width:1080px){
+.conteudoqs{
+	padding-top: auto;
+	font-size: 11px;
+	display: block;
+	text-align: center;
+	width: 90%;
+}
+.painel_geral h1{
+	width: 100%;
+	font-size: 45px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.formulario{
+	text-align: left;
+	font-size: 15px;
+	line-height: 20px;
+	width: 90%;
+	padding: 40px 30px;
+	margin-left: 0px;
+}
+.form-group ::placeholder{
+	font-size: 12px;
+	font-weight: bolder;
+}
+#br-escondido{
+	display: none;
+}
+.map{
+	text-align: left;
+	margin-left: 0px;
+	margin-bottom: 50px;
+	margin-left: 0px;
+	margin-top: 0px;
+	vertical-align: auto;
+}
+.map iframe{
+	text-align: center;
+	margin: auto;
+	width: 95%;
+	height: 300px;
+}
+}
