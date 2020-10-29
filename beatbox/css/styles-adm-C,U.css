@@ -26,8 +26,35 @@ body {
     height: 500px;
 }
 
-@media (max-width: 350px) {
+.col-edit,.col-elements,.col-delete {
+    width: 10%;
+}
+
+.col-id {
+    width: 5%;
+}
+
+.col-cat {
+    width: 60%;
+}
+
+@media (max-width: 600px) {
     .title h1 {
         font-size: 30px;
+    }
+
+    .col-edit,.col-elements,.col-delete {
+        width: auto;
+        font-size: 12px;
+    }
+    
+    .col-id {
+        width: auto;
+        font-size: 12px;
+    }
+    
+    .col-cat {
+        width: auto;
+        font-size: 12px;
     }
 }

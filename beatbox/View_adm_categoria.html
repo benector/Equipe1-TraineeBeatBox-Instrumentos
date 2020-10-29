@@ -19,22 +19,32 @@
 <body>
     <div class="container-fluid main">
         <!-- Titulo da página -->
-        <div class="container-fluid mt-5 mb-0 justify-content-center title">
+        <div class="container-fluid mt-5 mb-0 title">
             <h1 class="m-auto">Categorias</h1>
         </div>
 
         <!-- Conteúdo -->
         <div class="container-fluid content">
-            <div class="container">
-                <table class="table">
-                    <thead>
+            <div class="container pt-5">
+                <table class="table table-bordered bg-white">
+                    <thead class="thead-dark">
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">#</th>
-                            <th scope="col">#</th>
+                            <th class="col-edit" scope="col">Editar</th>
+                            <th class="col-id" >#</th>
+                            <th class="col-cat">Categoria</th>
+                            <th class="col-elements" >Elementos</th>
+                            <th class="col-delete" >Excluir</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-edit" scope="row"><button type="button" class="btn">&#128221</button></td>
+                            <td class="col-id">1</th>
+                            <td class="col-cat">Guitarras</td>
+                            <td class="col-elements">24</td>
+                            <td class="col-delete" ><button type="button" class="btn">Excluir</button></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
