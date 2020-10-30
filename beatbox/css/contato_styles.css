@@ -102,6 +102,9 @@
 	text-align: center;
 	width: 90%;
 }
+.conteudoqs h3{
+	font-size: 25px;
+}
 .painel_geral h1{
 	width: 100%;
 	font-size: 45px;
@@ -110,15 +113,25 @@
 }
 .formulario{
 	text-align: left;
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 20px;
 	width: 90%;
 	padding: 40px 30px;
 	margin-left: 0px;
 }
+.formulario label{
+	padding-top: 10px;
+	font-size: 20px;
+}
+.formulario h1{
+	font-size: 35px;
+}
+.formulario h2{
+	font-size: 28px;
+}
+
 .form-group ::placeholder{
-	font-size: 12px;
-	font-weight: bolder;
+	font-size: 20px;
 }
 #br-escondido{
 	display: none;
@@ -129,12 +142,11 @@
 	margin-bottom: 50px;
 	margin-left: 0px;
 	margin-top: 0px;
-	vertical-align: auto;
+	vertical-align: auto;	
 }
 .map iframe{
 	text-align: center;
 	margin: auto;
-	width: 95%;
 	height: 300px;
 }
 }
