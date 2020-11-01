@@ -60,66 +60,38 @@
 	display: block;
 	text-align: center;
 }
-.main h3{
-	font-size: 40px;
-}
-
 .formulario{
 	text-align: left;
-	font-size: 18px;
-	line-height: 20px;
-	width: 90%;
+	width: 100%;
 	padding: 40px 30px;
 	margin-left: 0px;
 }
-.formulario label{
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 32px;
-}
-.formulario h1{
-	font-size: 60px;
-}
-.formulario h2{
-	font-size: 50px;
-}
-.form-control{
-	height: 80px !important;
-}
-#exampleFormControlTextarea1{
-	height: 240px !important;
-}
-#inputEstado{
-	font-size: 35px;
-}
-#exampleFormControlSelect1{
-	font-size: 35px;
-}
-
-.form-group ::placeholder{
-	font-size: 40px;
-	font-weight: 300;
-}
-
 #br-escondido{
 	display: none;
 }
 
 .map{
 	margin-left: 0px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	margin-left: 0px;
 	margin-top: 0px;
-	vertical-align: auto;	
+	vertical-align: auto;
+	width: 90%;
+	height: 40%;
+	overflow: hidden;
+}
+.map h3{
+	text-align: left;
 }
 .map iframe{
 	margin: auto;
-	width: 800px;
-	height: 500px;
 }
-.btn h4{
-	padding-top: 10px;
-	font-size: 28px;
-	line-height: 30px;
+.mapa {
+	border-style: none;
+}
+.mapa iframe{
+	background-color: chartreuse;
+	width: 80%;
+	height: 300px;
 }
 }
