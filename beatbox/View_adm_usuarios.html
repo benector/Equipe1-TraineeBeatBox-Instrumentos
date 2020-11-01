@@ -243,24 +243,41 @@
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="TituloModalLongoExemplo">Produtos</h5>
+                        <h5 class="modal-title" id="TituloModalLongoExemplo">
+                            Usuário
+                        </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="prodlist">
-                            <p>Guitarra V</p>
-                            <p>Guitarra Tagima</p>
-                            <p>Guitarra Guibson</p>
-                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="nome-user">Nome: </label>
+                                <input type="text" class="form-control" id="user-nome-edt"
+                                    placeholder="Insira o nome do usuário" readonly/>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="user-email">E-mail:</label>
+                                    <input type="email" class="form-control" id="email-new"
+                                        placeholder="example@e-mail.com" readonly/>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="user-password">Senha:</label>
+                                    <input type="password" class="form-control" id="password-new"
+                                        placeholder="******" readonly/>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">
-                            Ok
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Fechar
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
