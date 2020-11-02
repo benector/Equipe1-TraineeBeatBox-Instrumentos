@@ -113,3 +113,11 @@
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
+
+.mensagem-welcome {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #01233F;
+  text-align: center;
+  margin: 5% 0 0 0;
+}

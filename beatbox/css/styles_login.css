@@ -23,7 +23,7 @@ body {
 
 .form-signin .img-container img {
   text-align: center;
-  width: 15vw;
+  width: 100%;
 }
 
 .form-signin .checkbox {
@@ -66,22 +66,4 @@ body {
 .botoes-check {
   display: block;
   text-align: left;
-}
-
-@media(max-width: 768px) {
-
-  .form-signin .img-container img {
-    text-align: center;
-    width: 35vw;
-  }
-
-}
-
-@media(max-width: 425px) {
-
-  .form-signin .img-container img {
-    text-align: center;
-    width: 70vw;
-  }
-
 }
