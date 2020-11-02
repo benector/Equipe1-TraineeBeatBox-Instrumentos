@@ -42,10 +42,7 @@ body{
     text-align: left;
     display: inline-flex;
     margin-bottom: 0;
-   
-    
-   
-   
+ 
     
 }
 .painel_produtos h1{
@@ -55,10 +52,9 @@ body{
 }
 .filtros{
     width: 20%;
-    height: 1100px;
     margin-top: 15px;
     margin-bottom: 30px;
-    padding-left: 60px;
+    padding-left:2em;
   
 }
 .filtros-res{
@@ -90,10 +86,11 @@ body{
     margin-bottom: 20px; 
     text-align: center;
 
+
 }
 .card{
     width: 250px;
-    height: 400px;
+    height: 400px; 
     display: inline-block;
     margin-left: 25px;
     margin-right: 25px;
@@ -108,7 +105,7 @@ body{
 
 .card-img-top{
    
-    height: 250px;
+    height: 60%;
     border-radius: 20px;
     object-fit: contain;
     
@@ -127,8 +124,6 @@ body{
 }
 .card:hover{
     color: #04B3BB;
-
-    ;
     transition: 0.2s;
 }
 .card-title{
@@ -192,9 +187,7 @@ body{
         margin-right: 25px;
 
     }
-     /* .painel_produtos{
-        padding-left: 30px;
-    }  */
+  
     
     
     
@@ -205,6 +198,11 @@ body{
         width: 80%;
         height: 7%;
     }
+    .painel_produtos{
+        display: inline-block;
+    }
+    .pagination{
+        margin-top: 15px;
     
    
 }
