@@ -19,7 +19,6 @@ body {
     width: 96%;
     margin: auto;
     padding: 0px;
-    height: max-content;
 }
 
 /* Área com logo e carousel */
@@ -74,7 +73,7 @@ body {
     background-color: #ededed;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    padding-bottom: 10px;   
+    padding-bottom: 10px;    
 }
 
 .product {
@@ -88,16 +87,14 @@ body {
 }
 
 
+
 .card {
    width: 100% !important;
-   height:max-content;
-}
-
-.card img {
-   margin-top: 5px;
-}
+   height: 100%;
+}  
 
 /* ////////////Responsividade */
+
 @media only screen and (max-width: 1000px) {
    
         .product {
@@ -163,5 +160,8 @@ body {
     
     .card {
        height: 100%;
-    }    
+    }
+
+    
+    
   }
