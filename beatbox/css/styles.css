@@ -39,3 +39,10 @@
   .btn:hover {
     background-color: #04b3bb;
   }
+
+  @media (max-width: 374px){
+    
+    .painel_geral h1 {
+        font-size:36px ;
+    }
+}
