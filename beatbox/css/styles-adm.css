@@ -2,10 +2,6 @@ body {
   background-color: #21d8d8;
 }
 
-.main {
-  height: 100vh;
-}
-
 .table{
     background-color: white;
     margin: auto;
@@ -69,6 +65,9 @@ width: 4%;
   .col-email{
      display: none;
  }
+ .main {
+  height: 100vh;
+}
 }
 
 @media (max-width: 375px) {
