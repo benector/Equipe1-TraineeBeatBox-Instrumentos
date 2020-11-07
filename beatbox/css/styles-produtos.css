@@ -74,10 +74,7 @@ body{
     text-align: left;
     display: inline-flex;
     margin-bottom: 0;
-   
-    
-   
-   
+ 
     
 }
 .painel_produtos h1{
@@ -87,14 +84,10 @@ body{
 }
 .filtros{
     width: 20%;
-    height: 1100px;
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 30px;
-    
-    
-    
-    
-    
+    padding-left:2em;
+  
 }
 .filtros-res{
     display: none;
@@ -122,31 +115,31 @@ body{
 
     margin: auto;
     margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    
-    
-    
+    margin-bottom: 20px; 
+    text-align: center;
 
-    
+
 }
 .card{
     width: 250px;
-    height: 400px;
+    height: 400px; 
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
     border-radius: 20px;
     margin-top: 20px;
     text-align: center;
     color: #484848;
     transition: 0.2s;
     
+    
 }
 
 .card-img-top{
-    width: 100%;
-    height: 250px;
+   
+    height: 60%;
     border-radius: 20px;
+    object-fit: contain;
     
 }
 .card-text {
@@ -163,8 +156,6 @@ body{
 }
 .card:hover{
     color: #04B3BB;
-
-    ;
     transition: 0.2s;
 }
 .card-title{
@@ -179,9 +170,9 @@ body{
 .paginacao{
     background-color: #ededed;
     height: 75px;
-    width: 96%;
+    width: 100%;
     display: inline-block;
-    margin-bottom: 30px;
+   
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
    
@@ -189,7 +180,7 @@ body{
 }
 .pagination{
     margin-top: 30px;
-    margin-bottom: 30px;
+   
     
 }
 @media (max-width: 1200px) {
@@ -228,9 +219,7 @@ body{
         margin-right: 25px;
 
     }
-     /* .painel_produtos{
-        padding-left: 30px;
-    }  */
+  
     
     
     
@@ -239,22 +228,14 @@ body{
     
     .card{
         width: 80%;
-        height: 500px;
+        height: 7%;
     }
-    .card-img-top{
-        height: 300px;
+    .painel_produtos{
+        display: inline-block;
     }
-    .painel_geral h1{
-        line-height: 50px;
-        padding-top: 20px;
-        
-    }
-    .painel_geral{
-        height: 150px;
-    }
+    .pagination{
+        margin-top: 15px;
+    
+   
 }
-
-
-
-
-
+}
