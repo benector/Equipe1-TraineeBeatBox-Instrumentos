@@ -93,6 +93,10 @@ body {
    height: 100%;
 }  
 
+.card img {
+    margin-top: 10px;
+}
+
 /* ////////////Responsividade */
 
 @media only screen and (max-width: 1000px) {
@@ -110,7 +114,7 @@ body {
     
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 
     /* Área da logo e Carousel */
     .title {
@@ -158,10 +162,20 @@ body {
         font-size: 16px;
     }
     
-    .card {
-       height: 100%;
+    .card img {
+        width: 73%;
+        margin: auto;
+        margin-top: 20px;
     }
+  }
 
-    
-    
+  @media only screen and (max-width: 450px) {
+    .product {
+        display: inline-block;
+        margin: auto;
+        margin-top: 8px;
+        width: 70%;
+        height: 310px;
+        overflow: hidden;
+    } 
   }

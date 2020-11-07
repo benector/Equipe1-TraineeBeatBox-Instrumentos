@@ -1,39 +1,6 @@
-body{
+
+body {
 	background-color: #21d8d8;
-}
-.conteudoqs{
-	border-radius: 40px;
-	padding: 0px;
-	margin: auto;
-	margin-top: 30px;
-	overflow: hidden;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 10px;
-	background-color:  #ededed;
-	color: #01233F;
-	width: 96%;
-}
-
-.painel_geral{
-	text-align: center;
-	font-size: 20px;
-	margin-top: -20px;
-	background-color: #04B3BB;
-    width: 100%;
-	padding-bottom: 25px;
-	padding-top: 10px;
-	display: inline-block;
-    height: 100px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-}
-
-.painel_geral h1{
-    color:#01233F;
-    font-family: 'Bungee', cursive;
-    line-height: 100px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color:#ededed;
 }
 
 .texto{
@@ -42,6 +9,10 @@ body{
 	margin-left: 500px;
 	padding-right: 70px;
 	line-height: 30px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	font-size: 20px;
+	font-weight: 600;
 }
 #parte2{
 	margin-left: 580px;
@@ -65,19 +36,13 @@ body{
 }
 
 @media(max-width:1080px){
-.conteudoqs{
+.main{
 	padding-top: auto;
-	font-size: 11px;
 	display: block;
 	text-align: center;
 }
-.painel_geral h1{
-	width: 100%;
-	font-size: 45px;
-	padding-left: 0px;
-	padding-right: 0px;
-}
-.conteudoqs img{
+
+.main img{
 	float: none;
 }
 .imag1 img{
@@ -94,10 +59,9 @@ body{
 }
 
 .texto{
-	padding: 15px;
+	padding: 30px;
 	margin-left: 0px;
 	text-align: center;
-	line-height: 20px;
 }
 #parte2{
 	margin-left: 0px;
@@ -108,5 +72,4 @@ body{
 #br-escondido{
 	display: none;
 }
-
 }
