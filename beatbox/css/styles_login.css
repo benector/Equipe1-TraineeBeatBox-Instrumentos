@@ -1,0 +1,69 @@
+html,
+body {
+  height: 100%;
+}
+
+#pagina {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ededed;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-signin .img-container img {
+  text-align: center;
+  width: 100%;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+  margin-left: 80px;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-primary {
+  color: #ededed;
+  background-color: #01233F;
+  border-color: #01233F;
+}
+
+.btn-primary:hover {
+  color: #ededed;
+  background-color: #04B3BB;
+  border-color: #04B3BB;
+}
+
+.botoes-check {
+  display: block;
+  text-align: left;
+}
