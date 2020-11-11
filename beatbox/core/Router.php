@@ -34,6 +34,7 @@ class Router
      * @param string $uri
      * @param string $controller
      */
+    
     public function get($uri, $controller)
     {
         $this->routes['GET'][$uri] = $controller;
