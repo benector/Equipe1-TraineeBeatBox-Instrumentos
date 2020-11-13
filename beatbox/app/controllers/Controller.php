@@ -7,8 +7,11 @@ class Controller {
 
     public function index ()
     {
+        $title = 'Beatbox Instumentos';
+
         require 'app/views/site/header.php';
         require 'app/views/site/navbar.php';
+        
         return view ('/site/index');
     }
 
