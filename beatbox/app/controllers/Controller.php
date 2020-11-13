@@ -7,7 +7,39 @@ class Controller {
 
     public function index ()
     {
+        require 'app/views/site/header.php';
+        require 'app/views/site/navbar.php';
         return view ('/site/index');
     }
+
+    public function quemSomos ()
+    {      
+        require 'app/views/site/header.php';
+        require 'app/views/site/navbar.php';
+        return view ('/site/quemSomos');
+    }
+
+    public function produtos ()
+    {   
+        require 'app/views/site/header.php';
+        require 'app/views/site/navbar.php';
+        return view ('/site/produtos');
+    }
     
+
+    public function login ()
+    {   
+        require 'app/views/site/header.php';
+        require 'app/views/site/navbar.php';
+        return view ('/site/login');
+    }
+    
+
+    public function contato ()
+    {   
+        require 'app/views/site/header.php';
+        require 'app/views/site/navbar.php';
+        return view ('/site/contato');
+    }
+        
 }
