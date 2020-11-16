@@ -17,9 +17,8 @@
     crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
 
-
-  <link rel="stylesheet" href="css/styles-produtos.css">
-  <link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="../public/css/styles.css">
+		<link rel="stylesheet" href="../public/css/styles-produtos.css">
  
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -110,177 +109,21 @@
         </div>
       </div>
       <div class="lista-produtos">
+      <?php foreach ($produtos as $produto) : ?>
+        <a class="produto-direcao" href="#">
+          <div class="card">
+            <img class="card-img-top" src="../public/img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
+              alt="Imagem de capa do card">
+            <div class="card-body">
+              <h5 class="card-title"><?= $produto->nome ?></h5>
+              <p class="card-text-preco"><b>R$ <?= $produto->preco ?></p>
+              <p class="card-text"><?= $produto->quantidade ?> Disponíveis</p>
+            </div>
+          </div>
+        </a>
+        <?php endforeach; ?>
         
-            
-            
-         
-          
         
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
-        <a class="produto-direcao" href="#">
-          <div class="card">
-            <img class="card-img-top" src="img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
-              alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Guitarra Tagima</h5>
-              <p class="card-text-preco"><b>Preço: </b>R$450,00</p>
-              <p class="card-text">44 Disponíveis</p>
-            </div>
-          </div>
-        </a>
         
 
         

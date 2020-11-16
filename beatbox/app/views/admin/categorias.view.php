@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -18,7 +17,7 @@
         
     <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/styles-adm.css"/>
+    <link rel="stylesheet" href=""/>
     <link rel="stylesheet" href="css/styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />

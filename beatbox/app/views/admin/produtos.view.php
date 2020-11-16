@@ -16,8 +16,8 @@
         </script>
     <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="css/styles.css" >
-    <link rel="stylesheet" href="css/styles-adm.css">
+    <link rel="stylesheet" href="../public/css/styles.css">
+		<link rel="stylesheet" href="../public/css/styles-adm.css">
  
 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
@@ -48,145 +48,28 @@
                 </tr>
             </thead>
             <tbody>
+            <?php foreach ($produtos as $produto) : ?>
                 <tr>
                     <th scope="row">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
+                            <img class="min" src="../public/img/write_edit_icon.png" alt="Editar" title="Editar" />
                         </button>
                     </th>
-                    <td>1</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir" />
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
-                        </button>
-                    </th>
-                    <td>2</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir" >
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
-                        </button>
-                    </th>
-                    <td>2</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir" >
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
-                        </button>
-                    </th>
-                    <td>2</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir" >
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
-                        </button>
-                    </th>
-                    <td>2</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir" >
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
-                        </button>
-                    </th>
-                    <td>2</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir" >
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
-                        </button>
-                    </th>
-                    <td>2</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir" >
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
-                        </button>
-                    </th>
-                    <td>2</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir">
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
-                            <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar">
-                        </button>
-                    </th>
-                    <td>3</td>
-                    <td data-toggle="modal" data-target="#vizualizar">Guitarra</td>
-                    <td class = "coluna-4-qtd">10</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
-                            <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir">
-                        </button>
-                    </td>
-                </tr>
+                    <td><?= $produto->id ?></td>
+                    <td data-toggle="modal" data-target="#vizualizar"><?= $produto->nome ?></td>
+          <td class="coluna-4-qtd"><?= $produto->quantidade ?></td>
+          <td>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#excluir">
+                  <img class="min" src="../public/img/x-icon.png" alt="Excluir" title="Excluir" />
+              </button>
+          </td>
+          </tr>
+
+          <?php endforeach; ?>    
             </tbody>
         </table>
         <div class="modal fade" id="adicionar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
+            aria-hidden="true"  action="/produtos/create" method="POST">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-content">
@@ -201,14 +84,14 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="formGroupExampleInput">Nome do produto: </label>
+                                    <label for="formGroupExampleInput" name = "nome">Nome do produto: </label>
                                     <input type="text" class="form-control" id="formGroupExampleInput"
                                         placeholder="Insira o nome do produto" />
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-5">
                                         <label for="exampleFormControlSelect1">Categoria</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
+                                        <select class="form-control" name = "categoria" id="exampleFormControlSelect1">
                                             <option >Selecione uma Categoria</option>
                                             <option>Guitarra</option>
                                             <option>Guitarra</option>
@@ -219,7 +102,7 @@
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="formGroupExampleInput2">Quantidade</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        <input type="text" name="quantidade" class="form-control" id="formGroupExampleInput2"
                                             placeholder="Insira a Quantidade" />
                                     </div>
                                     <div class="form-group col-md-3">
@@ -235,19 +118,20 @@
                                 <form>
                                     <div class="form-group">
                                       <label for="exampleFormControlFile1">Insira uma imagem</label>
-                                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                      <input type="file" class="form-control-file" name="img" id="exampleFormControlFile1">
                                     </div>
                                 </form>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
+                                <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                 Fechar
                             </button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">
                                 Salvar mudanças
                             </button>
                         </div>
+</form>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -395,7 +279,7 @@
                     <div class="modal-body">
                         <h4>Tem certeza que deseja excluir o item selecionado ?</h4>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer" action="/produto/delete" method="POST">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">
                             Excluir e Salvar mudanças
                         </button>
