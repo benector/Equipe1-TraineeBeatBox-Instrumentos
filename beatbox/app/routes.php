@@ -18,5 +18,8 @@ $router->post('produtos/create', 'ProdutosAdminController@create');
 
 $router->post('produtos/delete', 'ProdutosAdminController@delete');
 
-$router->get('adm/categorias', 'CategoriasController@index')
+$router->get('adm/categorias', 'CategoriasController@index');
+
+
+
 ?>

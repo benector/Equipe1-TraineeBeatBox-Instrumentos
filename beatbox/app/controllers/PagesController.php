@@ -17,6 +17,8 @@ class PagesController {
 
     public function quemSomos ()
     {      
+        $title= 'Beatbox Quem Somos';
+
         require 'app/views/site/header.php';
         require 'app/views/site/navbar.php';
         return view ('/site/quemSomos');
