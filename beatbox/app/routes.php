@@ -8,7 +8,7 @@
  
  $router->get('login','Controller@login');
 
- $router->get('quemsomos','Controller@quemsomos');
+ $router->get('quem-somos','Controller@quemsomos');
 
  $router->get('admin','Controller@admin');
 
