@@ -4,20 +4,58 @@ namespace App\Core\Database;
 
 use PDO;
 
-class QueryBuilder
-{
+class QueryBuilder{
 
     protected $pdo;
 
-
-    public function __construct($pdo)
-    {
+    public function __construct($pdo){
         $this->pdo = $pdo;
-
     }
 
+    public function selectAll($table){
+        $sql = "select * from {$table}";
 
-    //Aqui vão as funções de manipulação da base de dados
-    //Essas funções rodam comandos SQL
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+
+    public function insert($table, $parameters){
+        $sql = sprintf('insert into %s (%s) values(%s)', $table, implode(", ", array_keys($parameters)),
+        "'" . implode("', '", array_values($parameters)) . "'");
+
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
     
+   public function delete($table, $id){
+        $sql  = "delete from {$table} where id ={$id}";
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+   }
+    
+   public function update($table, $parameters){
+        $sql = "UPDATE users SET name='{$parameters['name']}', email='{$parameters['email']}', password='{$parameters['password']}' WHERE id={$parameters['id']}";
+        
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+
+    }
 }
+

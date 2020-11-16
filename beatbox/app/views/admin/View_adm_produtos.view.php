@@ -16,8 +16,8 @@
         </script>
     <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="css/styles.css" >
-    <link rel="stylesheet" href="css/styles-adm.css">
+    <link rel="stylesheet" href="/public/css/styles.css" >
+    <link rel="stylesheet" href="/public/css/styles-adm.css">
  
 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />

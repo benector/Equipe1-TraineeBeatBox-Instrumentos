@@ -14,6 +14,12 @@
 
  $router->get('admin/categorias','Controller@admin_categorias');
 
- $router->get('admin/usuarios','Controller@admin_usuarios');
-
  $router->get('admin/produtos','Controller@admin_produtos');
+
+ $router->get('admin/usuarios','UsersController@index'); 
+
+ $router->post('admin/create_user','UsersController@create');  
+
+ $router->post('admin/update_user','UsersController@update');  
+
+ $router->post('admin/delete_user','UsersController@delete');  

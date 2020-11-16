@@ -6,8 +6,8 @@
 		 <meta charset="utf-8">
 		 <meta name="viewport" content="width=device-width,initial-scale=1">
  		<title> BeatBox - Quem Somos</title>
-		<link rel="stylesheet" href="css/styles.css">
-		<link rel="stylesheet" href="css/stylequemsomos.css">
+		<link rel="stylesheet" href="/public/css/styles.css">
+		<link rel="stylesheet" href="/public/css/stylequemsomos.css">
 		<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 

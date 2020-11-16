@@ -26,7 +26,7 @@ class Controller {
     }
 
     public function admin(){
-        return require'app/views/admin/admin.view.php';
+        return require'app/views/admin/admin_navbar.view.php';
     }
 
     public function admin_categorias(){
