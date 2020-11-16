@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Core\App;
 
-class Controller {
+class PagesController {
 
     public function index ()
     {

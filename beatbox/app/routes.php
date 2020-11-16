@@ -2,14 +2,14 @@
 
 // use App\Core\Router;
 
-$router->get('','Controller@index');
+$router->get('','PagesController@index');
 
-$router->get('quem-somos','Controller@quemSomos');
+$router->get('quem-somos','PagesController@quemSomos');
 
-$router->get('produtos','Controller@produtos');
+$router->get('produtos','PagesController@produtos');
 
-$router->get('contato','Controller@contato');
+$router->get('contato','PagesController@contato');
 
-$router->get('login','Controller@login');
+$router->get('login','PagesController@login');
 
 ?>

@@ -120,7 +120,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <div class="prodlist">
-                                        <form>
+                                        <!-- <form action="/adm/categoria/" method="POST"> -->
                                             <input type="checkbox" id="prod1" name="prod1">
                                             <label for="vehicle1"> Guitarra Flying V</label><br>
                                             <input type="checkbox" id="prod2" name="prod2">
@@ -133,7 +133,7 @@
                                             <label for="vehicle2"> Bateria batmuito</label><br>
                                             <input type="checkbox" id="prod6" name="prod6">
                                             <label for="vehicle3"> Amplificador Ampere</label><br>
-                                        </form>
+                                        <!-- </form> -->
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">

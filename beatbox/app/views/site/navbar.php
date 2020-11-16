@@ -12,10 +12,10 @@
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="./produtos">Produtos <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/produtos">Produtos <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="./quem-somos">Quem Somos <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/quem-somos">Quem Somos <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="/contato">Contato <span class="sr-only">(current)</span></a>
