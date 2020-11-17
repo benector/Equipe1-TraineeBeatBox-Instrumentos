@@ -68,6 +68,17 @@ class QueryBuilder
         }
     }
 
+    public function update($table, $parameters){
+        $sql = "UPDATE categorias SET categoria='{$parameters['categoria']}', descrição ='{$parameters['descrição']}', quantidade='{$parameters['quantidade']}' WHERE id={$parameters['id']}";
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch(Exception $e){
+            die($e->getMessage());
+        }
+
+    }
+
     //Aqui vão as funções de manipulação da base de dados
     //Essas funções rodam comandos SQL
     
