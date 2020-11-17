@@ -12,10 +12,7 @@ class ProdutosController {
         require 'app/views/site/header.php';
         require 'app/views/site/navbar.php';
         return view ('/site/produtos',compact( 'produtos'));
-
-     
-
-    
+ 
     }
         
 }

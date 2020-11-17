@@ -1,7 +1,17 @@
 body {
   background-color: #21d8d8;
 }
+.viz{
+ 
+  text-align: center;
+}
 
+.img-viz{
+  object-fit: contain;
+  width: 40%;
+  
+
+}
 .table{
     background-color: white;
     margin: auto;

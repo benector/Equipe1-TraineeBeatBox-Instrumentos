@@ -33,6 +33,7 @@ class ProdutosAdminController {
       $parameters = [
         'nome' => $_POST['nome'],
         'categoria' => $_POST['categoria'],
+        'descricao' => $_POST['descricao'],
         'preco' => $_POST['preco'],
         'quantidade' => $_POST['quantidade'],
         'img' => $_POST['img']
@@ -40,7 +41,7 @@ class ProdutosAdminController {
 
       App::get('database')->insert('produtos', $parameters );
 
-      header('Location: /produtos');
+      header('Location: /adm-produtos');
 
     }
 
@@ -48,8 +49,24 @@ class ProdutosAdminController {
     {
       App::get('database')->delete('produtos', $_POST['id'] );
 
-      header('Location: /produtos');
+      header('Location: /adm-produtos');
 
     }
+
+    public function update(){
+      
+      $parameters = [
+        'nome' => $_POST['nome'],
+        'categoria' => $_POST['categoria'],
+        'descricao' => $_POST['descricao'],
+        'preco' => $_POST['preco'],
+        'quantidade' => $_POST['quantidade'],
+        'img' => $_POST['img']
+      ];
+      App::get('database')->update('produtos', $parameters);
+
+      header('Location: /adm-produtos');
+     }
+}
         
 }

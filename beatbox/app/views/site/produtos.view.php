@@ -112,7 +112,7 @@
       <?php foreach ($produtos as $produto) : ?>
         <a class="produto-direcao" href="#">
           <div class="card">
-            <img class="card-img-top" src="../public/img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
+            <img class="card-img-top" src="../public/img/<?= $produto->img?>"
               alt="Imagem de capa do card">
             <div class="card-body">
               <h5 class="card-title"><?= $produto->nome ?></h5>
