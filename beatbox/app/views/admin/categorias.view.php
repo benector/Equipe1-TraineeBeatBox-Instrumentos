@@ -1,33 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+<body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-        </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-        </script>
-        
-    <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href=""/>
-    <link rel="stylesheet" href="css/styles.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-
-    <title>Beatbox ADM - Categoria</title>
-
-</head>
-
-<body>
     <div class="main">
         <!-- ///////////Título da página///////////// -->
         <div class="painel_geral">
@@ -57,16 +37,16 @@
                         <tr>
                             <td scope="row">
                                 <button type="button" class="btn btn-primary btn-icon" data-toggle="modal" data-target="#editar<?= $categoria->id ?>">
-                                    <img class="min" src="img/write_edit_icon.png" alt="Editar" title="Editar" />
+                                    <img class="min" src="../public/img/write_edit_icon.png" alt="Editar" title="Editar" />
                                 </button>
                             </td>
                             <td> <?= $categoria->id ?> </td>
-                            <td data-toggle="modal" data-target="#listar"><?= $categoria->categoria ?></td>
+                            <td data-toggle="modal" data-target="#listar<?= $categoria->id ?>"><?= $categoria->categoria ?></td>
                             <td class="col-email"><?= $categoria->quantidade ?></td>
                             <td>
-                                    <button type="button" class="btn btn-primary btn-icon" data-toggle="modal" data-target="#excluir<?= $categoria->id ?>">
-                                        <img class="min" src="img/x-icon.png" alt="Excluir" title="Excluir" />
-                                    </button>
+                                <button type="button" class="btn btn-primary btn-icon" data-toggle="modal" data-target="#excluir<?= $categoria->id ?>">
+                                    <img class="min" src="../public/img/x-icon.png" alt="Excluir" title="Excluir" />
+                                </button>
                             </td>
                         </tr>
                     
@@ -119,7 +99,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleFormControlTextarea1">Descrição da Categoria</label>
-                                                <input value = "<?= $categoria->descrição?>" type="text" name= "descrição" class="form-control" id="exampleFormControlTextarea1" rows="3"/>
+                                                <textarea value = "<?= $categoria->descrição?>" type="text" name= "descrição" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div>
                                         
                                     </div>
@@ -156,16 +136,16 @@
                                         <button type="submit" class="btn btn-secondary">
                                             Excluir e Salvar mudanças
                                         </button>
-                                        </form>
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                            Não
-                                        </button>
+                                    </form>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                       Não
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="modal fade" id="listar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                    <div class="modal fade" id="listar<?= $categoria->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content">
@@ -180,6 +160,10 @@
                                         <p>Guitarra V</p>
                                         <p>Guitarra Tagima</p>
                                         <p>Guitarra Guibson</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Descrição da Categoria:</label>
+                                        <textarea type="text" name= "descrição" class="form-control" id="exampleFormControlTextarea1" rows="3" disabled><?= $categoria->descrição?></textarea>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -209,8 +193,7 @@
                         <form action="/adm/categorias/create" method="POST">
                             <div class="form-group">
                                 <label for="nome-categoria">Nome da Categoria: </label>
-                                <input type="text" name="categoria" class="form-control" id="categoria-nome-new"
-                                    placeholder="Insira o nome da Categoria" />
+                                <input type="text" name="categoria" class="form-control" placeholder="Insira o nome da Categoria" />
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -256,7 +239,7 @@
         </div>
 
         <div class="paginacao ">
-            <nav aria-label="Navegação de página exemplo">
+            <nav>
               <ul class="pagination justify-content-center ">
                 <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Anterior</a>
                 </li>

@@ -9,6 +9,10 @@ class CategoriasController {
     public function index()
     {   
         $categorias = App::get('database')->selectAll('categorias'); 
+        $title = "Beatbox ADM - Categorias";
+        $css_pages=[
+            '/public/css/styles-adm.css',
+        ];
 
         require 'app/views/site/header.php';
         return view ('/admin/categorias', compact('categorias'));

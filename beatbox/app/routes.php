@@ -26,4 +26,6 @@ $router->post('adm/categorias/delete', 'CategoriasController@delete');
 
 $router->post('adm/categorias/edit', 'CategoriasController@update')
 
-?>;
+?>
+
+
