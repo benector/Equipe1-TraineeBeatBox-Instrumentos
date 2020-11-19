@@ -60,7 +60,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-5">
                                         <label for="Categoria">Categoria</label>
-                                        <select class="form-control" name="categoria" id="exampleFormControlSelect1">
+                                        <select class="form-control" name="categoria" id="categoria">
                                             <option>Selecione uma Categoria</option>
                                             <option>Guitarra</option>
                                             <option>Guitarra</option>
@@ -70,14 +70,14 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label for="formGroupExampleInput2">Quantidade</label>
+                                        <label for="quantidade">Quantidade</label>
                                         <input type="text" name="quantidade" class="form-control" id="quantidade"
                                             placeholder="Insira a Quantidade" />
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label for="formGroupExampleInput2">Preço</label>
+                                        <label for="preço">Preço</label>
                                         <input name="preco" type="text" class="form-control" id="preco"
-                                            placeholder="Insira o preço" />
+                                            placeholder="Insira o preço">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -112,12 +112,14 @@
                 <?php foreach ($produtos as $produto) : ?>
                 <tr>
                     <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#editar<?=$produto->id?>">
                             <img class="min" src="../public/img/write_edit_icon.png" alt="Editar" title="Editar" />
                         </button>
                     </th>
                     <td><?= $produto->id ?></td>
-                    <td data-toggle="modal" data-target="#vizualizar<?=$produto->id?>"><?= $produto->nome ?></td>
+                    <td data-toggle="modal" data-target="#vizualizar<?=$produto->id?>"><?= $produto->nome ?>
+                    </td>
                     <td class="coluna-4-qtd"><?= $produto->quantidade ?></td>
                     <td>
                         <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -126,176 +128,182 @@
                         </button>
                     </td>
                 </tr>
-        <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="TituloModalLongoExemplo">
-                                Editar
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="formGroupExampleInput">Nome do produto: </label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput"
-                                        placeholder="Insira o nome do produto" />
+                <div class="modal fade" id="editar<?=$produto->id?>" tabindex="-1" role="dialog"
+                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="TituloModalLongoExemplo">
+                                        Editar
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-5">
-                                        <label for="exampleFormControlSelect1">Categoria</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>Selecione uma Categoria</option>
-                                            <option>Guitarra</option>
-                                            <option>Guitarra</option>
-                                            <option>Guitarra</option>
-                                            <option>Guitarra</option>
-                                            <option>Guitarra</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="formGroupExampleInput2">Quantidade</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                                            placeholder="Insira a Quantidade" />
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="formGroupExampleInput2">Preço</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                                            placeholder="Insira o preço">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Descrição do Produto</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlFile1">Insira uma imagem</label>
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div>
-                                </form>
+                                <div class="modal-body">
+                                    <form method="POST" action="/adm-produto/update">
+                                        <input type="hidden" value="<?= $produto->id ?>" name="id">
+                                        <div class="form-group">
+                                            <label for="nome">Nome do produto: </label>
+                                            <input type="text" name="nome" class="form-control"
+                                                id="formGroupExampleInput" value="<?= $produto->nome ?>">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-5">
+                                                <label for="exampleFormControlSelect1">Categoria</label>
+                                                <select name="categoria" class="form-control" id="categoria"
+                                                    value="<?= $produto->categoria ?>">
 
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                Fechar
-                            </button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                Salvar mudanças
-                            </button>
+                                                    <option>Guitarra</option>
+                                                    <option>Guitarra</option>
+                                                    <option>Guitarra</option>
+                                                    <option>Guitarra</option>
+                                                    <option>Guitarra</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="quantidade">Quantidade</label>
+                                                <input name="quantidade" type="text" class="form-control"
+                                                    id="quantidade" value="<?= $produto->quantidade ?>">
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="preço">Preço</label>
+                                                <input name="preco" type="text" class="form-control" id="preço"
+                                                    value="<?= $produto->preco ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="descrição">Descrição do
+                                                Produto</label>
+                                            <textarea name="descricao" class="form-control" id="descrição" rows="3"
+                                                value="<?= $produto->descricao ?>"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="exampleFormControlFile1">Insira uma imagem</label>
+                                            <input name="img" type="file" value="<?= $produto->img ?>"
+                                                class="form-control-file" id="img">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                Fechar
+                                            </button>
+                                            <button type="submit" class="btn btn-primary">
+                                                Salvar mudanças
+                                            </button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="modal fade" id="vizualizar<?=$produto->id?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="TituloModalLongoExemplo">
-                                Vizualizar
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class = "viz">
-                                    <img class = "img-viz" src="../public/img/<?= $produto->img?>"
-                                        alt="Produto" title="Produto">
-                </div>
-                                <div class="form-group">
-                                    <label for="formGroupExampleInput">Nome do produto: </label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput"
-                                        placeholder="<?= $produto->nome ?>" readonly>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-5">
-                                        <label for="exampleFormControlSelect1">Categoria</label>
-                                        <select class="form-control" id="exampleFormControlSelect1" readonly>
-                                            <option><?= $produto->categoria ?></option>
-                                            
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="formGroupExampleInput2">Quantidade</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                                            placeholder="<?= $produto->quantidade ?>" readonly>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="formGroupExampleInput2">Preço</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                                            placeholder="<?= $produto->preco ?>" readonly>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="formGroupExampleInput">Descrição do Produto</label>
-                                    <textarea class="form-control" placeholder="<?= $produto->descricao ?>" id="exampleFormControlTextarea1" rows="3"
-                                        readonly></textarea>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                Fechar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="excluir<?=$produto->id?>" tabindex="-1" role="dialog"
-            aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+    </div>
+    <div class="modal fade" id="vizualizar<?=$produto->id?>" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="TituloModalLongoExemplo">Excluir</h5>
+                        <h5 class="modal-title" id="TituloModalLongoExemplo">
+                            Vizualizar
+                        </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h4>Tem certeza que deseja excluir o item selecionado ?</h4>
+                        <form>
+                            <div class="viz">
+                                <img class="img-viz" src="../public/img/<?= $produto->img?>" alt="Produto"
+                                    title="Produto">
+                            </div>
+                            <div class="form-group">
+                                <label for="nome">Nome do produto: </label>
+                                <input type="text" class="form-control" id="nome" placeholder="<?= $produto->nome ?>"
+                                    readonly>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="exampleFormControlSelect1">Categoria</label>
+                                    <select class="form-control" id="exampleFormControlSelect1" readonly>
+                                        <option><?= $produto->categoria ?></option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="formGroupExampleInput2">Quantidade</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        placeholder="<?= $produto->quantidade ?>" readonly>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="formGroupExampleInput2">Preço</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        placeholder="<?= $produto->preco ?>" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Descrição do Produto</label>
+                                <textarea class="form-control" placeholder="<?= $produto->descricao ?>"
+                                    id="exampleFormControlTextarea1" rows="3" readonly></textarea>
+                            </div>
+
+                        </form>
                     </div>
-                    <form action="/adm-produto/delete" method="POST">
-                        <div class="modal-footer">
-                            <input type="hidden" value="<?= $produto->id ?>" name="id" />
-                            <button type="submit" class="btn btn-secondary">Excluir e Salvar
-                                mudanças</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
-                        </div>
-                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Fechar
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <?php endforeach; ?>
-            </tbody>
-        </table>
-        <div class="paginacao">
-            <nav aria-label="Navegação de página exemplo">
-                <ul class="pagination justify-content-center ">
-                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Anterior</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="View_Produtos.html">1</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">2</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="View_Produtos - 3.html">3</a> </li>
-                    <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">Próximo</a>
-                    </li>
-                </ul>
-            </nav>
+    </div>
+    <div class="modal fade" id="excluir<?=$produto->id?>" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalLongoExemplo">Excluir</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>Tem certeza que deseja excluir o item selecionado ?</h4>
+                </div>
+                <form action="/adm-produto/delete" method="POST">
+                    <div class="modal-footer">
+                        <input type="hidden" value="<?= $produto->id ?>" name="id">
+                        <button type="submit" class="btn btn-secondary">Excluir e Salvar
+                            mudanças</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
+                    </div>
+                </form>
+            </div>
         </div>
+    </div>
+    <?php endforeach; ?>
+    </tbody>
+    </table>
+    <div class="paginacao">
+        <nav aria-label="Navegação de página exemplo">
+            <ul class="pagination justify-content-center ">
+                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Anterior</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="View_Produtos.html">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="View_Produtos - 3.html">3</a> </li>
+                <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">Próximo</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     </div>
 </body>
 

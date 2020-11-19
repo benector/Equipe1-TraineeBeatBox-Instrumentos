@@ -56,6 +56,7 @@ class ProdutosAdminController {
     public function update(){
       
       $parameters = [
+        'id' => $_POST['id'],
         'nome' => $_POST['nome'],
         'categoria' => $_POST['categoria'],
         'descricao' => $_POST['descricao'],
@@ -69,4 +70,3 @@ class ProdutosAdminController {
      }
 }
         
-}
