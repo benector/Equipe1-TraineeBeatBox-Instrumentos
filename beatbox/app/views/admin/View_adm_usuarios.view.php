@@ -15,10 +15,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
         </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js%22%3E"></script>
     <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/public/css/styles-adm.css"/>
     <link rel="stylesheet" href="/public/css/styles.css" >
+
+    <script src="/public/js/mostrarSenha.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
@@ -88,18 +92,18 @@
                                         <div class="form-group">
                                             <label for="nome-user">Nome: </label>
                                             <input name="name" type="text" class="form-control" id="user-nome-edt"
-                                                placeholder="Insira o nome do usuário" />
+                                                placeholder="Insira o nome do usuário" required />
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="user-email">E-mail:</label>
                                                 <input name="email" type="email" class="form-control" id="email-new"
-                                                    placeholder="example@e-mail.com" />
+                                                    placeholder="example@e-mail.com" required/>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="user-password">Senha:</label>
                                                 <input name="password" type="password" class="form-control" id="password-new"
-                                                    placeholder="******" />
+                                                    placeholder="******" required/>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -131,18 +135,22 @@
                                         <div class="form-group">
                                             <label for="nome-user">Nome: </label>
                                             <input type="text" class="form-control" name="name" id="user-nome-edt"
-                                                value="<?= $user->name ?>" />
+                                                value="<?= $user->name ?>" required/>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="user-email">E-mail:</label>
                                                 <input type="email" class="form-control" name="email" id="email-new"
-                                                    value="<?= $user->email ?>" />
+                                                    value="<?= $user->email ?>" required/>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="user-password">Senha:</label>
-                                                <input type="password" class="form-control" name="password" id="password-new"
-                                                    value="<?= $user->password ?>" />
+                                                <div>
+                                                <input type="password" class="form-control" name="password" id="pass_log_id"
+                                                    value="<?= $user->password ?>" required/>
+                                                <!-- SHOW PASSWORD -->
+                                                    <span toggle="#password-field" class="fa fa-fw fa-eye-slash field_icon toggle-password"></span>
+                                                </div>
                                             </div>
                                         </div>
                                     <div class="modal-footer">
@@ -212,8 +220,12 @@
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="user-password">Senha:</label>
-                                                <input type="password" class="form-control" id="password-new"
+                                                <div>
+                                                <input type="password" class="form-control" name="password" id="pass_log_id2"
                                                     value="<?= $user->password ?>" readonly/>
+                                                    <!-- SHOW PASSWORD -->
+                                                    <span toggle="#password-field" class="fa fa-fw fa-eye-slash field_icon toggle-password2"></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>

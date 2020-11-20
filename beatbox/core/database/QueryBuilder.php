@@ -29,7 +29,7 @@ class QueryBuilder{
         "'" . implode("', '", array_values($parameters)) . "'");
 
         try{
-            $stmt = $this->pdo->prepare($sql);
+            $stmt = $this->pdo->prepare($sql); 
             $stmt->execute();
         } catch(Exception $e){
             die($e->getMessage());
@@ -47,7 +47,15 @@ class QueryBuilder{
    }
     
    public function update($table, $parameters){
-        $sql = "UPDATE users SET name='{$parameters['name']}', email='{$parameters['email']}', password='{$parameters['password']}' WHERE id={$parameters['id']}";
+
+        $sql = "UPDATE {$table} set" ;
+        foreach ($parameters as $key => $value) {
+            if($key != 'id'){
+                $sql .= " {$key}='$value',";
+            }
+        }
+        $sql=substr($sql, 0, -1);
+        $sql.=" where id = {$parameters['id']}";
         
         try{
             $stmt = $this->pdo->prepare($sql);

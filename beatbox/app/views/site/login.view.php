@@ -14,7 +14,7 @@
 
     <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
 
-    <script src="./js/mostrarSenha.js"></script>
+    <script src="/public/js/mostrarSenha.js"></script>
 
     <title>Login</title>
   </head>

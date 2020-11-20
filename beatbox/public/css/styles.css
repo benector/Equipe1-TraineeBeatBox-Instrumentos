@@ -40,6 +40,13 @@
     background-color: #04b3bb;
   }
 
+  .field-icon {
+    float: right;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2;
+  }
+
   @media (max-width: 374px){
     
     .painel_geral h1 {
