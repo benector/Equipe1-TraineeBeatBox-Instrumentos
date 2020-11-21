@@ -1,3 +1,4 @@
+    
     <nav class="navbar navbar-expand-lg navbar-light cinza-quase-branco">
       <a class="navbar-brand" href="#">
         <img src="../public/img/beatbox-logo-cropped.png" width="30" height="30" alt="Logo" loading="lazy">

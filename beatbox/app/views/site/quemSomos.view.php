@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	 
  	<head>
@@ -13,11 +13,9 @@
 		<link rel="stylesheet" href="../public/css/stylequemsomos.css">
 		<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-	 </head>
+	 </head> -->
 
-	 <body style="background-color: #21d8d8;">
-	 
-	 <?php require ('app/views/site/navbar.php') ?>
+	 <!-- <body style="background-color: #21d8d8;"> -->
 
  		<div class="main">
 			<div class="painel_geral"> <h1>Quem Somos</h1></div>
