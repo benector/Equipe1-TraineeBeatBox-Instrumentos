@@ -51,7 +51,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="/adm-produto/create" method="POST">
+                            <form action="/adm/produto/create" method="POST">
                                 <div class="form-group">
                                     <label>Nome do produto: </label>
                                     <input name="nome" type="text" class="form-control" id="formGroupExampleInput"
@@ -62,11 +62,10 @@
                                         <label for="Categoria">Categoria</label>
                                         <select class="form-control" name="categoria" id="categoria">
                                             <option>Selecione uma Categoria</option>
-                                            <option>Guitarra</option>
-                                            <option>Guitarra</option>
-                                            <option>Guitarra</option>
-                                            <option>Guitarra</option>
-                                            <option>Guitarra</option>
+                                            <?php foreach ($categorias as $categoria) : ?>
+                                            <option><?=$categoria->categoria?></option>
+                                            <?php endforeach; ?>
+
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3">
@@ -142,7 +141,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="POST" action="/adm-produto/update">
+                                    <form method="POST" action="/adm/produto/update">
                                         <input type="hidden" value="<?= $produto->id ?>" name="id">
                                         <div class="form-group">
                                             <label for="nome">Nome do produto: </label>
@@ -152,14 +151,11 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-5">
                                                 <label for="exampleFormControlSelect1">Categoria</label>
-                                                <select name="categoria" class="form-control" id="categoria"
-                                                    value="<?= $produto->categoria ?>">
-
-                                                    <option>Guitarra</option>
-                                                    <option>Guitarra</option>
-                                                    <option>Guitarra</option>
-                                                    <option>Guitarra</option>
-                                                    <option>Guitarra</option>
+                                                <select name="categoria" class="form-control" id="categoria">
+                                                    <option><?=$produto->categoria?></option>
+                                                    <?php foreach ($categorias as $categoria) : ?>
+                                                    <option><?=$categoria->categoria?></option>
+                                                    <?php endforeach; ?>
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-3">
@@ -176,14 +172,14 @@
                                         <div class="form-group">
                                             <label for="descrição">Descrição do
                                                 Produto</label>
-                                            <textarea name="descricao" class="form-control" id="descrição" rows="3"
-                                                value="<?= $produto->descricao ?>"></textarea>
+                                            <textarea name="descricao" class="form-control" id="descrição"
+                                                rows="3"><?= $produto->descricao ?></textarea>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleFormControlFile1">Insira uma imagem</label>
-                                            <input name="img" type="file" value="<?= $produto->img ?>"
-                                                class="form-control-file" id="img">
+                                            <label for="imagem">Insira uma imagem</label>
+                                            <input name="img" type="file" class="form-control-file" id="img">
+
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -275,7 +271,7 @@
                 <div class="modal-body">
                     <h4>Tem certeza que deseja excluir o item selecionado ?</h4>
                 </div>
-                <form action="/adm-produto/delete" method="POST">
+                <form action="/adm/produto/delete" method="POST">
                     <div class="modal-footer">
                         <input type="hidden" value="<?= $produto->id ?>" name="id">
                         <button type="submit" class="btn btn-secondary">Excluir e Salvar

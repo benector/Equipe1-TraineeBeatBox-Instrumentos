@@ -7,8 +7,15 @@ class ProdutosAdminController {
 
     public function produtosAdmin ()
     {   
-        $produtos = App::get('database')->selectAll('produtos');  
-       return view ('/admin/produtos',compact( 'produtos'));
+        $produtos = App::get('database')->selectAll('produtos'); 
+        $categorias = App::get('database')->selectAll('categorias'); 
+       
+        $parametros =[
+          'categorias'=>$categorias,
+          'produtos' =>$produtos,
+        ];
+        return view ('/admin/produtos',$parametros);
+        
     }
     public function selectAll($table)
     {
@@ -41,7 +48,7 @@ class ProdutosAdminController {
 
       App::get('database')->insert('produtos', $parameters );
 
-      header('Location: /adm-produtos');
+      header('Location: /adm/produtos');
 
     }
 
@@ -49,7 +56,7 @@ class ProdutosAdminController {
     {
       App::get('database')->delete('produtos', $_POST['id'] );
 
-      header('Location: /adm-produtos');
+      header('Location: /adm/produtos');
 
     }
 
@@ -66,7 +73,8 @@ class ProdutosAdminController {
       ];
       App::get('database')->update('produtos', $parameters);
 
-      header('Location: /adm-produtos');
+      header('Location: /adm/produtos');
      }
+     
 }
         

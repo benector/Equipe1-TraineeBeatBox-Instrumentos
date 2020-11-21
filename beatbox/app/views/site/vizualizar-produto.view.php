@@ -15,8 +15,10 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles-produto.css">
+ 
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="../public/css/styles-produto.css">
+    <link rel="stylesheet" href="../public/css/styles_nav_footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Beatbox</title>
@@ -43,41 +45,20 @@
             <div class="conteudo-produto">
                 <div class="align-middle">
                     <h1>Guitarra Tagima</h1>
-                    <p class = "descricao-curta">A MG30 é nova Stratocaster da linha de entrada da Tagima, indicada para iniciantes que procuram
+                    <!-- <p class = "descricao-curta">A MG30 é nova Stratocaster da linha de entrada da Tagima, indicada para iniciantes que procuram
                         um instrumento com ótima sonoridade , acabamento e com a versatilidade deste modelo clássico
-                        criado pela Fender nos anos 50. Destaque para o acabamento fosco do corpo. </p>
-                    <h3>Preço: </h3>
-                    <h3>Categoria: </h3>
-                    <h3>Quantidade Disponível: </h3>
+                        criado pela Fender nos anos 50. Destaque para o acabamento fosco do corpo. </p> -->
+                    <h3 class = "preco">Por apenas <span class = "preco-valor">R$ <?= $produtos[0]->preco ?> </span></h3>
+                    <h3 class = "h3-other">Categoria: <?= $produtos[0]->categoria ?> </h3>
+                    <h3 class = "h3-other"> <b>Estoque Disponível</b> </h3>
+                    <h3 class = "h3-other">Quantidade: <?= $produtos[0]->quantidade ?>  </h3>
                 </div>
             </div>
         </div>
         <div class="descricao">
-            <p> A MG30 é nova Stratocaster da linha de entrada da Tagima, indicada para iniciantes que procuram um
-                instrumento com ótima sonoridade , acabamento e com a versatilidade deste modelo clássico criado pela
-                Fender nos anos 50. Destaque para o acabamento fosco do corpo.
-            <p>Tarraxas Blindadas: Sim</p>
-            <p></p>Possui Captadores: Sim
-            <p></p>Modelo dos Captadores: Single Coils
-            <p></p>Captadores com Configuração SSS: Sim
-            <p></p>Quantidade de Captadores: 3
-            <p></p>Possui Controle: Sim
-            <p></p>Quantidade de Controles: 1
-            <p></p>Possui Tonalidades: Sim
-            <p></p>Quantidade de Tonalidade: 2
-            <p></p>Possui Chave Seletora: Sim
-            <p></p>Quantidade de Chaves Seletoras: 1
-            <p></p>Posições da Chave Seletora: 5
-            <p></p>Marca: Tagima
-            <p></p>Conteúdo da embalagem: 1 Guitarra
-            <p></p>Dimensões aproximadas do produto: 101 x 5 x 33 cm (A x L x C)
-            <p></p>Dimensões aproximadas da embalagem: 104 x 9 x 42 x (A x L x C)
-            <p></p>Peso aproximado do produto: 3,6 Kg
-            <p></p>Peso aproximado da embalagem: 4,3 Kg
-            <p></p>Informações Adicionais: Maior qualidade e durabilidade no dia a dia de decoração não inclusos.
-            Imagens meramente ilustrativas.
-            <p></p>As cores dos objetos podem sofrer alterações devido a luminosidade, configurações do monitor e até
-            mesmo a percepção do usuário.</p>
+        <?= nl2br($produtos[0]->descricao, false)?> 
+            
         </div>
     </div>
 </body>
+

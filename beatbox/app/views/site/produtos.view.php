@@ -19,6 +19,7 @@
 
 		<link rel="stylesheet" href="../public/css/styles.css">
 		<link rel="stylesheet" href="../public/css/styles-produtos.css">
+    <link rel="stylesheet" href="../public/css/styles_nav_footer.css">
  
   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -105,8 +106,68 @@
         </div>
       </div>
       <div class="lista-produtos">
-      <?php foreach ($produtos as $produto) : ?>
-        <a class="produto-direcao" href="#">
+      <?php foreach ($produtos as $produto) : ?> 
+        <div class="modal fade" id="vizualizar<?=$produto->id?>" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalLongoExemplo">
+                            Vizualizar
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="viz">
+                                <img class="img-viz" src="../public/img/<?= $produto->img?>" alt="Produto"
+                                    title="Produto">
+                            </div>
+                            <div class="form-group">
+                                <label for="nome">Nome do produto: </label>
+                                <input type="text" class="form-control" id="nome" placeholder="<?= $produto->nome ?>"
+                                    readonly>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="exampleFormControlSelect1">Categoria</label>
+                                    <select class="form-control" id="exampleFormControlSelect1" readonly>
+                                        <option><?= $produto->categoria ?></option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="formGroupExampleInput2">Quantidade</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        placeholder="<?= $produto->quantidade ?>" readonly>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="formGroupExampleInput2">Preço</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        placeholder="<?= $produto->preco ?>" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Descrição do Produto</label>
+                                <textarea class="form-control" placeholder="<?= $produto->descricao ?>"
+                                    id="exampleFormControlTextarea1" rows="3" readonly></textarea>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <a class="produto-direcao" href="#" data-toggle="modal" data-target="#vizualizar<?=$produto->id?>">
           <div class="card">
             <img class="card-img-top" src="../public/img/<?= $produto->img?>"
               alt="Imagem de capa do card">
@@ -116,7 +177,7 @@
               <p class="card-text"><?= $produto->quantidade ?> Disponíveis</p>
             </div>
           </div>
-        </a>
+      </a>
         <?php endforeach; ?>
         
         

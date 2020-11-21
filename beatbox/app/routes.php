@@ -12,11 +12,11 @@ $router->get('contato','Controller@contato');
 
 $router->get('login','Controller@login');
 
-$router->get('adm-produtos', 'ProdutosAdminController@produtosAdmin');
+$router->get('adm/produtos', 'ProdutosAdminController@produtosAdmin');
 
-$router->post('adm-produto/create', 'ProdutosAdminController@create');
+$router->post('adm/produto/create', 'ProdutosAdminController@create');
 
-$router->post('adm-produto/delete', 'ProdutosAdminController@delete');
+$router->post('adm/produto/delete', 'ProdutosAdminController@delete');
 
-$router->post('adm-produto/update','ProdutosAdminController@update');  
+$router->post('adm/produto/update','ProdutosAdminController@update');  
 ?>

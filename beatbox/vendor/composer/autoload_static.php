@@ -14,6 +14,7 @@ class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
         'App\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/controllers/Controller.php',
         'App\\Controllers\\ProdutosAdminController' => __DIR__ . '/../..' . '/app/controllers/ProdutosAdminController.php',
         'App\\Controllers\\ProdutosController' => __DIR__ . '/../..' . '/app/controllers/ProdutosController.php',
+        'App\\Controllers\\VizualizarController' => __DIR__ . '/../..' . '/app/controllers/VizualizarController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
