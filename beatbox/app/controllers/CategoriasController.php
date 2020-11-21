@@ -8,14 +8,21 @@ class CategoriasController {
 
     public function index()
     {   
-        $categorias = App::get('database')->selectAll('categorias'); 
-        $title = "Beatbox ADM - Categorias";
-        $css_pages=[
-            '/public/css/styles-adm.css',
-        ];
+      $categorias = App::get('database')->selectAll('categorias');
+      $produtos = App::get('database')->selectAll('produtos');
 
-        require 'app/views/site/header.php';
-        return view ('/admin/categorias', compact('categorias'));
+      $title = "Beatbox ADM - Categorias";
+      $css_pages=[
+            '/public/css/styles-adm.css',
+      ];
+
+      $parametros =[
+        'categorias'=>$categorias,
+        'produtos' =>$produtos,
+      ];
+
+      require 'app/views/site/header.php';
+      return view ('/admin/categorias', $parametros);
     }
     public function create()
     {
@@ -46,6 +53,8 @@ class CategoriasController {
         'descrição' => $_POST['descrição'],
         'id' => $_POST['id']
         ];
+
+
         App::get('database')->update('categorias', $parameters);
 
         header('Location: /adm/categorias');

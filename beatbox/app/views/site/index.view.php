@@ -1,8 +1,4 @@
-  
-<link rel="stylesheet" href="../public/css/styles-home.css">
-
-<body>
- 
+   
   <!-- ///////////////////////CORPO DA HOME///////////////////////// -->
 
   <div class="content">

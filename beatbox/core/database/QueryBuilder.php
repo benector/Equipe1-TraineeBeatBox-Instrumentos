@@ -69,7 +69,21 @@ class QueryBuilder
     }
 
     public function update($table, $parameters){
-        $sql = "UPDATE categorias SET categoria='{$parameters['categoria']}', descrição ='{$parameters['descrição']}', quantidade='{$parameters['quantidade']}' WHERE id={$parameters['id']}";
+
+        $sql = "UPDATE {$table} set" ;
+
+        foreach ($parameters as $key => $value) {
+            if($key != 'id'){
+                $sql .= " {$key}='$value',";
+            }
+        }
+        $sql=substr($sql, 0, -1);
+
+        $sql.=" where id = {$parameters['id']}";
+
+        // die(var_dump($sql));
+
+
         try{
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
