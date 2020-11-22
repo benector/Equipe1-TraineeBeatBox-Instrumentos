@@ -1,5 +1,4 @@
 
-
 <body>
         <div class="main">
         <!-- ///////////Título da página///////////// -->
@@ -243,6 +242,7 @@
             </nav>
           </div>
     </div>
+    </main>
 </body>
 
 </html>

@@ -118,6 +118,5 @@
                     style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
             </div>
         </div>
- 	</body>
-
-</html>
+     
+        <?php require 'app/views/site/partials/footer.php'; ?>   

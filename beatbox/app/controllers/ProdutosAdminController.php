@@ -7,8 +7,12 @@ class ProdutosAdminController {
 
     public function produtosAdmin ()
     {   
-        $produtos = App::get('database')->selectAll('produtos');  
-       return view ('/admin/produtos',compact( 'produtos'));
+      $produtos = App::get('database')->selectAll('produtos'); 
+
+      $title = "Beatbox ADM - Produtos";
+
+      require 'app/views/admin/partials/admin_navbar.view.php';
+      return view ('/admin/produtos',compact( 'produtos'));
     }
     public function selectAll($table)
     {
