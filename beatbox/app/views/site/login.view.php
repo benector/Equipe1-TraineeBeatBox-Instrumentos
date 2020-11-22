@@ -6,8 +6,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./css/styles_login.css">
+    
+    <link rel="stylesheet" href="../public/css/styles_nav_footer.css">
+    <link rel="stylesheet" href="./public/css/styles_login.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -19,6 +20,7 @@
     <title>Login</title>
   </head>
   <body id="pagina" class="text-center">
+    <?php require "app/views/site/partials/navbar.php"; ?>
 
     <form class="form-signin">
         <div class="img-container">
@@ -46,5 +48,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
+
+    <?php require 'app/views/site/partials/footer.php'; ?>

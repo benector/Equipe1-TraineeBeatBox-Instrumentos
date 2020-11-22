@@ -38,6 +38,5 @@
 				  o poder de influência, devemos honrá-lo e realizar nosso trabalho com a dedicação e atenção que merece. </h2>
 
  		</div>
- 	</body>
-
-</html>
+	 
+		<?php require 'app/views/site/partials/footer.php'; ?>

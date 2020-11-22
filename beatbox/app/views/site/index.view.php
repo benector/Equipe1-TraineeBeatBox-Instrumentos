@@ -85,6 +85,5 @@
     crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
 
-</body>
 
-</html>
+  <?php require 'app/views/site/partials/footer.php'; ?>

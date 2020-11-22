@@ -16,13 +16,15 @@ class PagesController {
         // require 'app/views/site/navbar.php';
         
         return view ('/site/index');
+
+        require 'app/views/site/partials/footer.php';
     }
 
     public function quemSomos ()
     {      
         $title = "Beatbox Quem Somos";
         $css_pages=[
-            '/public/css/stylesquemsomos.css',
+            '../public/css/stylequemsomos.css',
         ];
 
         require 'app/views/site/partials/header.php';
@@ -32,12 +34,12 @@ class PagesController {
 
     public function login ()
     {   
-        $title = "Beatbox Login";
-        $css_pages=[
-            '/public/css/styles-login.css',
-        ];
+        // $title = "Beatbox Login";
+        // $css_pages=[
+        //     '/public/css/styles_login.css',
+        // ];
 
-        require 'app/views/site/partials/header.php';
+        // require 'app/views/site/partials/header.php';
         // require 'app/views/site/navbar.php';
         return view ('/site/login');
     }
@@ -47,7 +49,7 @@ class PagesController {
     {   
         $title = "Beatbox Contato";
         $css_pages=[
-            '/public/css/contato-styles.css',
+            '/public/css/contato_styles.css',
         ];
 
         require 'app/views/site/partials/header.php';
