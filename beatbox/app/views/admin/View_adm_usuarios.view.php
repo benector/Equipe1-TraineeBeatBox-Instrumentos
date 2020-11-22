@@ -16,7 +16,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
         </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js%22%3E"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js%22%3E"></script>-->
     <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/public/css/styles-adm.css"/>
@@ -55,7 +55,11 @@
                 </tr>
             </thead>
             <tbody>
+                <?php $contador = 0; ?>
                 <?php foreach($users as $user): ?>
+
+                    
+                    
                     <tr>
                         <td scope="row">
                             <button type="button" class="btn btn-primary btn-icon" data-toggle="modal"
@@ -74,49 +78,6 @@
                         </td>
                     </tr>
 
-                    <div class="modal fade" id="adicionar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="TituloModalLongoExemplo">
-                                        Cadastrar Usuário
-                                    </h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="/admin/create_user"  method="POST">
-                                        <div class="form-group">
-                                            <label for="nome-user">Nome: </label>
-                                            <input name="name" type="text" class="form-control" id="user-nome-edt"
-                                                placeholder="Insira o nome do usuário" required />
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="user-email">E-mail:</label>
-                                                <input name="email" type="email" class="form-control" id="email-new"
-                                                    placeholder="example@e-mail.com" required/>
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="user-password">Senha:</label>
-                                                <input name="password" type="password" class="form-control" id="password-new"
-                                                    placeholder="******" required/>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                            <button type="submit" class="btn btn-primary">Salvar mudanças</button> 
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                     <div class="modal fade" id="editar<?=$user->id?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -130,26 +91,26 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form method="POST" action="/admin/update_user">
+                                    <form method="POST" action="/adm/usuarios/update">
                                         <input type="hidden" value="<?= $user->id ?>" name="id"/>
                                         <div class="form-group">
                                             <label for="nome-user">Nome: </label>
-                                            <input type="text" class="form-control" name="name" id="user-nome-edt"
+                                            <input type="text" class="form-control" name="name"
                                                 value="<?= $user->name ?>" required/>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="user-email">E-mail:</label>
-                                                <input type="email" class="form-control" name="email" id="email-new"
+                                                <input type="email" class="form-control" name="email"
                                                     value="<?= $user->email ?>" required/>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="user-password">Senha:</label>
-                                                <div>
-                                                <input type="password" class="form-control" name="password" id="pass_log_id"
+                                                <div class="senha-e-olho">
+                                                <input type="password" class="form-control input-senha" name="password" id="a<?= $user->id ?>"
                                                     value="<?= $user->password ?>" required/>
                                                 <!-- SHOW PASSWORD -->
-                                                    <span toggle="#password-field" class="fa fa-fw fa-eye-slash field_icon toggle-password"></span>
+                                                <span id="1olho<?= $user->id ?>" toggle="#password-field" class="far fa-fw fa-eye-slash field_icon" onclick="togglePassword2('a<?= $user->id ?>', '1olho<?= $user->id ?>')"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -182,7 +143,7 @@
                                 <div class="modal-body">
                                     <h4>Tem certeza que deseja excluir o usuário selecionado?</h4>
                                 </div>
-                                <form action="/admin/delete_user" method="POST">
+                                <form action="/adm/usuarios/delete" method="POST">
                                 <div class="modal-footer">
                                     <input type="hidden" value="<?= $user->id ?>" name="id"/>
                                     <button type="submit" class="btn btn-secondary">Excluir e Salvar mudanças</button>
@@ -209,22 +170,22 @@
                                     <form>
                                         <div class="form-group">
                                             <label for="nome-user">Nome: </label>
-                                            <input type="text" class="form-control" id="user-nome-edt"
+                                            <input type="text" class="form-control"
                                                 value="<?= $user->name ?>" readonly/>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="user-email">E-mail:</label>
-                                                <input type="email" class="form-control" id="email-new"
+                                                <input type="email" class="form-control"
                                                     value="<?= $user->email ?>" readonly/>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="user-password">Senha:</label>
-                                                <div>
-                                                <input type="password" class="form-control" name="password" id="pass_log_id2"
+                                                <div class="senha-e-olho">
+                                                <input type="password" class="form-control input-senha" name="password" id="b<?= $user->id ?>"
                                                     value="<?= $user->password ?>" readonly/>
                                                     <!-- SHOW PASSWORD -->
-                                                    <span toggle="#password-field" class="fa fa-fw fa-eye-slash field_icon toggle-password2"></span>
+                                                    <span id="2olho<?= $user->id ?>" toggle="#password-field" class="far fa-fw fa-eye-slash field_icon" onclick="togglePassword2('b<?= $user->id ?>', '2olho<?= $user->id ?>')"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,6 +201,48 @@
                         </div>
                     </div>
             <?php endforeach; ?>
+
+            <div class="modal fade" id="adicionar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="TituloModalLongoExemplo">
+                                        Cadastrar Usuário
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/adm/usuarios/create"  method="POST">
+                                        <div class="form-group">
+                                            <label for="nome-user">Nome: </label>
+                                            <input name="name" type="text" class="form-control"
+                                                placeholder="Insira o nome do usuário" required />
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="user-email">E-mail:</label>
+                                                <input name="email" type="email" class="form-control"
+                                                    placeholder="example@e-mail.com" required/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="user-password">Senha:</label>
+                                                <input name="password" type="password" class="form-control" id="password-new"
+                                                    placeholder="******" required/>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                            <button type="submit" class="btn btn-primary">Salvar mudanças</button> 
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+            </div>
         </tbody>
     </table>
     <div class="paginacao ">

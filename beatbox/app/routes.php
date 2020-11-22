@@ -10,16 +10,16 @@
 
  $router->get('quem-somos','Controller@quemsomos');
 
- $router->get('admin','Controller@admin');
+ $router->get('adm','Controller@admin');
 
- $router->get('admin/categorias','Controller@admin_categorias');
+ $router->get('adm/categorias','Controller@admin_categorias');
 
- $router->get('admin/produtos','Controller@admin_produtos');
+ $router->get('adm/produtos','Controller@admin_produtos');
 
- $router->get('admin/usuarios','UsersController@index'); 
+ $router->get('adm/usuarios','UsersController@index'); 
 
- $router->post('admin/create_user','UsersController@create');  
+ $router->post('adm/usuarios/create','UsersController@create');  
 
- $router->post('admin/update_user','UsersController@update');  
+ $router->post('adm/usuarios/update','UsersController@update');  
 
- $router->post('admin/delete_user','UsersController@delete');  
+ $router->post('adm/usuarios/delete','UsersController@delete');  

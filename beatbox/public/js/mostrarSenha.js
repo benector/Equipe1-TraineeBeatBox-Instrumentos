@@ -1,5 +1,5 @@
 function mostrarSenha() {
-    var x = document.getElementById("inputPassword");
+    var x = document.getElementById('<?= $user->id ?>');
     if (x.type === "password") {
       x.type = "text";
     } else {
@@ -9,14 +9,8 @@ function mostrarSenha() {
 
   //admin usuarios
 
-  $(document).on('click', '.toggle-password', function() {
-    $(this).toggleClass("fa-eye fa-eye-slash");
-    var input = $("#pass_log_id");
-    input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
-    });
-
-    $(document).on('click', '.toggle-password2', function() {
-    $(this).toggleClass("fa-eye fa-eye-slash");
-    var input = $("#pass_log_id2");
-    input.attr('type') === 'password' ? input.attr('type','text') : input.attr('type','password')
-    });
+    function togglePassword2(id, id2) {
+    document.getElementById(id).type === 'password' ? document.getElementById(id).type = 'text' : document.getElementById(id).type = 'password';
+    //document.getElementById('1olho').toggleClass("fa-eye fa-eye-slash");
+    document.getElementById(id2).className === "far fa-fw fa-eye-slash field_icon" ? document.getElementById(id2).className = "far fa-fw fa-eye field_icon" : document.getElementById(id2).className = "far fa-fw fa-eye-slash field_icon";
+    };

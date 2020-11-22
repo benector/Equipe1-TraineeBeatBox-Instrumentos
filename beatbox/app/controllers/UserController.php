@@ -19,12 +19,12 @@ class UsersController{
 
       App::get('database')->insert('users', $parameters);
 
-      header('Location: usuarios');
+      header('Location: /adm/usuarios');
     }
 
     public function delete(){
       App::get('database')->delete('users',$_POST['id']);
-      header('Location: usuarios');
+      header('Location: /adm/usuarios');
     }
 
      public function update(){
@@ -34,9 +34,10 @@ class UsersController{
         'password'=>$_POST['password'],
         'id'=>$_POST['id']
       ];
+      
       App::get('database')->update('users', $parameters);
 
-      header('Location: usuarios');
+      header('Location: /adm/usuarios');
      }
 }
 
