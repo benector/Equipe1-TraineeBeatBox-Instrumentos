@@ -12,7 +12,7 @@ $router->get('contato','PagesController@contato');
 
 $router->get('login','PagesController@login');
 
-$router->get('produtos-admin', 'ProdutosAdminController@produtosAdmin');
+$router->get('adm/produtos', 'ProdutosAdminController@produtosAdmin');
 
 $router->post('produtos/create', 'ProdutosAdminController@create');
 

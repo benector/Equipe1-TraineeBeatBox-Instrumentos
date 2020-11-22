@@ -36,7 +36,7 @@
       
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Sair</a>
+          <a class="nav-link" href="/">Sair</a>
         </li>
       </ul>
     </nav>
@@ -54,13 +54,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/adm/produtos">
                   <span data-feather="file"></span>
                   Produtos
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/adm/categorias">
                   <span data-feather="shopping-cart"></span>
                   Categorias
                 </a>
@@ -79,4 +79,5 @@
     </div>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-0">
+    
       

@@ -13,6 +13,7 @@ class ProdutosController {
         $css_pages=[
             '/public/css/styles-produtos.css',
         ];
+        
         require 'app/views/site/partials/header.php';
         // require 'app/views/site/navbar.php';
         return view ('/site/produtos',compact( 'produtos'));

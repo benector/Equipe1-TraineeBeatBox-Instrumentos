@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -26,7 +26,7 @@
     
     <title>Beatbox</title>
 
-</head>
+</head> -->
 
 <body>
     <div class="main">
