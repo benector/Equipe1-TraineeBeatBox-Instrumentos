@@ -152,10 +152,10 @@
                                             <?php endif; ?>
                                         <?php endforeach; ?>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Descrição da Categoria:</label>
                                         <textarea type="text" name= "descrição" class="form-control" id="exampleFormControlTextarea1" rows="3" disabled><?= $categoria->descrição?></textarea>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal">
