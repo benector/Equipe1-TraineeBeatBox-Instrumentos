@@ -55,12 +55,12 @@
                                 <div class="form-group">
                                     <label>Nome do produto: </label>
                                     <input name="nome" type="text" class="form-control" id="formGroupExampleInput"
-                                        placeholder="Insira o nome do produto" />
+                                        placeholder="Insira o nome do produto" required>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-5">
                                         <label for="Categoria">Categoria</label>
-                                        <select class="form-control" name="categoria" id="categoria">
+                                        <select class="form-control" name="categoria" id="categoria" required>
                                             <option>Selecione uma Categoria</option>
                                             <?php foreach ($categorias as $categoria) : ?>
                                             <option><?=$categoria->categoria?></option>
@@ -71,21 +71,21 @@
                                     <div class="form-group col-md-3">
                                         <label for="quantidade">Quantidade</label>
                                         <input type="text" name="quantidade" class="form-control" id="quantidade"
-                                            placeholder="Insira a Quantidade" />
+                                            placeholder="Insira a Quantidade" required>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="preço">Preço</label>
                                         <input name="preco" type="text" class="form-control" id="preco"
-                                            placeholder="Insira o preço">
+                                            placeholder="Insira o preço" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="Descricao">Descrição do Produto</label>
-                                    <textarea name="descricao" class="form-control" id="descricao" rows="3"></textarea>
+                                    <textarea name="descricao" class="form-control" id="descricao" rows="3" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlFile1">Insira uma imagem</label>
-                                    <input name="img" type="file" class="form-control-file" id="img">
+                                    <input name="img" type="file" class="form-control-file" id="img" required>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -146,12 +146,12 @@
                                         <div class="form-group">
                                             <label for="nome">Nome do produto: </label>
                                             <input type="text" name="nome" class="form-control"
-                                                id="formGroupExampleInput" value="<?= $produto->nome ?>">
+                                                id="formGroupExampleInput" value="<?= $produto->nome ?>" required>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-5">
                                                 <label for="exampleFormControlSelect1">Categoria</label>
-                                                <select name="categoria" class="form-control" id="categoria">
+                                                <select name="categoria" class="form-control" id="categoria" required>
                                                     <option><?=$produto->categoria?></option>
                                                     <?php foreach ($categorias as $categoria) : ?>
                                                     <option><?=$categoria->categoria?></option>
@@ -161,24 +161,24 @@
                                             <div class="form-group col-md-3">
                                                 <label for="quantidade">Quantidade</label>
                                                 <input name="quantidade" type="text" class="form-control"
-                                                    id="quantidade" value="<?= $produto->quantidade ?>">
+                                                    id="quantidade" value="<?= $produto->quantidade ?>" required>
                                             </div>
                                             <div class="form-group col-md-3">
                                                 <label for="preço">Preço</label>
                                                 <input name="preco" type="text" class="form-control" id="preço"
-                                                    value="<?= $produto->preco ?>">
+                                                    value="<?= $produto->preco ?>" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="descrição">Descrição do
                                                 Produto</label>
                                             <textarea name="descricao" class="form-control" id="descrição"
-                                                rows="3"><?= $produto->descricao ?></textarea>
+                                                rows="3" required><?= $produto->descricao ?></textarea>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="imagem">Insira uma imagem</label>
-                                            <input name="img" type="file" class="form-control-file" id="img">
+                                            <input name="img" type="file" class="form-control-file" id="img" required>
 
                                         </div>
                                         <div class="modal-footer">
