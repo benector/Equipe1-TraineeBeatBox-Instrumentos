@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd2ff282a1745df799f90dafc80aaec45
+class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
 {
     public static $files = array (
         '5ec26a44593cffc3089bdca7ce7a56c3' => __DIR__ . '/../..' . '/core/helpers.php',
@@ -13,6 +13,10 @@ class ComposerStaticInitd2ff282a1745df799f90dafc80aaec45
     public static $classMap = array (
         'App\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/controllers/Controller.php',
         'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',
+        'App\\Controllers\\CategoriasController' => __DIR__ . '/../..' . '/app/controllers/CategoriasController.php',
+        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
+        'App\\Controllers\\ProdutosAdminController' => __DIR__ . '/../..' . '/app/controllers/ProdutosAdminController.php',
+        'App\\Controllers\\ProdutosController' => __DIR__ . '/../..' . '/app/controllers/ProdutosController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
@@ -21,6 +25,9 @@ class ComposerStaticInitd2ff282a1745df799f90dafc80aaec45
         'ComposerAutoloaderInitd2ff282a1745df799f90dafc80aaec45' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitd2ff282a1745df799f90dafc80aaec45' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'ComposerAutoloaderInite7b1cd73872d834ad895b331bb49c9c1' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
@@ -28,6 +35,7 @@ class ComposerStaticInitd2ff282a1745df799f90dafc80aaec45
     {
         return \Closure::bind(function () use ($loader) {
             $loader->classMap = ComposerStaticInitd2ff282a1745df799f90dafc80aaec45::$classMap;
+            $loader->classMap = ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::$classMap;
 
         }, null, ClassLoader::class);
     }
