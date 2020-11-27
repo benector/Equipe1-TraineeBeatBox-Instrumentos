@@ -183,7 +183,7 @@
                                             <input name="img" type="file" class="form-control-file" id="img">
 
                                             <?php if(isset($_FILES['img']) || empty($_FILES['img'])) : ?>
-                                                <input name="img" type="hidden"id="img" value=<?= $produto->img ?> >
+                                                <input name="img" type="hidden"id="img" value="<?= $produto->img ?>" >
                                             <?php endif; ?>
 
                                             
