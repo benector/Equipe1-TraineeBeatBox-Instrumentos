@@ -8,9 +8,11 @@ class Controller {
     public function index ()
     {
         $title = 'Beatbox Instumentos';
+        $css_pages=[
+            '/public/css/styles-home.css',
+        ];
 
-        // require 'app/views/site/header.php';
-        require 'app/views/site/navbar.php';
+        require 'app/views/site/header.php';
         
         return view ('/site/index');
     }

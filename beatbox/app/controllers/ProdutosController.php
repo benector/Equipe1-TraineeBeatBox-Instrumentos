@@ -10,10 +10,15 @@ class ProdutosController {
         $produtos = App::get('database')->selectAll('produtos'); 
 
         
-        require 'app/views/site/navbar.php';
+        $title = 'Beatbox Instumentos';
+        $css_pages=[
+            '/public/css/styles-produtos.css'
+            
+        ];
+
+        require 'app/views/site/header.php';
         
         return view ('/site/produtos',compact('produtos'));
- 
     }
    
        

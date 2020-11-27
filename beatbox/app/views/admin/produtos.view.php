@@ -81,7 +81,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Descricao">Descrição do Produto</label>
-                                    <textarea name="descricao" class="form-control" id="descricao" rows="3" required></textarea>
+                                    <textarea name="descricao" class="form-control" id="descricao" rows="3"
+                                        required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlFile1">Insira uma imagem</label>
@@ -143,6 +144,7 @@
                                 <div class="modal-body">
                                     <form method="POST" action="/adm/produto/update">
                                         <input type="hidden" value="<?= $produto->id ?>" name="id">
+                                    
                                         <div class="form-group">
                                             <label for="nome">Nome do produto: </label>
                                             <input type="text" name="nome" class="form-control"
@@ -172,14 +174,14 @@
                                         <div class="form-group">
                                             <label for="descrição">Descrição do
                                                 Produto</label>
-                                            <textarea name="descricao" class="form-control" id="descrição"
-                                                rows="3" required><?= $produto->descricao ?></textarea>
+                                            <textarea name="descricao" class="form-control" id="descrição" rows="3"
+                                                required><?= $produto->descricao ?></textarea>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="imagem">Insira uma imagem</label>
-                                            <input name="img" type="file" class="form-control-file" id="img" required>
-
+                                          <label for="imagem">Trocar a imagem</label>
+                                            <input name="img" type="file" class="form-control-file" id="img">
+                                            
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -188,10 +190,12 @@
                                             <button type="submit" class="btn btn-primary">
                                                 Salvar mudanças
                                             </button>
+                                            
                                         </div>
-
-                                    </form>
+                                </form>
+                                
                                 </div>
+
 
                             </div>
                         </div>
