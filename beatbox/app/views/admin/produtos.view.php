@@ -180,13 +180,7 @@
 
                                         <div class="form-group">
                                           <label for="imagem">Trocar a imagem</label>
-                                            <input name="img" type="file" class="form-control-file" id="img">
-
-                                            <?php if(isset($_FILES['img']) || empty($_FILES['img'])) : ?>
-                                                <input name="img" type="hidden"id="img" value="<?= $produto->img ?>" >
-                                            <?php endif; ?>
-
-                                            
+                                            <input name="img" type="file" class="form-control-file" id="img">                                            
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">

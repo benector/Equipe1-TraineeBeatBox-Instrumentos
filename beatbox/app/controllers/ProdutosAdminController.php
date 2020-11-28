@@ -72,9 +72,17 @@ class ProdutosAdminController {
         'preco' => $_POST['preco'],
         'quantidade' => $_POST['quantidade'],
         'img' => $_POST['img'],
-        
+           
       ];
+
+      if (isset($parameters['img']) && empty($parameters['img'])){
+        array_pop($parameters);
+      }
+
+     
       App::get('database')->update('produtos', $parameters);
+
+      
 
       header('Location: /adm/produtos');
      }
