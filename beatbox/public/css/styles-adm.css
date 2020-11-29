@@ -2,6 +2,10 @@ body {
   background-color: #21d8d8;
 }
 
+.main {
+  margin-top: 25px;
+}
+
 .table{
     background-color: white;
     margin: auto;
