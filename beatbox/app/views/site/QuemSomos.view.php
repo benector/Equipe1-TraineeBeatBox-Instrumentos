@@ -26,7 +26,7 @@
 					que trabalha para oferecer instrumentos com a melhor qualidade e pelo menor preço.
 				</h2>
 			<div class="imag2">
-				<img src="img/img2.jpg" alt ="Foto de expositório de guitarras da loja">
+				<img src="public/img/img2.jpg" alt ="Foto de expositório de guitarras da loja">
 			</div> 
  			<h2 class="texto"  id="parte2">Apaixonados pelo ramo da música, nossos funcionários são formados e altamente capacitados, 
 				 a fim de trazer a mais adequada orientação para nossos clientes, garantindo uma boa experiência com 
