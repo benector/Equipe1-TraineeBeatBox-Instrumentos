@@ -75,12 +75,12 @@
                                                             <?php endforeach; ?>
                                                         </select>
                                                     </div>
-                                                </div> -->
+                                                </div> 
                                                 <div class="form-group col-md-6">
                                                     <label for="formGroupExampleInput2">Quantidade</label>
                                                     <input value = "<?= $categoria->quantidade?>" name="quantidade" type="text" class="form-control" id="formGroupExampleInput2"
                                                     required/>
-                                                </div>
+                                                </div>-->
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleFormControlTextarea1">Descrição da Categoria</label>
@@ -141,7 +141,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <label>Produtos</label>
+                                    <label><h3><?= $categoria->categoria?></h3></label>
                                     <div class="prodlist">
                                         <?php foreach ($produtos as $produto) : ?>
                                             <?php if($produto->categoria === $categoria->categoria) : ?>
@@ -204,11 +204,11 @@
                                         </form>
                                     </div>
                                 </div> -->
-                                <div class="form-group col-md-6">
+                                <!-- <div class="form-group col-md-6">
                                     <label for="formGroupExampleInput2">Quantidade</label>
                                     <input type="text" name="quantidade" class="form-control" id="formGroupExampleInput2"
                                         placeholder="Insira a Quantidade" required/>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Descrição da Categoria</label>
