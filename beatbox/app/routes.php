@@ -24,7 +24,9 @@ $router->post('adm/categorias/create', 'CategoriasController@create');
 
 $router->post('adm/categorias/delete', 'CategoriasController@delete');
 
-$router->post('adm/categorias/edit', 'CategoriasController@update')
+$router->post('adm/categorias/edit', 'CategoriasController@update');
+
+$router->get('adm', 'PagesController@admIndex');
 
 ?>
 

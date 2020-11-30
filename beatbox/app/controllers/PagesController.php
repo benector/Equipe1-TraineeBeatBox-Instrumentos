@@ -56,5 +56,14 @@ class PagesController {
         // require 'app/views/site/navbar.php';
         return view ('/site/contato');
     }
+
+    public function admIndex()
+    {
+        $title = "Beatbox ADM";
+        
+        require 'app/views/admin/partials/admin_navbar.view.php';
+        
+        return view ('/admin/adm-index');
+    }
         
 }
