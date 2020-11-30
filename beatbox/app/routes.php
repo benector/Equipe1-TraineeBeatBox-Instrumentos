@@ -28,6 +28,14 @@ $router->post('adm/categorias/edit', 'CategoriasController@update');
 
 $router->get('adm', 'PagesController@admIndex');
 
+$router->get('adm/usuarios','UsersController@index'); 
+
+$router->post('adm/usuarios/create','UsersController@create');  
+
+$router->post('adm/usuarios/update','UsersController@update');  
+
+$router->post('adm/usuarios/delete','UsersController@delete');
+
 ?>
 
 

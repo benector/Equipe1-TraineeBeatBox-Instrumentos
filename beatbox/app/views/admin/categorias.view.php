@@ -62,7 +62,7 @@
                                             <div class="form-group">
                                                 <label for="nome-categoria">Nome da Categoria: </label>
                                                 <input value = "<?= $categoria->categoria?>" name="categoria" type="text" class="form-control" id="categoria-nome-edt"
-                                                     />
+                                                required/>
                                             </div>
                                             <div class="form-row">
                                                 <!-- <div class="form-group col-md-6">
@@ -79,7 +79,7 @@
                                                 <div class="form-group col-md-6">
                                                     <label for="formGroupExampleInput2">Quantidade</label>
                                                     <input value = "<?= $categoria->quantidade?>" name="quantidade" type="text" class="form-control" id="formGroupExampleInput2"
-                                                        />
+                                                    required/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -151,10 +151,10 @@
                                             <?php endif; ?>
                                         <?php endforeach; ?>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Descrição da Categoria:</label>
                                         <textarea type="text" name= "descrição" class="form-control" id="exampleFormControlTextarea1" rows="3" disabled><?= $categoria->descrição?></textarea>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-dismiss="modal">
@@ -183,7 +183,7 @@
                         <form action="/adm/categorias/create" method="POST">
                             <div class="form-group">
                                 <label for="nome-categoria">Nome da Categoria: </label>
-                                <input type="text" name="categoria" class="form-control" placeholder="Insira o nome da Categoria" />
+                                <input type="text" name="categoria" class="form-control" placeholder="Insira o nome da Categoria" required/>
                             </div>
                             <div class="form-row">
                                 <!-- <div class="form-group col-md-6">
@@ -207,7 +207,7 @@
                                 <div class="form-group col-md-6">
                                     <label for="formGroupExampleInput2">Quantidade</label>
                                     <input type="text" name="quantidade" class="form-control" id="formGroupExampleInput2"
-                                        placeholder="Insira a Quantidade" />
+                                        placeholder="Insira a Quantidade" required/>
                                 </div>
                             </div>
                             <div class="form-group">

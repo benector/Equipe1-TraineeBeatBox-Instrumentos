@@ -1,1 +1,6 @@
-<div class="mensagem-welcome""><h1>Bem vindo [Usuário]<h1></div>
+<div class="mensagem-welcome"">
+    <?php foreach ($users as $user) : ?>
+    <h1>Bem vindo <?= $user->name ?><h1>
+    <?php endforeach; ?>
+
+</div>

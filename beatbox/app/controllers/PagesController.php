@@ -60,10 +60,11 @@ class PagesController {
     public function admIndex()
     {
         $title = "Beatbox ADM";
+        $users = App::get('database')->selectAll('users');
         
         require 'app/views/admin/partials/admin_navbar.view.php';
         
-        return view ('/admin/adm-index');
+        return view ('/admin/adm-index', compact('users'));
     }
         
 }
