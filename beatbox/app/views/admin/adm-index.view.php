@@ -1,1 +1,1 @@
-<div style="margin:auto; margin-top:25px; text-align:center"><h1>Bem vindo <?=$user ?><h1></div>
+<div class="mensagem-welcome""><h1>Bem vindo [Usuário]<h1></div>
