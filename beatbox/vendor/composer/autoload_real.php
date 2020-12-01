@@ -22,9 +22,6 @@ class ComposerAutoloaderInite7b1cd73872d834ad895b331bb49c9c1
             return self::$loader;
         }
 
-        spl_autoload_register(array('ComposerAutoloaderInitd2ff282a1745df799f90dafc80aaec45', 'loadClassLoader'), true, true);
-        self::$loader = $loader = new \Composer\Autoload\ClassLoader();
-        spl_autoload_unregister(array('ComposerAutoloaderInitd2ff282a1745df799f90dafc80aaec45', 'loadClassLoader'));
         spl_autoload_register(array('ComposerAutoloaderInite7b1cd73872d834ad895b331bb49c9c1', 'loadClassLoader'), true, true);
         self::$loader = $loader = new \Composer\Autoload\ClassLoader();
         spl_autoload_unregister(array('ComposerAutoloaderInite7b1cd73872d834ad895b331bb49c9c1', 'loadClassLoader'));
@@ -33,7 +30,6 @@ class ComposerAutoloaderInite7b1cd73872d834ad895b331bb49c9c1
         if ($useStaticLoader) {
             require __DIR__ . '/autoload_static.php';
 
-            call_user_func(\Composer\Autoload\ComposerStaticInitd2ff282a1745df799f90dafc80aaec45::getInitializer($loader));
             call_user_func(\Composer\Autoload\ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::getInitializer($loader));
         } else {
             $map = require __DIR__ . '/autoload_namespaces.php';

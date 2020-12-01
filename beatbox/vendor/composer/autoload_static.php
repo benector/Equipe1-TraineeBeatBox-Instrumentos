@@ -11,20 +11,17 @@ class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
     );
 
     public static $classMap = array (
-        'App\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/controllers/Controller.php',
-        'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',
         'App\\Controllers\\CategoriasController' => __DIR__ . '/../..' . '/app/controllers/CategoriasController.php',
+        'App\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/controllers/Controller.php',
         'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
         'App\\Controllers\\ProdutosAdminController' => __DIR__ . '/../..' . '/app/controllers/ProdutosAdminController.php',
         'App\\Controllers\\ProdutosController' => __DIR__ . '/../..' . '/app/controllers/ProdutosController.php',
+        'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'ComposerAutoloaderInitd2ff282a1745df799f90dafc80aaec45' => __DIR__ . '/..' . '/composer/autoload_real.php',
-        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\ComposerStaticInitd2ff282a1745df799f90dafc80aaec45' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'ComposerAutoloaderInite7b1cd73872d834ad895b331bb49c9c1' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1' => __DIR__ . '/..' . '/composer/autoload_static.php',
@@ -34,7 +31,6 @@ class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitd2ff282a1745df799f90dafc80aaec45::$classMap;
             $loader->classMap = ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::$classMap;
 
         }, null, ClassLoader::class);

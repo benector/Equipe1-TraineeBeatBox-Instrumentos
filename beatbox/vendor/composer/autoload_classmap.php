@@ -6,20 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Controllers\\Controller' => $baseDir . '/app/controllers/Controller.php',
-    'App\\Controllers\\UsersController' => $baseDir . '/app/controllers/UserController.php',
     'App\\Controllers\\CategoriasController' => $baseDir . '/app/controllers/CategoriasController.php',
+    'App\\Controllers\\Controller' => $baseDir . '/app/controllers/Controller.php',
     'App\\Controllers\\PagesController' => $baseDir . '/app/controllers/PagesController.php',
     'App\\Controllers\\ProdutosAdminController' => $baseDir . '/app/controllers/ProdutosAdminController.php',
     'App\\Controllers\\ProdutosController' => $baseDir . '/app/controllers/ProdutosController.php',
+    'App\\Controllers\\UsersController' => $baseDir . '/app/controllers/UserController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
-    'ComposerAutoloaderInitd2ff282a1745df799f90dafc80aaec45' => $vendorDir . '/composer/autoload_real.php',
-    'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
-    'Composer\\Autoload\\ComposerStaticInitd2ff282a1745df799f90dafc80aaec45' => $vendorDir . '/composer/autoload_static.php',
     'ComposerAutoloaderInite7b1cd73872d834ad895b331bb49c9c1' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1' => $vendorDir . '/composer/autoload_static.php',
