@@ -8,14 +8,19 @@ class CategoriasController {
 
     public function index()
     {   
-      $categorias = App::get('database')->selectAll('categorias');
       $produtos = App::get('database')->selectAll('produtos');
+    
+      $pagination= new Paginacao('categorias', 10);
+
+      $categorias = App::get('database')->paginaRows('categorias',$pagination->limiteDeItens,$pagination->offset);
+      
 
       $title = "Beatbox ADM - Categorias";
 
       $parametros =[
         'categorias'=>$categorias,
         'produtos' =>$produtos,
+        'pagination' => $pagination,
       ];
 
       require 'app/views/admin/partials/admin_navbar.view.php';

@@ -9,6 +9,7 @@ class ProdutosController {
 
     public function produtos ()
     {     
+        
         $pagination= new Paginacao('produtos', 8);
 
         $produtos = App::get('database')->paginaRows('produtos',$pagination->limiteDeItens,$pagination->offset);

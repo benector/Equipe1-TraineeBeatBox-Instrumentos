@@ -6,13 +6,21 @@ use App\Core\App;
 
 class UsersController{
     public function index(){
-      $users = App::get('database')->selectAll('users');
+
+      $pagination= new Paginacao('users', 10);
+
+      $users = App::get('database')->paginaRows('users',$pagination->limiteDeItens,$pagination->offset);
+
+      $parametros= [
+        'users'=>$users,
+        'pagination'=>$pagination,
+      ];
   
       $title = "Beatbox ADM - Usuários";
 
       require 'app/views/admin/partials/admin_navbar.view.php';      
       
-      return view('admin/View_adm_usuarios', compact('users'));
+      return view('admin/View_adm_usuarios', $parametros);
     }
 
     public function create(){

@@ -82,16 +82,13 @@ width: 4%;
   .col-email{
      display: none;
  }
- .main {
-  height: 100vh;
-}
 }
 
 @media (max-width: 375px) {
   .main {
      width: 100vw;
      margin: 0px;
-     margin-top: 50px;
+     margin-top: 10px;
    }
   .table{
      font-size: 12px;

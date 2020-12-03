@@ -6,14 +6,21 @@ use App\Core\App;
 class ProdutosAdminController {
 
     public function produtosAdmin ()
-    {   
-        $produtos = App::get('database')->selectAll('produtos'); 
-        $categorias = App::get('database')->selectAll('categorias'); 
+    {     
+      $pagination= new Paginacao('categorias', 10);
+
+      $title = "Beatbox ADM - Produtos";
+      $produtos = App::get('database')->paginaRows('produtos',$pagination->limiteDeItens,$pagination->offset); 
+      $categorias = App::get('database')->selectAll('categorias'); 
       
         $parametros =[
           'categorias'=>$categorias,
           'produtos' =>$produtos,
+          'pagination' =>$pagination,
         ];
+
+
+        require 'app/views/admin/partials/admin_navbar.view.php';
        
         return view ('/admin/produtos',$parametros);
         
