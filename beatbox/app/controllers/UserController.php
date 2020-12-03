@@ -7,6 +7,11 @@ use App\Core\App;
 class UsersController{
     public function index(){
       $users = App::get('database')->selectAll('users');
+  
+      $title = "Beatbox ADM - Usuários";
+
+      require 'app/views/admin/partials/admin_navbar.view.php';      
+      
       return view('admin/View_adm_usuarios', compact('users'));
     }
 

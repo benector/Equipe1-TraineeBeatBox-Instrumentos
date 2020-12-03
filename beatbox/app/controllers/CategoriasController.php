@@ -12,16 +12,13 @@ class CategoriasController {
       $produtos = App::get('database')->selectAll('produtos');
 
       $title = "Beatbox ADM - Categorias";
-      $css_pages=[
-            '/public/css/styles-adm.css',
-      ];
 
       $parametros =[
         'categorias'=>$categorias,
         'produtos' =>$produtos,
       ];
 
-      require 'app/views/site/header.php';
+      require 'app/views/admin/partials/admin_navbar.view.php';
       return view ('/admin/categorias', $parametros);
     }
     public function create()

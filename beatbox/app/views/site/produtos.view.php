@@ -138,6 +138,4 @@
   
 
    
-</body>
-
-</html>
+    <?php require 'app/views/site/partials/footer.php'; ?>

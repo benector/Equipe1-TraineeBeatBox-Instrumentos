@@ -14,7 +14,7 @@ $router->post('sendEmail','PagesController@send');
 
 $router->get('login','PagesController@login');
 
-$router->get('produtos-admin', 'ProdutosAdminController@produtosAdmin');
+$router->get('adm/produtos', 'ProdutosAdminController@produtosAdmin');
 
 $router->post('produtos/create', 'ProdutosAdminController@create');
 
@@ -27,6 +27,8 @@ $router->post('adm/categorias/create', 'CategoriasController@create');
 $router->post('adm/categorias/delete', 'CategoriasController@delete');
 
 $router->post('adm/categorias/edit', 'CategoriasController@update');
+
+$router->get('adm', 'PagesController@admIndex');
 
 $router->get('adm/usuarios','UsersController@index'); 
 
