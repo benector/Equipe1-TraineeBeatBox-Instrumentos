@@ -1,24 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<body>  
   
-  <script src="https://kit.fontawesome.com/736c040bb4.js" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" href="../public/css/styles.css">
-	<link rel="stylesheet" href="../public/css/styles-produtos.css">
- 
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <title>Beatbox - Produtos</title>
-
-</head> -->
-
-<!-- <body> -->
     <div class = "main">
     <div class="painel_geral">
       <h1>Nossos Produtos</h1>
@@ -28,12 +9,8 @@
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Busque seu produto" aria-label="Busque seu produto" aria-describedby="button-addon2">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
-          
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>    
         </div>
-        
-        
-
       </div>
       
     
@@ -58,10 +35,7 @@
         </div>
 
       </div>
-
-
-
-
+      
     </div>
     <div class="painel_produtos">
 
@@ -99,10 +73,74 @@
         </div>
       </div>
       <div class="lista-produtos">
-      <?php foreach ($produtos as $produto) : ?>
-        <a class="produto-direcao" href="#">
+      <?php
+
+use App\Controllers\Pagination;
+
+foreach ($produtos as $produto) : ?> 
+        <div class="modal fade" id="vizualizar<?=$produto->id?>" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalLongoExemplo">
+                            Vizualizar
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="viz">
+                                <img class="img-viz" src="../public/img/<?= $produto->img?>" alt="Produto"
+                                    title="Produto">
+                            </div>
+                            <div class="form-group">
+                                <label for="nome">Nome do produto: </label>
+                                <input type="text" class="form-control" id="nome" placeholder="<?= $produto->nome ?>"
+                                    readonly>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="exampleFormControlSelect1">Categoria</label>
+                                    <select class="form-control" id="exampleFormControlSelect1" readonly>
+                                        <option><?= $produto->categoria ?></option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="formGroupExampleInput2">Quantidade</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        placeholder="<?= $produto->quantidade ?>" readonly>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="formGroupExampleInput2">Preço</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                                        placeholder="<?= $produto->preco ?>" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Descrição do Produto</label>
+                                <textarea class="form-control" placeholder="<?= $produto->descricao ?>"
+                                    id="exampleFormControlTextarea1" rows="3" readonly></textarea>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <a class="produto-direcao" href="#" data-toggle="modal" data-target="#vizualizar<?=$produto->id?>">
           <div class="card">
-            <img class="card-img-top" src="../public/img/guitarra_tagima_tg_530_woodstock_stratocaster_2117_4_20191128181745.jpg"
+            <img class="card-img-top" src="../public/img/<?= $produto->img?>"
               alt="Imagem de capa do card">
             <div class="card-body">
               <h5 class="card-title"><?= $produto->nome ?></h5>
@@ -110,7 +148,7 @@
               <p class="card-text"><?= $produto->quantidade ?> Disponíveis</p>
             </div>
           </div>
-        </a>
+      </a>
         <?php endforeach; ?>
         
         
@@ -120,22 +158,9 @@
       </div>
     </div>
   
-    <div class="paginacao">
-      <nav aria-label="Navegação de página exemplo">
-        <ul class="pagination justify-content-center ">
-          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Anterior</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="View_Produtos.html">1</a></li>
-          <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">2</a></li>
-          <li class="page-item"><a class="page-link" href="View_Produtos - 3.html">3</a></li>
-          <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">Próximo</a>
-          </li>
-        </ul>
-      </nav>
+       
+      <?= $pagination->createLinks(); ?> 
     </div>
-    </div>
-  
-  
 
    
     <?php require 'app/views/site/partials/footer.php'; ?>

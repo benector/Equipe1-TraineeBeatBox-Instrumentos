@@ -1,11 +1,21 @@
 body {
   background-color: #21d8d8;
 }
+.viz{
+ 
+  text-align: center;
+}
 
 .main {
   margin-top: 25px;
 }
 
+.img-viz{
+  object-fit: contain;
+  width: 40%;
+  
+
+}
 .table{
     background-color: white;
     margin: auto;

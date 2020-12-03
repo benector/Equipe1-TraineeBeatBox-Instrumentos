@@ -7,12 +7,16 @@ class ProdutosAdminController {
 
     public function produtosAdmin ()
     {   
-      $produtos = App::get('database')->selectAll('produtos'); 
-
-      $title = "Beatbox ADM - Produtos";
-
-      require 'app/views/admin/partials/admin_navbar.view.php';
-      return view ('/admin/produtos',compact( 'produtos'));
+        $produtos = App::get('database')->selectAll('produtos'); 
+        $categorias = App::get('database')->selectAll('categorias'); 
+      
+        $parametros =[
+          'categorias'=>$categorias,
+          'produtos' =>$produtos,
+        ];
+       
+        return view ('/admin/produtos',$parametros);
+        
     }
     public function selectAll($table)
     {
@@ -37,6 +41,7 @@ class ProdutosAdminController {
       $parameters = [
         'nome' => $_POST['nome'],
         'categoria' => $_POST['categoria'],
+        'descricao' => $_POST['descricao'],
         'preco' => $_POST['preco'],
         'quantidade' => $_POST['quantidade'],
         'img' => $_POST['img']
@@ -44,16 +49,43 @@ class ProdutosAdminController {
 
       App::get('database')->insert('produtos', $parameters );
 
-      header('Location: /produtos');
+      header('Location: /adm/produtos');
 
     }
 
     public function delete()
     {
       App::get('database')->delete('produtos', $_POST['id'] );
+      $val = $_POST['img'];
 
-      header('Location: /produtos');
+      header('Location: /adm/produtos');
 
     }
-        
+
+    public function update(){
+      
+      $parameters = [
+        'id' => $_POST['id'],
+        'nome' => $_POST['nome'],
+        'categoria' => $_POST['categoria'],
+        'descricao' => $_POST['descricao'],
+        'preco' => $_POST['preco'],
+        'quantidade' => $_POST['quantidade'],
+        'img' => $_POST['img'],
+           
+      ];
+
+      if (isset($parameters['img']) && empty($parameters['img'])){
+        array_pop($parameters);
+      }
+
+     
+      App::get('database')->update('produtos', $parameters);
+
+      
+
+      header('Location: /adm/produtos');
+     }
+     
 }
+        

@@ -92,6 +92,17 @@ body{
     
     
 }
+.viz{
+ 
+    text-align: center;
+  }
+  
+  .img-viz{
+    object-fit: contain;
+    width: 40%;
+    
+  
+  }
 
 .card-img-top{
    

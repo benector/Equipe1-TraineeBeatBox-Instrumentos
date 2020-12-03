@@ -236,7 +236,6 @@
                 <li class="page-item"><a class="page-link" href="View_Produtos.html">1</a></li>
                 <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">2</a></li>
                 <li class="page-item"><a class="page-link" href="View_Produtos - 3.html">3</a></li>
-                <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">Próximo</a>
                 </li>
               </ul>
             </nav>

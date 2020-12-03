@@ -14,9 +14,7 @@ $router->get('login','PagesController@login');
 
 $router->get('adm/produtos', 'ProdutosAdminController@produtosAdmin');
 
-$router->post('produtos/create', 'ProdutosAdminController@create');
-
-$router->post('produtos/delete', 'ProdutosAdminController@delete');
+$router->post('adm/produto/create', 'ProdutosAdminController@create');
 
 $router->get('adm/categorias', 'CategoriasController@index');
 
@@ -36,6 +34,9 @@ $router->post('adm/usuarios/update','UsersController@update');
 
 $router->post('adm/usuarios/delete','UsersController@delete');
 
+$router->post('adm/produto/delete', 'ProdutosAdminController@delete');
+
+$router->post('adm/produto/update','ProdutosAdminController@update');  
 ?>
 
 
