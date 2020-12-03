@@ -40,16 +40,16 @@
         <div class="adress" class="form-group">
             <div class="form-group">
                 <label for="inputAddress">Endereço</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Rua, nº">
+                <input name="end" type="text" class="form-control" id="inputAddress" placeholder="Rua, nº">
             </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputCity">Cidade</label>
-                  <input type="text" class="form-control" id="inputCity">
+                  <input name="cidade" type="text" class="form-control" id="inputCity">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="inputEstado">Estado</label>
-                  <select id="inputEstado" class="form-control">
+                  <select name="estado" id="inputEstado" class="form-control">
                     <option selected>Escolher</option>
                     <option>...</option>
                     <option>AC</option>
