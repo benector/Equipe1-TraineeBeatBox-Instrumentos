@@ -89,4 +89,25 @@ class QueryBuilder
         }
     }
 
+
+    public function search($table, $search){
+
+    $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%'";
+
+    try
+        {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        }catch(Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
+
+
 }

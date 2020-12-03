@@ -1,6 +1,6 @@
 <body>
 
-<form class = "main" method="GET" action="/site/resultado">
+<form class = "main" method="POST" action="/site/resultado">
     <div class="painel_geral">
   <h1>Nossos Produtos</h1>
 </div>
@@ -33,12 +33,7 @@
           Categoria
         </button>
         <div class="dropdown-menu">
-        <ul class="list-group">
-            <?php foreach($categorias as $categoria) : ?>
-            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2"><?= $categoria->categoria ?></li>
-            <?php endforeach; ?>
-            
-          </ul>
+          ...
         </div>
 
       </div>
@@ -47,19 +42,40 @@
     <div class="painel_produtos">
 
       <div class="filtros">
+        <h4>Ordenar</h4>
+        <div class="card-lista">
+          <ul class="list-group">
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Cras justo
+              odio</li>
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Dapibus ac
+              facilisis in</li>
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Vestibulum at
+              eros</li>
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Vestibulum at
+              eros</li>
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Vestibulum at
+              eros</li>
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Vestibulum at
+              eros</li>
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Vestibulum at
+              eros</li>
+          </ul>
+        </div>
+
         <h4>Categoria</h4>
         <div class="card-lista">
           <ul class="list-group">
-            <?php foreach($categorias as $categoria) : ?>
-            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2"><?= $categoria->categoria ?></li>
-            <?php endforeach; ?>
-            
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2">Cras justo
+              odio</li>
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Dapibus ac
+              facilisis in</li>
+            <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck1">Vestibulum at
+              eros</li>
           </ul>
         </div>
       </div>
       <div class="lista-produtos">
-
-        <?php foreach ($produtos as $produto) : ?>
+        <?php foreach ($resultado as $produto) : ?>
         <div class="modal fade" id="vizualizar<?=$produto->id?>" tabindex="-1" role="dialog"
           aria-labelledby="myLargeModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-xl">

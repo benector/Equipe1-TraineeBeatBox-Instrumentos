@@ -1,34 +1,7 @@
 body {
   background-color: #21d8d8;
 }
-.main{
-  background-color: white;
-}
-.pesquisa {
-  background-color: white;
-  margin: auto;
-  width: 100%;
-  margin-bottom: 0;
-  height: 50px;
-}
-.input-group {
-  width: 100%;
-  margin: auto;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: white;
-}
-.btn {
-  background-color: #01233f;
-  color: white;
-  border-style: none;
-  margin-left: 5px;
-}
-.btn:hover {
-  background-color: #04b3bb;
-}
+
 .produto {
   display: flex;
   justify-content: center;
@@ -37,14 +10,24 @@ body {
 }
 
 .produto h1{
-  font-size: 50px;
+  font-size: 40px;
 }
 .preco-valor{
   color: green;
 }
+.preco-viz{
+  margin-top: 50px;
+}
+
+
 .preco{
     
     font-size: 30px;
+}
+.h3-categoria{
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 .h3-other{
   font-size: 20px;
@@ -63,7 +46,7 @@ img {
   width: 48%;
   padding-top: 20px;
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 40px;
   text-align: center;
 }
 .descricao {
@@ -98,13 +81,20 @@ p {
   width: 96%;
   margin: auto;
 }
-.descricao-curta{
-  display: none;
-}
+
 .produto h1{
   font-size: 25px;
 }
 .produto h3{
   font-size: 15px;
+}
+.h3-categoria{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.preco-viz{
+  margin-top: 25px;
 }
 }

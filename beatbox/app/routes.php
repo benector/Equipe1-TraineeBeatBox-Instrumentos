@@ -14,9 +14,12 @@ $router->get('login','Controller@login');
 
 $router->get('adm/produtos', 'ProdutosAdminController@produtosAdmin');
 
+$router->get('site/resultado', 'ProdutosController@pesquisar');
+
 $router->post('adm/produto/create', 'ProdutosAdminController@create');
 
 $router->post('adm/produto/delete', 'ProdutosAdminController@delete');
 
 $router->post('adm/produto/update','ProdutosAdminController@update');  
+
 ?>

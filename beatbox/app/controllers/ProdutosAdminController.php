@@ -56,7 +56,7 @@ class ProdutosAdminController {
     public function delete()
     {
       App::get('database')->delete('produtos', $_POST['id'] );
-      $val = $_POST['img'];
+     
 
       header('Location: /adm/produtos');
 
