@@ -59,6 +59,4 @@ class PagesController {
     {      
         require 'app/views/site/sendEmail.php';
     }
-
-
 }

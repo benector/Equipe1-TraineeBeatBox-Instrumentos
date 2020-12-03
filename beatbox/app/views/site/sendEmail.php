@@ -43,6 +43,6 @@ if(! $mail->send()){
     echo 'Não foi possível enviar a mensagem.<br>';
     echo 'Erro: ' . $mail->ErrorInfo;
 } else{
-    header('Location: contato', true, 301);
+    header('Location: ./', true, 301);
     exit();
 }

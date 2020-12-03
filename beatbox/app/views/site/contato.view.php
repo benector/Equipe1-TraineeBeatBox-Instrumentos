@@ -103,9 +103,22 @@
                         placeholder="Obrigado pelo contato! Insira aqui sua mensagem e entraremos em contato assim que possível." required></textarea>
                     </div>
 
-                    <div>
-                        <button class="btn" type="submit"  ><h4>Enviar</h4></button>
+                    <button class="btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                        <h4>Enviar</h4>
+                    </button>
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Email enviado com sucesso!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            </div>
+                        </div>
                     </div>
+
 
                 </form>
             </div>
