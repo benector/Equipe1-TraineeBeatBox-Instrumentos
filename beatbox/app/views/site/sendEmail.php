@@ -9,6 +9,16 @@ $name = utf8_decode($_POST['name']);
 $email = utf8_encode($_POST['email']);
 $subject = utf8_decode($_POST['subject']);
 $body = utf8_decode($_POST['body']);
+$end = utf8_decode($_POST['end']);
+$cidade = utf8_decode($_POST['cidade']);
+$estado = utf8_encode($_POST['estado']);
+
+if($end != '' && $cidade != '' && $estado != 'Escolher'){
+    $content = $body . '<br />  <br />Enviado por:  ' . $name . ',  ' . $end . ',  ' . $cidade . ' - ' . $estado ;
+}else{
+    $content = $body;
+}
+
 
 require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require 'vendor/autoload.php';
@@ -35,7 +45,7 @@ $mail->addAddress('beatbox.musicstore@gmail.com');
 
 $mail->isHTML(true);
 $mail->Subject = $subject;
-$mail->Body    = nl2br($body);
+$mail->Body    = nl2br($content);
 $mail->AltBody = nl2br(strip_tags($body));
 
 
