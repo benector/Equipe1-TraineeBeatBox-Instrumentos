@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
  	<head>
-
-         <meta charset="utf-8">
-         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
  		<title> BeatBox - SAC</title>
         <link rel="stylesheet" href="/public/css/styles.css">
         <link rel="stylesheet" href="/public/css/contato_styles.css">
@@ -17,23 +16,25 @@
  		<div class="main">
 
             <div class="painel_geral"> <h1>Contato</h1></div>
-        
+
+            <h4 class="sent-notification"></h4>
+            
             <div class="formulario">
                 <h1>BeatBox - Fale Conosco</h1>
                 <h2>Teremos prazer em te responder!</h2>
                 <br><br>
                 <h3>Insira os seus dados nos campos abaixo:</h3>
                 <br>
-                <form>
+                <form action="sendEmail" method = "post">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Nome *</label>
-                        <textarea class="form-control" rows="1" 
-                        placeholder="Nome completo"></textarea>
+                        <textarea name = "name" class="form-control" rows="1" 
+                        placeholder="Nome completo" required></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleFormControlInput1">E-mail *</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+                        <input name ="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" required>
                     </div>
                     <div class="adress" class="form-group">
                         <div class="form-group">
@@ -86,7 +87,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Assunto / motivo de contato *</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select name="subject" class="form-control" id="exampleFormControlSelect1" required>
                             <option>Assunto</option>
                             <option>Dúvidas</option>
                             <option>Reclamação</option>
@@ -98,26 +99,29 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Mensagem *</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" 
-                        placeholder="Obrigado pelo contato! Insira aqui sua mensagem e entraremos em contato assim que possível."></textarea>
+                        <textarea name="body" class="form-control" id="exampleFormControlTextarea1" rows="3" 
+                        placeholder="Obrigado pelo contato! Insira aqui sua mensagem e entraremos em contato assim que possível." required></textarea>
                     </div>
 
-                    <div class="btn">
-                        <h4>Enviar</h4>
+                    <div>
+                        <button class="btn" type="submit"  ><h4>Enviar</h4></button>
                     </div>
 
                 </form>
             </div>
         </div>
         
+
+
+
             <div class="map">
                 <h3>Localização da loja:</h3><br class="br-escondido">
                 <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.4589649922696!2d-43.34804368542829!
                     3d-21.76249100350975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989ca0f2617c3f%3A0x5a40d83fac2382b8!2sBox%20Elet
                     r%C3%B4nica%20Musical!5e0!3m2!1spt-BR!2sbr!4v1603899898392!5m2!1spt-BR!2sbr" width="450" height="450" frameborder="0" 
-                    style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+                    style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
-        </div>
  	</body>
 
 </html>

@@ -10,6 +10,8 @@ $router->get('produtos','ProdutosController@produtos');
 
 $router->get('contato','PagesController@contato');
 
+$router->post('sendEmail','PagesController@send');
+
 $router->get('login','PagesController@login');
 
 $router->get('produtos-admin', 'ProdutosAdminController@produtosAdmin');

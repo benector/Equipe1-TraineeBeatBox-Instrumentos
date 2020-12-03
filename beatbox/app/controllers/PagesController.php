@@ -54,5 +54,11 @@ class PagesController {
         require 'app/views/site/navbar.php';
         return view ('/site/contato');
     }
-        
+
+    public function send ()
+    {      
+        require 'app/views/site/sendEmail.php';
+    }
+
+
 }
