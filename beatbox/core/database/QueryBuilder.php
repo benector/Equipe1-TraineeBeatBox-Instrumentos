@@ -92,7 +92,7 @@ class QueryBuilder
 
     public function search($table, $search){
 
-    $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%'";
+    $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
 
     try
         {

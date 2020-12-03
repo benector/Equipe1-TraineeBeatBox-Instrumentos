@@ -1,6 +1,6 @@
 <body>
 
-<form class = "main" method="GET" action="/site/resultado">
+<form class = "main" method="POST" action="/busca">
     <div class="painel_geral">
   <h1>Nossos Produtos</h1>
 </div>
@@ -13,9 +13,7 @@
       <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
     </div>
   </div>
-
-    
-
+  
     <div class="filtros-res">
       <div class="btn-group">
         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
@@ -38,7 +36,8 @@
             <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2"><?= $categoria->categoria ?></li>
             <?php endforeach; ?>
             
-          </ul>
+        </ul>
+        
         </div>
 
       </div>
@@ -55,6 +54,7 @@
             <?php endforeach; ?>
             
           </ul>
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
         </div>
       </div>
       <div class="lista-produtos">
