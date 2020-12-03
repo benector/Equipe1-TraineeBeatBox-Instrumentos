@@ -14,7 +14,7 @@
     </head>
 
  	<body style="background-color: #21d8d8;"> -->
-     <div class="main">
+<div class="main">
 
 <div class="painel_geral"> <h1>Contato</h1></div>
 
@@ -135,6 +135,7 @@
         r%C3%B4nica%20Musical!5e0!3m2!1spt-BR!2sbr!4v1603899898392!5m2!1spt-BR!2sbr" width="450" height="450" frameborder="0" 
         style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
+</div>
 </div>
      
         <?php require 'app/views/site/partials/footer.php'; ?>   

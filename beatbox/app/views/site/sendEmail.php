@@ -5,10 +5,10 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 
-$name = utf8_encode($_POST['name']);
+$name = utf8_decode($_POST['name']);
 $email = utf8_encode($_POST['email']);
-$subject = utf8_encode($_POST['subject']);
-$body = utf8_encode($_POST['body']);
+$subject = utf8_decode($_POST['subject']);
+$body = utf8_decode($_POST['body']);
 
 require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require 'vendor/autoload.php';
