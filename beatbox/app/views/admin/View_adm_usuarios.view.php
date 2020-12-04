@@ -57,9 +57,6 @@
             <tbody>
                 <?php $contador = 0; ?>
                 <?php foreach($users as $user): ?>
-
-                    
-                    
                     <tr>
                         <td scope="row">
                             <button type="button" class="btn btn-primary btn-icon" data-toggle="modal"

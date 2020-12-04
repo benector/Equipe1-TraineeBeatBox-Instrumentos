@@ -1,6 +1,10 @@
 <div class="mensagem-welcome"">
-    <?php foreach ($users as $user) : ?>
-    <h1>Bem vindo <?= $user->name ?><h1>
-    <?php endforeach; ?>
-
+    <?php
+    if(isset($_SESSION['user'])){
+        //$name="select name from users where email = '{$_SESSION['user']}'";
+        //echo 'Bem Vindo, '. $_SESSION['user'].'.';
+        //echo 'Bem Vindo, '. $name.'.';
+        echo 'Seja bem vindo!';
+    }
+    ?>
 </div>
