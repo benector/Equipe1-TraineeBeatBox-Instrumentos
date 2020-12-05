@@ -43,7 +43,7 @@ session_start();
 
         <h1 class="h3 mb-3 font-weight-normal">Faça seu login</h1>
         <label for="inputEmail" class="sr-only">Endereço de email</label>
-        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Endereço de email" autofocus oninvalid="this.setCustomValidity('Por favor, coloque seu email')">
+        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Endereço de email" autofocus">
         <label for="inputPassword" class="sr-only">Senha</label>
         <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Senha">
         <div class="checkbox mb-3">
