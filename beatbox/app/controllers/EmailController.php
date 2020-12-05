@@ -56,14 +56,21 @@ class EmailController {
 
 
         if(! $mail->send()){
-            $sucesso = true;
-            echo 'Não foi possível enviar a mensagem.<br>';
-            echo 'Erro: ' . $mail->ErrorInfo;
+            $sucesso = false;
+            $title = "Beatbox Contato";
+            $css_pages=[
+                '/public/css/contato_styles.css'
+            ];
+            require 'app/views/site/partials/header.php';
             return view('/site/contato', ['sucesso'=> $sucesso]);
         } else{
-            return view('./site/contato', ['sucesso'=> $sucesso]);
-            //header('Location: ./', true, 301);
-            //exit();
+            $sucesso = true;
+            $title = "Beatbox Contato";
+            $css_pages=[
+                '/public/css/contato_styles.css'
+            ];
+            require 'app/views/site/partials/header.php';
+            return view('/site/contato', ['sucesso'=> $sucesso]);
         }
     }
 }

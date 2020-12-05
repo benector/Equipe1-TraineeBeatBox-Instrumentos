@@ -108,11 +108,17 @@
             <h4>Enviar</h4>
         </button>
     </form>
-        
-        <?php if ($sucesso): ?>
+    <?php if (isset($sucesso)): ?>
+        <?php if ($sucesso == true): ?>
             <script>
                 $(document).ready(function(){
-                    $("staticBackdrop").modal();
+                    $("#staticBackdrop").modal();
+                });
+            </script>
+        <?php else: ?>
+            <script>
+                $(document).ready(function(){
+                    $("#modal-fade").modal();
                 });
             </script>
         <?php endif; ?>
@@ -129,9 +135,21 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="modal-fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Algo deu errado! Tente novamente.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
 </div>
 </div>
-
 
 
 
