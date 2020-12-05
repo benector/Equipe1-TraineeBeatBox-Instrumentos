@@ -85,36 +85,36 @@ class QueryBuilder
     }
 
 
-    public function search($table, $search)
-    {
+    // public function search($table, $search)
+    // {
 
-        $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
+    //     $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
 
-        try {
-            $stmt = $this->pdo->prepare($sql);
+        
 
-            $stmt->execute();
+    //     try {
+    //         $stmt = $this->pdo->prepare($sql);
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
+    //         $stmt->execute();
 
-    public function filtro($table, $criterios)
+    //         return $stmt->fetchAll(PDO::FETCH_CLASS);
+    //     } catch (Exception $e) {
+    //         die($e->getMessage());
+    //     }
+    // }
+
+    public function filtro($table, $criterios,$search, $operador)
     {   
-        $sql = "SELECT * FROM produtos WHERE categoria";
+        $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
+        $sql .= $operador ." categoria";
         $i = 0;
 
    
-        // foreach ($criterios as $i => $value) {
+        foreach ($criterios as $i => $value) {
            
-        //     // $sql .= " LIKE '$value' ";
-        //     // $sql .= "OR categoria";
-
-        //     print_r($value);
-        
-        // }
+            $sql .= " LIKE '$value' ";
+            $sql .= "OR categoria";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -126,4 +126,5 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
 }

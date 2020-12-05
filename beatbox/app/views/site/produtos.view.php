@@ -1,28 +1,21 @@
 <body>
 
-  <div class="main">
+  <form class="main" action="/filtro" method="POST">
     <div class="painel_geral">
       <h1>Nossos Produtos</h1>
     </div>
 
-    <form method="POST" action="/busca">
       <div class="input-group mb-3">
-        <input type="text" name="busca" class="form-control" placeholder="Busque seu produto" aria-label="Busque seu produto" aria-describedby="button-addon2">
+        <input type="text" name="busca" class="form-control" <?php if (isset($_POST['busca'])) : ?> placeholder=" Exibindo resultados para <?= $_POST['busca'] ?>" value="<?= $_POST['busca']?>" <?php endif; ?> <?php if (!isset($_POST['busca'])) : ?> placeholder="Procure aqui algum produto..." <?php endif; ?> aria-label="Busque seu produto" aria-describedby="button-addon2">
+
+
         <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
         </div>
       </div>
-    </form>
+   
 
     <div class="filtros-res">
-      <div class="btn-group">
-        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Ordenar
-        </button>
-        <div class="dropdown-menu">
-          ...
-        </div>
-      </div>
       <div class="btn-group">
         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Categoria
@@ -30,30 +23,30 @@
         <div class="dropdown-menu">
           <ul class="list-group">
             <?php foreach ($categorias as $categoria) : ?>
-              <li class="list-group-item"><input type="checkbox"  class="form-check-input" id="exampleCheck2"  value= "<?= $categoria->categoria ?>"></li>
+              <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2" value="<?= $categoria->categoria ?>"></li>
             <?php endforeach; ?>
           </ul>
         </div>
       </div>
     </div>
     <div class="painel_produtos">
-      
-        <div class="filtros">
-        <form action="/filtro" method="POST">
-        <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
+
+      <div class="filtros">
+        
+          <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
           <h4>Categoria</h4>
           <div class="card-lista">
             <ul class="list-group">
               <?php foreach ($categorias as $categoria) : ?>
                 <li class="list-group-item">
-                  <input type="checkbox" name="criterio[]" class="form-check-input" id="exampleCheck2" value = <?= $categoria->categoria ?> ><?= $categoria->categoria ?></input>
+                  <input type="checkbox" name="criterio[]" class="form-check-input" id="exampleCheck2" value=<?= $categoria->categoria ?>><?= $categoria->categoria ?></input>
                 </li>
               <?php endforeach; ?>
             </ul>
           </div>
-          </form>
-        </div>
-      
+        
+      </div>
+
       <div class="lista-produtos">
 
         <?php foreach ($produtos as $produto) : ?>
@@ -78,7 +71,7 @@
                     <div class="conteudo-produto">
                       <div class="align-middle">
                         <h1>
-                          <?= $produto->nome?>
+                          <?= $produto->nome ?>
                         </h1>
                         <h3 class="preco-viz">Por apenas <span class="preco-valor">R$
                             <?= $produto->preco ?> </span>
@@ -93,7 +86,7 @@
                     </div>
                   </div>
                   <div class="descricao">
-                    <?= nl2br($produto->descricao, false)?>
+                    <?= nl2br($produto->descricao, false) ?>
 
                   </div>
                 </div>
@@ -135,6 +128,7 @@
         </ul>
       </nav>
     </div>
-  </div>
+        </form>
 </body>
+
 </html>
