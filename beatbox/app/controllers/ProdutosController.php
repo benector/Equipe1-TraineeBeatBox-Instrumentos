@@ -51,17 +51,17 @@ class ProdutosController {
 
 public function filtrar()
 {
-    $pesquisar = array();
+    $filtro = array();
     if (isset($_POST['criterio']))
     {
-        array_push($pesquisar,$_POST['criterio']);
-    }
-    else{
-        $pesquisar = '';
-    }
-        
-        $produtos = App::get('database')->filtro('produtos', $pesquisar);
+        // array_push($filtro,$_POST['criterio']);
+        $filtro[] = $_POST['criterio'];
+    }  
+    // var_dump($filtro);  
+        $produtos = App::get('database')->filtro('produtos', $filtro);
         $categorias = App::get('database')->selectAll('categorias');
+
+        
 
         $parametros =[
             'categorias'=>$categorias,

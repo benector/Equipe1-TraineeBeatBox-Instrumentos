@@ -102,14 +102,19 @@ class QueryBuilder
     }
 
     public function filtro($table, $criterios)
-    {
+    {   
         $sql = "SELECT * FROM produtos WHERE categoria";
         $i = 0;
-        foreach($criterios as $criterio){
-            $sql = $sql . " LIKE '" . $criterio[$i] . "'";
-            $sql = $sql . "OR categoria";
-            $i++;
-        }
+
+   
+        // foreach ($criterios as $i => $value) {
+           
+        //     // $sql .= " LIKE '$value' ";
+        //     // $sql .= "OR categoria";
+
+        //     print_r($value);
+        
+        // }
 
         try {
             $stmt = $this->pdo->prepare($sql);

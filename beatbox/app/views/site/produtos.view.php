@@ -37,8 +37,10 @@
       </div>
     </div>
     <div class="painel_produtos">
-      <form action="/filtro" method="POST">
+      
         <div class="filtros">
+        <form action="/filtro" method="POST">
+        <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
           <h4>Categoria</h4>
           <div class="card-lista">
             <ul class="list-group">
@@ -48,10 +50,10 @@
                 </li>
               <?php endforeach; ?>
             </ul>
-            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
           </div>
+          </form>
         </div>
-      </form>
+      
       <div class="lista-produtos">
 
         <?php foreach ($produtos as $produto) : ?>

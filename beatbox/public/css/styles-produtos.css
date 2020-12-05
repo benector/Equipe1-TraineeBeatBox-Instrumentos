@@ -45,7 +45,11 @@ body{
     margin-top: 15px;
     margin-bottom: 30px;
     padding-left:2em;
-  
+    text-align: center;
+}
+
+.filtro{
+    margin-top: 10px;
 }
 .filtros-res{
     display: none;
