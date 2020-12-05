@@ -56,11 +56,14 @@ class EmailController {
 
 
         if(! $mail->send()){
+            $sucesso = true;
             echo 'Não foi possível enviar a mensagem.<br>';
             echo 'Erro: ' . $mail->ErrorInfo;
+            return view('/site/contato', ['sucesso'=> $sucesso]);
         } else{
-            header('Location: ./', true, 301);
-            exit();
+            return view('./site/contato', ['sucesso'=> $sucesso]);
+            //header('Location: ./', true, 301);
+            //exit();
         }
     }
 }

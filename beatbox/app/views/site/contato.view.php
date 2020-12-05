@@ -104,9 +104,19 @@
             placeholder="Obrigado pelo contato! Insira aqui sua mensagem e entraremos em contato assim que possível." required></textarea>
         </div>
 
-        <button class="btn" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+        <button class="btn" type="submit">
             <h4>Enviar</h4>
         </button>
+    </form>
+        
+        <?php if ($sucesso): ?>
+            <script>
+                $(document).ready(function(){
+                    $("staticBackdrop").modal();
+                });
+            </script>
+        <?php endif; ?>
+
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -119,9 +129,6 @@
                 </div>
             </div>
         </div>
-
-
-    </form>
 </div>
 </div>
 

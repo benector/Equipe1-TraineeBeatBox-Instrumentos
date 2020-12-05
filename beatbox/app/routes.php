@@ -10,7 +10,7 @@ $router->get('produtos','ProdutosController@produtos');
 
 $router->get('contato','PagesController@contato');
 
-$router->post('send-email','ContatoController@send');
+$router->post('send-email','EmailController@send');
 
 $router->get('login','PagesController@login');
 
