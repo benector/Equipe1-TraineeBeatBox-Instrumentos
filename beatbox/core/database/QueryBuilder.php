@@ -13,23 +13,19 @@ class QueryBuilder
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
-
     }
 
     public function selectAll($table)
     {
         $sql = "select * from {$table}";
 
-        try
-        {
+        try {
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-
-        }catch(Exception $e)
-        {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
@@ -37,17 +33,18 @@ class QueryBuilder
 
     public function insert($table, $parameters)
     {
-        $sql = sprintf('insert into %s (%s) values(%s)', $table, implode(", ", array_keys($parameters)),
-        "'" . implode("', '", array_values($parameters)) . "'");
+        $sql = sprintf(
+            'insert into %s (%s) values(%s)',
+            $table,
+            implode(", ", array_keys($parameters)),
+            "'" . implode("', '", array_values($parameters)) . "'"
+        );
 
-        try
-        {
+        try {
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
-
-        }catch(Exception $e)
-        {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
@@ -56,58 +53,72 @@ class QueryBuilder
     {
         $sql = "delete from {$table} where id = {$id}";
 
-        try
-        {
+        try {
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
-
-        }catch(Exception $e)
-        {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
-    public function update($table, $parameters){
-    
-        $sql = "UPDATE {$table} set" ;
+    public function update($table, $parameters)
+    {
+
+        $sql = "UPDATE {$table} set";
 
         foreach ($parameters as $key => $value) {
-            if($key != 'id'){
+            if ($key != 'id') {
                 $sql .= " {$key}='$value',";
             }
         }
-        $sql=substr($sql, 0, -1);
+        $sql = substr($sql, 0, -1);
 
-        $sql.=" where id = {$parameters['id']}";
+        $sql .= " where id = {$parameters['id']}";
 
-        try{
+        try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
-        } catch(Exception $e){
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
 
-    public function search($table, $search){
+    public function search($table, $search)
+    {
 
-    $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
+        $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
 
-    try
-        {
+        try {
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-
-        }catch(Exception $e)
-        {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
+    public function filtro($table, $criterios)
+    {
+        $sql = "SELECT * FROM produtos WHERE categoria";
+        $i = 0;
+        foreach($criterios as $criterio){
+            $sql = $sql . " LIKE '" . $criterio[$i] . "'";
+            $sql = $sql . "OR categoria";
+            $i++;
+        }
 
+        try {
+            $stmt = $this->pdo->prepare($sql);
 
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

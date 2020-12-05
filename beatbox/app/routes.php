@@ -16,6 +16,8 @@ $router->get('adm/produtos', 'ProdutosAdminController@produtosAdmin');
 
 $router->post('busca', 'ProdutosController@pesquisar');
 
+$router->post('filtro', 'ProdutosController@filtrar');
+
 $router->post('adm/produto/create', 'ProdutosAdminController@create');
 
 $router->post('adm/produto/delete', 'ProdutosAdminController@delete');
