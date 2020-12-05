@@ -26,7 +26,7 @@ class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
 
     public static $classMap = array (
         'App\\Controllers\\CategoriasController' => __DIR__ . '/../..' . '/app/controllers/CategoriasController.php',
-        'App\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/controllers/Controller.php',
+        'App\\Controllers\\EmailController' => __DIR__ . '/../..' . '/app/controllers/EmailController.php',
         'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
         'App\\Controllers\\ProdutosAdminController' => __DIR__ . '/../..' . '/app/controllers/ProdutosAdminController.php',
         'App\\Controllers\\ProdutosController' => __DIR__ . '/../..' . '/app/controllers/ProdutosController.php',
@@ -53,6 +53,7 @@ class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
             $loader->prefixLengthsPsr4 = ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::$classMap;
+
         }, null, ClassLoader::class);
     }
 }

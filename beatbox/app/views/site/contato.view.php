@@ -26,7 +26,7 @@
     <br><br>
     <h3>Insira os seus dados nos campos abaixo:</h3>
     <br>
-    <form action="sendEmail" method = "post">
+    <form action="send-email" method = "post">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Nome *</label>
             <textarea name = "name" class="form-control" rows="1" 

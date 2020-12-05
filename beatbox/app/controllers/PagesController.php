@@ -57,10 +57,6 @@ class PagesController {
         return view ('/site/contato');
     }
 
-    public function send ()
-    {      
-        require 'app/views/site/sendEmail.php';
-    }
     public function admIndex()
     {
         $title = "Beatbox ADM";

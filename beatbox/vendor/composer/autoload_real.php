@@ -20,7 +20,7 @@ class ComposerAutoloaderInite7b1cd73872d834ad895b331bb49c9c1
     {
         if (null !== self::$loader) {
             return self::$loader;
-        };
+        }
 
         require __DIR__ . '/platform_check.php';
 
