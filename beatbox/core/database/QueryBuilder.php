@@ -93,7 +93,40 @@ class QueryBuilder
 
     }
 
-    //Aqui vão as funções de manipulação da base de dados
-    //Essas funções rodam comandos SQL
+    public function numberRows($table)
+    {
+        $sql="SELECT COUNT(*) FROM {$table}";
+        
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchColumn();
+
+        }catch(Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
+    public function paginaRows($table, $limite, $offset)
+    {
+        $sql= "SELECT * FROM {$table} LIMIT {$limite} OFFSET {$offset}";
     
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        }catch(Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
 }

@@ -37,11 +37,18 @@ body {
 }
 
 .produto h1{
-  font-size: 30px;
+  font-size: 50px;
 }
-.produto h3{
+.preco-valor{
+  color: green;
+}
+.preco{
+    
+    font-size: 30px;
+}
+.h3-other{
   font-size: 20px;
-}
+} 
 .img-produto {
   width: 48%;
 }

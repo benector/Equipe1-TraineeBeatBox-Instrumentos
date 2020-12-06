@@ -228,19 +228,7 @@
             </div>
         </div>
 
-        <div class="paginacao ">
-            <nav>
-              <ul class="pagination justify-content-center ">
-                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Anterior</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="View_Produtos.html">1</a></li>
-                <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">2</a></li>
-                <li class="page-item"><a class="page-link" href="View_Produtos - 3.html">3</a></li>
-                <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">Próximo</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <?= $pagination->createLinks() ?>
     </div>
     </main>
 </body>

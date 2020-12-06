@@ -40,6 +40,15 @@ body{
     text-align: center;
 
 }
+
+.page-link{
+    color: #01233f;
+}
+
+.page-link:hover{
+   color: #01233f;
+}
+
 .filtros{
     width: 20%;
     margin-top: 15px;
@@ -92,6 +101,17 @@ body{
     
     
 }
+.viz{
+ 
+    text-align: center;
+  }
+  
+  .img-viz{
+    object-fit: contain;
+    width: 40%;
+    
+  
+  }
 
 .card-img-top{
    

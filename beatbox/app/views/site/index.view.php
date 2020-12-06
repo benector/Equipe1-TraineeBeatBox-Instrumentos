@@ -1,6 +1,5 @@
    
   <!-- ///////////////////////CORPO DA HOME///////////////////////// -->
-
   <div class="content">
     <div class="title">
 

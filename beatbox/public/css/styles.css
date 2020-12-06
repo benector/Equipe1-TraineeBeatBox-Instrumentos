@@ -44,6 +44,19 @@ body {
     background-color: #04b3bb;
   }
 
+  .senha-e-olho {
+    display: flex;
+  }
+
+  .input-senha {
+    width: calc(100% - 100px);
+    margin-right: 20px;
+  }
+
+  .field_icon {
+    padding-top: 10px;
+  }
+
   @media (max-width: 374px){
     
     .painel_geral h1 {

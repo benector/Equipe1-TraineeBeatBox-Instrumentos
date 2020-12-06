@@ -121,3 +121,19 @@
   text-align: center;
   margin: 5% 0 0 0;
 }
+
+#sidebarMenu {
+  padding-top: 0;
+}
+
+.navbar-admin {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+
+  main {
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+  }
+}

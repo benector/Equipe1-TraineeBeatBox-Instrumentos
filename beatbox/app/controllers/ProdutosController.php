@@ -3,11 +3,21 @@
 namespace App\Controllers;
 use App\Core\App;
 
+
+
 class ProdutosController {
 
     public function produtos ()
-    {   
-        $produtos = App::get('database')->selectAll('produtos'); 
+    {     
+        
+        $pagination= new Paginacao('produtos', 8);
+
+        $produtos = App::get('database')->paginaRows('produtos',$pagination->limiteDeItens,$pagination->offset);
+
+        $parametros =[
+            'pagination'=>$pagination,
+            'produtos' =>$produtos,
+          ];
 
         $title = "Beatbox Produtos";
         $css_pages=[
@@ -15,9 +25,8 @@ class ProdutosController {
         ];
         
         require 'app/views/site/partials/header.php';
-        // require 'app/views/site/navbar.php';
-        return view ('/site/produtos',compact( 'produtos'));
-      
-    }
         
+        return view ('/site/produtos',$parametros);
+      
+    }       
 }
