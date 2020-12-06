@@ -126,7 +126,7 @@
       </div>
     </div>
 
-        <?php if(!isset($_GET['busca']) && !isset($$_GET['criterio']) ) : ?>
+        <?php if(!isset($_GET['busca']) && !isset($_GET['criterio']) ) : ?>
                   <?= $pagination->createLinks(); ?>
         <?php endif; ?>
     </div>
