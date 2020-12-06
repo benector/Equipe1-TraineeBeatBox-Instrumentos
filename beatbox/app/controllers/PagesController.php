@@ -39,7 +39,7 @@ class PagesController {
         ];
 
         require 'app/views/site/partials/header.php';
-        require 'app/views/site/navbar.php';
+        
         return view ('/site/login');
     }
     

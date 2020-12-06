@@ -9,7 +9,7 @@ class ProdutosController
 
     public function produtos()
     {
-        $pagination = new Paginacao('produtos', 8);
+        $pagination = new Paginacao('produtos', 2);
 
         $produtos = App::get('database')->paginaRows('produtos', $pagination->limiteDeItens, $pagination->offset);
         $categorias = App::get('database')->selectAll('categorias');
@@ -23,14 +23,19 @@ class ProdutosController
         $title = "Beatbox Produtos";
         $css_pages = [
             '/public/css/styles-produtos.css',
+            'public/css/styles-produto.css',
         ];
+        
         require 'app/views/site/partials/header.php';
+
         return view('/site/produtos', $parametros);
     }
 
     public function filtrar()
     {
         $filtro = array();
+        $pagination = new Paginacao('produtos', 2);
+
         if (isset($_POST['busca'])) {
             $pesquisar = $_POST['busca'];
         } else {
@@ -42,16 +47,16 @@ class ProdutosController
         }
         if (empty($filtro)) {
             if ($pesquisar == "") {
-                $produtos = App::get('database')->filtro('produtos', $filtro);
+                $produtos = App::get('database')->filtro('produtos', $filtro,$pagination->limiteDeItens, $pagination->offset);
             } else {
-                $produtos = App::get('database')->pesquisa('produtos', $filtro, $pesquisar, "OR");
+                $produtos = App::get('database')->pesquisa('produtos', $filtro, $pesquisar, "OR",$pagination->limiteDeItens, $pagination->offset);
             }
         } else {
 
             if ($pesquisar == "") {
-                $produtos = App::get('database')->filtro('produtos', $filtro[0]);
+                $produtos = App::get('database')->filtro('produtos', $filtro[0],$pagination->limiteDeItens, $pagination->offset);
             } else {
-                $produtos = App::get('database')->pesquisa('produtos', $filtro[0], $pesquisar, "AND");
+                $produtos = App::get('database')->pesquisa('produtos', $filtro[0], $pesquisar, "AND",$pagination->limiteDeItens, $pagination->offset);
             }
         }
         if ($pesquisar == "" && empty($filtro)) {
@@ -62,6 +67,7 @@ class ProdutosController
 
         $parametros = [
             'categorias' => $categorias,
+            'pagination' => $pagination,
             'produtos' => $produtos
         ];
         $title = 'Beatbox Instumentos';

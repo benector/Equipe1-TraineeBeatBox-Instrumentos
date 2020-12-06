@@ -5,15 +5,15 @@
       <h1>Nossos Produtos</h1>
     </div>
 
-      <div class="input-group mb-3">
-        <input type="text" name="busca" class="form-control" placeholder="Procure aqui algum produto..." <?php if (isset($_POST['busca'])) : ?> value="<?= $_POST['busca']?>" <?php endif; ?>  aria-label="Busque seu produto" aria-describedby="button-addon2">
+    <div class="input-group mb-3">
+      <input type="text" name="busca" class="form-control" placeholder="Procure aqui algum produto..." <?php if (isset($_POST['busca'])) : ?> value="<?= $_POST['busca'] ?>" <?php endif; ?> aria-label="Busque seu produto" aria-describedby="button-addon2">
 
 
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
-        </div>
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
       </div>
-   
+    </div>
+
 
     <div class="filtros-res">
       <div class="btn-group">
@@ -21,7 +21,7 @@
           Categoria
         </button>
         <div class="dropdown-menu">
-        <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
+          <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
           <ul class="list-group">
             <?php foreach ($categorias as $categoria) : ?>
               <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2" value="<?= $categoria->categoria ?>" checked="checked"></li>
@@ -29,35 +29,35 @@
           </ul>
         </div>
       </div>
-      
+
     </div>
     <div class="painel_produtos">
 
       <div class="filtros">
-        
-          <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
-          <h4>Categoria</h4>
-          <div class="card-lista">
-            <ul class="list-group">
-              <?php foreach ($categorias as $categoria) : ?>
-                <li class="list-group-item">
-                  <input type="checkbox" name="criterio[]" class="form-check-input" id="exampleCheck2" value=<?= $categoria->categoria ?>><?= $categoria->categoria ?></input>
-                </li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-        
+
+        <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
+        <h4>Categoria</h4>
+        <div class="card-lista">
+          <ul class="list-group">
+            <?php foreach ($categorias as $categoria) : ?>
+              <li class="list-group-item">
+                <input type="checkbox" name="criterio[]" class="form-check-input" id="exampleCheck2" value=<?= $categoria->categoria ?>><?= $categoria->categoria ?></input>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+
       </div>
 
       <div class="lista-produtos">
-      <?php if(empty($produtos)) : ?>
-            <p>Nenhum produto encontrado</p>
-          <?php endif; ?>
-      <?php
+        <?php if (empty($produtos)) : ?>
+          <p>Nenhum produto encontrado</p>
+        <?php endif; ?>
+        <?php
 
-use App\Controllers\Pagination;
+        use App\Controllers\Pagination;
 
-    foreach ($produtos as $produto) : ?>
+        foreach ($produtos as $produto) : ?>
           <div class="modal fade" id="vizualizar<?= $produto->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
 
@@ -123,10 +123,10 @@ use App\Controllers\Pagination;
         <?php endforeach; ?>
       </div>
     </div>
-  
-       
-      <?= $pagination->createLinks(); ?> 
-    </div>
 
-   
-    <?php require 'app/views/site/partials/footer.php'; ?>
+
+    <?= $pagination->createLinks(); ?>
+    </div>
+  </form>
+
+  <?php require 'app/views/site/partials/footer.php'; ?>

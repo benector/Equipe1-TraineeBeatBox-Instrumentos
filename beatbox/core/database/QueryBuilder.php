@@ -84,7 +84,7 @@ class QueryBuilder
     }
 
 
-    public function filtro($table, $criterios)
+    public function filtro($table, $criterios, $limite, $offset)
     {
 
         $sql = "SELECT * FROM produtos WHERE categoria";
@@ -95,6 +95,8 @@ class QueryBuilder
             $sql .= " LIKE '$value' ";
             $sql .= "OR categoria";
         }
+
+        $sql .= " LIMIT {$limite} OFFSET {$offset}";
         
 
         try {
@@ -108,7 +110,7 @@ class QueryBuilder
         }
     }
 
-    public function pesquisa($table, $criterios,$search, $operador)
+    public function pesquisa($table, $criterios,$search, $operador, $limite, $offset)
     {   
         $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%'";
         $sql .= $operador . " categoria ";
@@ -119,7 +121,8 @@ class QueryBuilder
             $sql .= " LIKE '$value' ";
             $sql .= "OR categoria";
         }
-             
+        
+        $sql .= " LIMIT {$limite} OFFSET {$offset}";
          try {
             $stmt = $this->pdo->prepare($sql);
 
