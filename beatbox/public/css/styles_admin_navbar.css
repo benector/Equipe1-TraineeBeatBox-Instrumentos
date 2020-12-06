@@ -122,10 +122,10 @@
   margin: 5% 0 0 0;
 }
 
-@media (max-width: 768px) {
+#sidebarMenu {
+  padding-top: 0;
+}
 
-  main {
-      padding-right: 0px !important;
-      padding-left: 0px !important;
-  }
+.navbar-admin {
+  padding: 0;
 }

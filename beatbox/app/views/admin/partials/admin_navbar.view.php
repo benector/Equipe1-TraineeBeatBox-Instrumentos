@@ -1,3 +1,10 @@
+<?php 
+    if(!isset($_SESSION)) { 
+        session_start();
+    } 
+    include('./app/verify_login.php');
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,6 +29,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="/public/js/mostrarSenha.js"></script>
+
     <title><?= $title ?></title>
 
   </head>
@@ -36,7 +45,7 @@
       
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="/">Sair</a>
+          <a class="nav-link" href="/app/logout.php">Sair</a>
         </li>
       </ul>
     </nav>
@@ -45,7 +54,7 @@
       <div class="row">
         
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-          <div class="sidebar-sticky pt-3">
+          <div class="sidebar-sticky pt-3 navbar-admin">
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active titulo-categoria" href="/adm">
