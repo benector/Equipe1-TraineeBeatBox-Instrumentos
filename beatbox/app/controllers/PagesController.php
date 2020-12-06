@@ -6,7 +6,9 @@ use App\Core\App;
 class PagesController {
 
     public function index ()
-    {
+    {   
+
+        $produtos = App::get('database')->selectAll('produtos');
         $title = 'Beatbox Instumentos';
         $css_pages=[
             '/public/css/styles-home.css',
@@ -15,7 +17,7 @@ class PagesController {
         require 'app/views/site/partials/header.php';
     
         
-        return view ('/site/index');
+        return view ('/site/index',compact('produtos'));
 
         require 'app/views/site/partials/footer.php';
     }

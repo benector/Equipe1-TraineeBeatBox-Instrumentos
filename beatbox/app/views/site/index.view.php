@@ -36,16 +36,22 @@
 
     <!-- ///////////////////////PAINEL DE PRODUTOS EM DESTAQUE///////////////////////// -->
     <div class="container-lg spot-products">
+      <?php $i=0; ?>
+    <?php foreach ($produtos as $produto) : ?>
+      <?php if ($i<=3) :?>
       <div class="product">
         <div class="card">
-          <img src="../public/img/violino.jpg" class="card-img-top" alt="...">
+          <img src="../public/img/<?= $produto->img ?>" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">
-            <h3>Violino Clássico</h3>Preço: 500.000</p>
+            <h3><?= $produto->nome ?></h3><?= $produto->preco ?></p>
           </div>
         </div>
       </div>
-      <div class="product">
+      <?php $i++; ?>
+      <?php endif ?>
+      <?php endforeach ?>
+      <!-- <div class="product">
         <div class="card">
           <img src="../public/img/Gibson-Flying-V.jpg" class="card-img-top" alt="...">
           <div class="card-body">
@@ -71,7 +77,7 @@
             <h3>Amp Roland</h3>Preço: 500.000</p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
