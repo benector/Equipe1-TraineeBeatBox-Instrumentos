@@ -36,14 +36,14 @@ class ProdutosController
         $filtro = array();
         $pagination = new Paginacao('produtos', 9);
 
-        if (isset($_POST['busca'])) {
-            $pesquisar = $_POST['busca'];
+        if (isset($_GET['busca'])) {
+            $pesquisar = $_GET['busca'];
         } else {
             $pesquisar = "";
         }
 
-        if (isset($_POST['criterio'])) {
-            $filtro[] = $_POST['criterio'];
+        if (isset($_GET['criterio'])) {
+            $filtro[] = $_GET['criterio'];
         }
         if (empty($filtro)) {
             if ($pesquisar == "") {

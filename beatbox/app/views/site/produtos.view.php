@@ -1,12 +1,12 @@
 <body>
 
-  <form class="main" action="/filtro" method="POST">
+  <form class="main" action="/filtro" method="GET">
     <div class="painel_geral">
       <h1>Nossos Produtos</h1>
     </div>
 
     <div class="input-group mb-3">
-      <input type="text" name="busca" class="form-control" placeholder="Procure aqui algum produto..." <?php if (isset($_POST['busca'])) : ?> value="<?= $_POST['busca'] ?>" <?php endif; ?> aria-label="Busque seu produto" aria-describedby="button-addon2">
+      <input type="text" name="busca" class="form-control" placeholder="Procure aqui algum produto..." <?php if (isset($_GET['busca'])) : ?> value="<?= $_GET['busca'] ?>" <?php endif; ?> aria-label="Busque seu produto" aria-describedby="button-addon2">
 
 
       <div class="input-group-append">
@@ -126,7 +126,7 @@
       </div>
     </div>
 
-        <?php if(!isset($_POST['busca']) && !isset($_POST['criterio']) ) : ?>
+        <?php if(!isset($_GET['busca']) && !isset($$_GET['criterio']) ) : ?>
                   <?= $pagination->createLinks(); ?>
         <?php endif; ?>
     </div>
