@@ -78,6 +78,13 @@ width: 4%;
   border-radius: .25rem
 }
 
+.page-link{
+  color: #01233f;
+ }
+.page-link:hover{
+ color: #01233f;
+}
+
 @media (max-width: 475px){
   .col-email{
      display: none;
@@ -117,12 +124,7 @@ width: 4%;
    width: 100%
   }
  
- .page-link{
-   color: #01233f;
-  }
- .page-link:hover{
-  color: #01233f;
- }
+ 
 }
 
 @media (max-width: 768px)

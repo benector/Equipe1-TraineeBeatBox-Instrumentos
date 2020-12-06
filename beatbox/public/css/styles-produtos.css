@@ -40,6 +40,15 @@ body{
     text-align: center;
 
 }
+
+.page-link{
+    color: #01233f;
+}
+
+.page-link:hover{
+   color: #01233f;
+}
+
 .filtros{
     width: 20%;
     margin-top: 15px;
