@@ -48,6 +48,9 @@
       </div>
 
       <div class="lista-produtos">
+      <?php if(empty($produtos)) : ?>
+            <p>Nenhum produto encontrado</p>
+          <?php endif; ?>
 
         <?php foreach ($produtos as $produto) : ?>
           <div class="modal fade" id="vizualizar<?= $produto->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
