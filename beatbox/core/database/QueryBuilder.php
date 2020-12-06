@@ -85,25 +85,31 @@ class QueryBuilder
     }
 
 
-    // public function search($table, $search)
-    // {
+    public function filtro($table, $criterios)
+    {
 
-    //     $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
+        $sql = "SELECT * FROM produtos WHERE categoria";
+        $i = 0;
 
+        foreach ($criterios as $i => $value) {
+           
+            $sql .= " LIKE '$value' ";
+            $sql .= "OR categoria";
+        }
         
 
-    //     try {
-    //         $stmt = $this->pdo->prepare($sql);
+        try {
+            $stmt = $this->pdo->prepare($sql);
 
-    //         $stmt->execute();
+            $stmt->execute();
 
-    //         return $stmt->fetchAll(PDO::FETCH_CLASS);
-    //     } catch (Exception $e) {
-    //         die($e->getMessage());
-    //     }
-    // }
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
-    public function filtro($table, $criterios,$search, $operador)
+    public function pesquisa($table, $criterios,$search, $operador)
     {   
         $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
         $sql .= $operador ." categoria";

@@ -6,7 +6,7 @@
     </div>
 
       <div class="input-group mb-3">
-        <input type="text" name="busca" class="form-control" <?php if (isset($_POST['busca'])) : ?> placeholder=" Exibindo resultados para <?= $_POST['busca'] ?>" value="<?= $_POST['busca']?>" <?php endif; ?> <?php if (!isset($_POST['busca'])) : ?> placeholder="Procure aqui algum produto..." <?php endif; ?> aria-label="Busque seu produto" aria-describedby="button-addon2">
+        <input type="text" name="busca" class="form-control" placeholder="Procure aqui algum produto..." <?php if (isset($_POST['busca'])) : ?> value="<?= $_POST['busca']?>" <?php endif; ?>  aria-label="Busque seu produto" aria-describedby="button-addon2">
 
 
         <div class="input-group-append">
@@ -23,7 +23,7 @@
         <div class="dropdown-menu">
           <ul class="list-group">
             <?php foreach ($categorias as $categoria) : ?>
-              <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2" value="<?= $categoria->categoria ?>"></li>
+              <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2" value="<?= $categoria->categoria ?>" checked="checked"></li>
             <?php endforeach; ?>
           </ul>
         </div>

@@ -64,11 +64,27 @@ public function filtrar()
         $filtro[] = $_POST['criterio'];
     }  
         if(empty($filtro)){
-            
-            $produtos = App::get('database')->filtro('produtos', $filtro,$pesquisar,"OR");
+            if($pesquisar == "")
+            {
+                $produtos = App::get('database')->filtro('produtos', $filtro); 
+            }
+            else{
+                $produtos = App::get('database')->pesquisa('produtos', $filtro,$pesquisar,"OR");
+            }
+
         }
         else{
-            $produtos = App::get('database')->filtro('produtos', $filtro[0],$pesquisar,"AND");
+
+            if($pesquisar == "")
+            {
+                $produtos = App::get('database')->filtro('produtos', $filtro[0]); 
+            }
+            else{
+            $produtos = App::get('database')->pesquisa('produtos', $filtro[0],$pesquisar,"AND");
+            }
+        }
+        if ($pesquisar == "" && empty($filtro)){
+            $produtos = App::get('database')->selectAll('produtos'); 
         }
 
         $categorias = App::get('database')->selectAll('categorias');
