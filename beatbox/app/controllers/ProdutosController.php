@@ -9,7 +9,7 @@ class ProdutosController
 
     public function produtos()
     {
-        $pagination = new Paginacao('produtos', 2);
+        $pagination = new Paginacao('produtos', 12);
 
         $produtos = App::get('database')->paginaRows('produtos', $pagination->limiteDeItens, $pagination->offset);
         $categorias = App::get('database')->selectAll('categorias');
@@ -34,7 +34,7 @@ class ProdutosController
     public function filtrar()
     {
         $filtro = array();
-        $pagination = new Paginacao('produtos', 2);
+        $pagination = new Paginacao('produtos', 9);
 
         if (isset($_POST['busca'])) {
             $pesquisar = $_POST['busca'];
@@ -47,16 +47,16 @@ class ProdutosController
         }
         if (empty($filtro)) {
             if ($pesquisar == "") {
-                $produtos = App::get('database')->filtro('produtos', $filtro,$pagination->limiteDeItens, $pagination->offset);
+                $produtos = App::get('database')->filtro('produtos', $filtro);
             } else {
-                $produtos = App::get('database')->pesquisa('produtos', $filtro, $pesquisar, "OR",$pagination->limiteDeItens, $pagination->offset);
+                $produtos = App::get('database')->pesquisa('produtos', $filtro, $pesquisar, "OR");
             }
         } else {
 
             if ($pesquisar == "") {
-                $produtos = App::get('database')->filtro('produtos', $filtro[0],$pagination->limiteDeItens, $pagination->offset);
+                $produtos = App::get('database')->filtro('produtos', $filtro[0]);
             } else {
-                $produtos = App::get('database')->pesquisa('produtos', $filtro[0], $pesquisar, "AND",$pagination->limiteDeItens, $pagination->offset);
+                $produtos = App::get('database')->pesquisa('produtos', $filtro[0], $pesquisar, "AND");
             }
         }
         if ($pesquisar == "" && empty($filtro)) {
@@ -67,7 +67,7 @@ class ProdutosController
 
         $parametros = [
             'categorias' => $categorias,
-            'pagination' => $pagination,
+            // 'pagination' => $pagination,
             'produtos' => $produtos
         ];
         $title = 'Beatbox Instumentos';

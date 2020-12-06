@@ -81,7 +81,6 @@ body{
     width: 200px;
 }
 
-
 .lista-produtos{
 
     margin: auto;
@@ -169,6 +168,10 @@ body{
         margin: auto;
         background-color: #ededed ;
         justify-content: center;
+        text-align: center;
+    }
+    .filtro-responsivo{
+        text-align: center;
     }
     .btn-group{
         margin-left: 10px;

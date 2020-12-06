@@ -21,12 +21,14 @@
           Categoria
         </button>
         <div class="dropdown-menu">
+          <div class="filtro-responsivo">
           <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
           <ul class="list-group">
             <?php foreach ($categorias as $categoria) : ?>
-              <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2" value="<?= $categoria->categoria ?>" checked="checked"></li>
+              <li class="lista-res"><input type="checkbox" name="criterio[]" class="form-check-input" id="exampleCheck2" value="<?= $categoria->categoria ?>"><?= $categoria->categoria ?></li>
             <?php endforeach; ?>
           </ul>
+            </div>
         </div>
       </div>
 
@@ -124,8 +126,9 @@
       </div>
     </div>
 
-
-    <?= $pagination->createLinks(); ?>
+        <?php if(!isset($_POST['busca']) && !isset($_POST['criterio']) ) : ?>
+                  <?= $pagination->createLinks(); ?>
+        <?php endif; ?>
     </div>
   </form>
 
