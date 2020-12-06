@@ -19,6 +19,7 @@ body {
     width: 96%;
     margin: auto;
     padding: 0px;
+    margin-bottom: 75px;
 }
 
 /* Área com logo e carousel */
@@ -26,7 +27,7 @@ body {
     width: 100%;
     height: 100%;
     margin:auto;
-    margin-top: 95px;
+    margin-top: 75px;
     background-color: #ededed;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;

@@ -24,20 +24,134 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `email` text NOT NULL,
+  `password` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
+(1, 'Antonio Marcos', 'antoniomarcos@beatbox.com', '123456'),
+(2, 'Pedro', 'pedro@beatbox.com', '45678'),
+(3, 'Larissa', 'larissa@beatbox.com', '12345678'),
+(5, 'Hyago', 'hyago@beatbox.com', '789456'),
+(6, 'Beatriz', 'beatriz@beatbox.com', '4566123');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+-- Estrutura da tabela `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id` int(11) NOT NULL,
+  `categoria` varchar(191) NOT NULL,
+  `descrição` text NOT NULL,
+  `quantidade` int(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `categoria`, `descrição`, `quantidade`) VALUES
+(16, 'Violões', 'Instrumento com umas parada de tecitura ai que não entendo', 58),
+(17, 'Guitarras', '', 0),
+(18, 'Baterias', 'Instrumento completo de percussão', 54);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `produtos`
 --
 
 CREATE TABLE `produtos` (
-  `id` int(11) NOT NULL,
+  
   `nome` varchar(100) NOT NULL,
   `categoria` varchar(100) NOT NULL,
   `quantidade` int(11) NOT NULL,
   `preco` decimal(10,2) NOT NULL,
   `img` varchar(1000) NOT NULL,
   `descricao` varchar(10000) NOT NULL
-
 	
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `produtos`
+--
+
+INSERT INTO `produtos` (`id`, `categoria`, `nome`, `quantidade`) VALUES
+(1, 'Guitarras', 'Tagima Flying V', 25),
+(2, 'Baterias', 'Batmuito Bateria', 4),
+(3, 'Baterias', 'Batbastante Bateria', 25),
+(4, 'Baterias', 'Batman!!!', 25);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices para tabela `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `categoria` (`categoria`);
+
+--
+-- Índices para tabela `produtos`
+--
+ALTER TABLE `produtos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `categoria` (`categoria`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT de tabela `produtos`
+--
+ALTER TABLE `produtos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `produtos`
+--
+
 
 --
 -- Indexes for dumped tables
@@ -52,6 +166,9 @@ ALTER TABLE `produtos`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+ALTER TABLE `produtos`
+  ADD CONSTRAINT `produtos_ibfk_1` FOREIGN KEY (`categoria`) REFERENCES `categorias` (`categoria`);
 
 --
 -- AUTO_INCREMENT for table `produtos`

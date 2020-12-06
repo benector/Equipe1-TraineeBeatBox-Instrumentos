@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
  	<head>
 
@@ -13,7 +13,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
 
- 	<body style="background-color: #21d8d8;">
+ 	<body style="background-color: #21d8d8;"> -->
  		<div class="main">
 
             <div class="painel_geral"> <h1>Contato</h1></div>
@@ -118,6 +118,5 @@
                     style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
             </div>
         </div>
- 	</body>
-
-</html>
+     
+        <?php require 'app/views/site/partials/footer.php'; ?>   

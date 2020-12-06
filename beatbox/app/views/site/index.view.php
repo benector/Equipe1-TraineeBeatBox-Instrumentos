@@ -1,10 +1,5 @@
-  
-<link rel="stylesheet" href="../public/css/styles-home.css">
-
-<body>
- 
+   
   <!-- ///////////////////////CORPO DA HOME///////////////////////// -->
-
   <div class="content">
     <div class="title">
 
@@ -89,6 +84,5 @@
     crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
 
-</body>
 
-</html>
+  <?php require 'app/views/site/partials/footer.php'; ?>

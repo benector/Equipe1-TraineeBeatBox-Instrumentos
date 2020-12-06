@@ -6,6 +6,10 @@ body {
   text-align: center;
 }
 
+.main {
+  margin-top: 25px;
+}
+
 .img-viz{
   object-fit: contain;
   width: 40%;
@@ -74,20 +78,24 @@ width: 4%;
   border-radius: .25rem
 }
 
+.page-link{
+  color: #01233f;
+ }
+.page-link:hover{
+ color: #01233f;
+}
+
 @media (max-width: 475px){
   .col-email{
      display: none;
  }
- .main {
-  height: 100vh;
-}
 }
 
 @media (max-width: 375px) {
   .main {
      width: 100vw;
      margin: 0px;
-     margin-top: 50px;
+     margin-top: 10px;
    }
   .table{
      font-size: 12px;
@@ -116,12 +124,7 @@ width: 4%;
    width: 100%
   }
  
- .page-link{
-   color: #01233f;
-  }
- .page-link:hover{
-  color: #01233f;
- }
+ 
 }
 
 @media (max-width: 768px)

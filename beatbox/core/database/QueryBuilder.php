@@ -62,10 +62,9 @@ class QueryBuilder
         }
     }
 
-    public function update($table, $parameters)
-    {
+    public function update($table, $parameters){
 
-        $sql = "UPDATE {$table} set";
+        $sql = "UPDATE {$table} set" ;
 
         foreach ($parameters as $key => $value) {
             if ($key != 'id') {
@@ -130,6 +129,43 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
+
     }
 
+    public function numberRows($table)
+    {
+        $sql="SELECT COUNT(*) FROM {$table}";
+        
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchColumn();
+
+        }catch(Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
+
+    public function paginaRows($table, $limite, $offset)
+    {
+        $sql= "SELECT * FROM {$table} LIMIT {$limite} OFFSET {$offset}";
+    
+
+        try
+        {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        }catch(Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
 }

@@ -29,6 +29,7 @@
           </ul>
         </div>
       </div>
+      
     </div>
     <div class="painel_produtos">
 
@@ -52,8 +53,11 @@
       <?php if(empty($produtos)) : ?>
             <p>Nenhum produto encontrado</p>
           <?php endif; ?>
+      <?php
 
-        <?php foreach ($produtos as $produto) : ?>
+use App\Controllers\Pagination;
+
+    foreach ($produtos as $produto) : ?>
           <div class="modal fade" id="vizualizar<?= $produto->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
 
@@ -119,20 +123,10 @@
         <?php endforeach; ?>
       </div>
     </div>
-    <div class="paginacao">
-      <nav aria-label="Navegação de página exemplo">
-        <ul class="pagination justify-content-center ">
-          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Anterior</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="View_Produtos.html">1</a></li>
-          <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">2</a></li>
-          <li class="page-item"><a class="page-link" href="View_Produtos - 3.html">3</a></li>
-          <li class="page-item"><a class="page-link" href="View_Produtos - 2.html">Próximo</a>
-          </li>
-        </ul>
-      </nav>
+  
+       
+      <?= $pagination->createLinks(); ?> 
     </div>
-        </form>
-</body>
 
-</html>
+   
+    <?php require 'app/views/site/partials/footer.php'; ?>
