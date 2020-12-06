@@ -47,6 +47,9 @@ class EmailController {
 
 
         $mail->setFrom($email, $name);
+        $mail->addReplyTo($email);
+        $mail->From = $email;
+        $mail->FromName = $name;
         $mail->addAddress('beatbox.musicstore@gmail.com');
 
         $mail->isHTML(true);
