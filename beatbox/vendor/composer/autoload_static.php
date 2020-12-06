@@ -29,6 +29,7 @@ class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
         'App\\Controllers\\EmailController' => __DIR__ . '/../..' . '/app/controllers/EmailController.php',
         'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
         'App\\Controllers\\Paginacao' => __DIR__ . '/../..' . '/app/controllers/Pagination.php',
+        'App\\Controllers\\PaginacaoFRONT' => __DIR__ . '/../..' . '/app/controllers/PaginationFRONT.php',
         'App\\Controllers\\ProdutosAdminController' => __DIR__ . '/../..' . '/app/controllers/ProdutosAdminController.php',
         'App\\Controllers\\ProdutosController' => __DIR__ . '/../..' . '/app/controllers/ProdutosController.php',
         'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',

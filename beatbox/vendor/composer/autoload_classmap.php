@@ -10,6 +10,7 @@ return array(
     'App\\Controllers\\EmailController' => $baseDir . '/app/controllers/EmailController.php',
     'App\\Controllers\\PagesController' => $baseDir . '/app/controllers/PagesController.php',
     'App\\Controllers\\Paginacao' => $baseDir . '/app/controllers/Pagination.php',
+    'App\\Controllers\\PaginacaoFRONT' => $baseDir . '/app/controllers/PaginationFRONT.php',
     'App\\Controllers\\ProdutosAdminController' => $baseDir . '/app/controllers/ProdutosAdminController.php',
     'App\\Controllers\\ProdutosController' => $baseDir . '/app/controllers/ProdutosController.php',
     'App\\Controllers\\UsersController' => $baseDir . '/app/controllers/UserController.php',

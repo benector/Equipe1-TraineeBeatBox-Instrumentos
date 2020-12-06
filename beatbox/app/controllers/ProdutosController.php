@@ -13,6 +13,7 @@ class ProdutosController
 
         $produtos = App::get('database')->paginaRows('produtos', $pagination->limiteDeItens, $pagination->offset);
         $categorias = App::get('database')->selectAll('categorias');
+        
 
         $parametros = [
             'pagination' => $pagination,
@@ -34,7 +35,6 @@ class ProdutosController
     public function filtrar()
     {
         $filtro = array();
-        $pagination = new Paginacao('produtos', 9);
 
         if (isset($_GET['busca'])) {
             $pesquisar = $_GET['busca'];
@@ -64,10 +64,12 @@ class ProdutosController
         }
 
         $categorias = App::get('database')->selectAll('categorias');
+        $pagination = new PaginacaoFRONT($produtos, 12);
+        $produtos = App::get('database')->paginaRows($produtos, $pagination->limiteDeItens, $pagination->offset);
 
         $parametros = [
             'categorias' => $categorias,
-            // 'pagination' => $pagination,
+            'pagination' => $pagination,
             'produtos' => $produtos
         ];
         $title = 'Beatbox Instumentos';
@@ -75,6 +77,7 @@ class ProdutosController
             'public/css/styles-produto.css',
             '/public/css/styles-produtos.css'
         ];
+        // die(var_dump($_SERVER));
 
         require 'app/views/site/partials/header.php';
 
