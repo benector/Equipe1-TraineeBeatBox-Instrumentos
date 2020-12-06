@@ -111,18 +111,17 @@ class QueryBuilder
 
     public function pesquisa($table, $criterios,$search, $operador)
     {   
-        $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%' OR categoria LIKE '%$search%' ";
-        $sql .= $operador ." categoria";
+        $sql = "SELECT * FROM produtos WHERE nome LIKE '%$search%'";
+        $sql .= $operador . " categoria ";
         $i = 0;
 
-   
         foreach ($criterios as $i => $value) {
            
             $sql .= " LIKE '$value' ";
             $sql .= "OR categoria";
         }
-
-        try {
+             
+         try {
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();

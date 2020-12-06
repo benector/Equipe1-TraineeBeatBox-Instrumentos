@@ -21,6 +21,7 @@
           Categoria
         </button>
         <div class="dropdown-menu">
+        <button class="filtro btn btn-outline-secondary" type="submit" id="button-addon2">Filtrar</button>
           <ul class="list-group">
             <?php foreach ($categorias as $categoria) : ?>
               <li class="list-group-item"><input type="checkbox" class="form-check-input" id="exampleCheck2" value="<?= $categoria->categoria ?>" checked="checked"></li>
