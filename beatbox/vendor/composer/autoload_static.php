@@ -10,8 +10,23 @@ class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
         '5ec26a44593cffc3089bdca7ce7a56c3' => __DIR__ . '/../..' . '/core/helpers.php',
     );
 
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+    );
+
     public static $classMap = array (
         'App\\Controllers\\CategoriasController' => __DIR__ . '/../..' . '/app/controllers/CategoriasController.php',
+        'App\\Controllers\\EmailController' => __DIR__ . '/../..' . '/app/controllers/EmailController.php',
         'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
         'App\\Controllers\\Paginacao' => __DIR__ . '/../..' . '/app/controllers/Pagination.php',
         'App\\Controllers\\ProdutosAdminController' => __DIR__ . '/../..' . '/app/controllers/ProdutosAdminController.php',
@@ -27,11 +42,18 @@ class ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'PHPMailer\\PHPMailer\\Exception' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/Exception.php',
+        'PHPMailer\\PHPMailer\\OAuth' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/OAuth.php',
+        'PHPMailer\\PHPMailer\\PHPMailer' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/PHPMailer.php',
+        'PHPMailer\\PHPMailer\\POP3' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/POP3.php',
+        'PHPMailer\\PHPMailer\\SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/src/SMTP.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInite7b1cd73872d834ad895b331bb49c9c1::$classMap;
 
         }, null, ClassLoader::class);

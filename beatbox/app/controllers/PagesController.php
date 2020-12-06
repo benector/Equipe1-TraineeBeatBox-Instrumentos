@@ -48,7 +48,7 @@ class PagesController {
     {   
         $title = "Beatbox Contato";
         $css_pages=[
-            '/public/css/contato_styles.css',
+            '/public/css/contato_styles.css'
         ];
 
         require 'app/views/site/partials/header.php';
