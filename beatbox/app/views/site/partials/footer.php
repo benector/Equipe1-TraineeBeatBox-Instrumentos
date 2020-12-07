@@ -24,9 +24,9 @@
           <div class="col coluna-footer">
             <ul>
               <li><h1>Fale Conosco</h1></li>
-              <li><i class="fas fa-map-marker-alt"></i> Endereço</li>
-              <li><i class="far fa-envelope"></i> Email</li>
-              <li><i class="fas fa-phone-alt"></i> Telefone</li>
+              <li><i class="fas fa-map-marker-alt"></i> R. Barbosa Lima, 280 - Centro, Juiz de Fora - MG, 36010-050</li>
+              <li><i class="far fa-envelope"></i> beatbox.musicstore@gmail.com </li>
+              <li><i class="fas fa-phone-alt"></i> 011 4002-8922</li>
             </ul>
           </div>
       </div>

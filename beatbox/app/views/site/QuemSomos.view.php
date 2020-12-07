@@ -27,13 +27,13 @@
 				</h2>
 			<div class="imag2">
 				<img src="public/img/img2.jpg" alt ="Foto de expositório de guitarras da loja">
+			</div>
+				<h2 class="texto"  id="parte2">Apaixonados pelo ramo da música, nossos funcionários são formados e altamente capacitados, 
+					a fim de trazer a mais adequada orientação para nossos clientes, garantindo uma boa experiência com 
+					os produtos que serão adquiridos, afinal, nós trabalhamos guiados pela filosofia de que a música traz 
+					vida para o mundo, e nos permite expressar os sentimentos mais bonitos, e se nós temos
+					o poder de influência, devemos honrá-lo e realizar nosso trabalho com a dedicação e atenção que merece. </h2>
 			</div> 
- 			<h2 class="texto"  id="parte2">Apaixonados pelo ramo da música, nossos funcionários são formados e altamente capacitados, 
-				 a fim de trazer a mais adequada orientação para nossos clientes, garantindo uma boa experiência com 
-				 os produtos que serão adquiridos, afinal, nós trabalhamos guiados pela filosofia de que a música traz 
-				 vida para o mundo, e nos permite expressar os sentimentos mais bonitos, e se nós temos
-				  o poder de influência, devemos honrá-lo e realizar nosso trabalho com a dedicação e atenção que merece. </h2>
 
- 		</div>
 	 
 		<?php require 'app/views/site/partials/footer.php'; ?>
