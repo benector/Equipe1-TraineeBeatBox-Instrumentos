@@ -154,8 +154,12 @@ class QueryBuilder
 
     public function paginaRows($table, $limite, $offset)
     {
-        $sql= "SELECT * FROM {$table} LIMIT {$limite} OFFSET {$offset}";
-         
+        if(is_string($table)){
+            $sql= "SELECT * FROM {$table} LIMIT {$limite} OFFSET {$offset}";
+        }else{
+           return array_slice($table, $offset, $limite);
+        }
+    
 
         try
         {

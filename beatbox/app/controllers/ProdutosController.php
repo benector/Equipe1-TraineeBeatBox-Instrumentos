@@ -65,7 +65,7 @@ class ProdutosController
 
         $categorias = App::get('database')->selectAll('categorias');
         $pagination = new PaginacaoFRONT($produtos, 12);
-        return array_slice($produtos,  $pagination->limiteDeItens, $pagination->offset);
+        $produtos = App::get('database')->paginaRows($produtos, $pagination->limiteDeItens, $pagination->offset);
 
         $parametros = [
             'categorias' => $categorias,
@@ -77,7 +77,7 @@ class ProdutosController
             'public/css/styles-produto.css',
             '/public/css/styles-produtos.css'
         ];
-        // die(var_dump($_SERVER));
+        
 
         require 'app/views/site/partials/header.php';
 
