@@ -2,7 +2,7 @@
 <body>
     <div class="main">
         <div class="painel_geral">
-            <h1>Lista de Produtos</h1>
+            <h1>Produtos</h1>
         </div>
         <div class="adicionar">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adicionar">

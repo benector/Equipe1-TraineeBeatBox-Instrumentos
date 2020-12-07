@@ -101,9 +101,9 @@ body{
     text-align: center;
     color: #484848;
     transition: 0.2s;
-    
-    
+    overflow: hidden;   
 }
+
 .card-img-top{
    
     height: 60%;
@@ -192,7 +192,6 @@ body{
         width: 40%;
         margin-left: 25px;
         margin-right: 25px;
-        overflow: hidden;
     }
   
     

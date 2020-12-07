@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  
 }
 
 #pagina {
@@ -16,7 +17,7 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: auto;
-  margin-top: 250px;
+  margin-top: 15%;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -72,4 +73,17 @@ body {
 .botoes-check {
   display: block;
   text-align: left;
+}
+
+@media (max-width: 1300px)
+{
+  .form-signin {
+    margin-top: 25%;
+  }
+}
+@media (max-width: 768px)
+{
+  .form-signin {
+    margin-top: 30%;
+  }
 }
