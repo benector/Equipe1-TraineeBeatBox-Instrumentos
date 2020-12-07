@@ -7,7 +7,7 @@ class ProdutosAdminController {
 
     public function produtosAdmin ()
     {     
-      $pagination= new Paginacao('categorias', 10);
+      $pagination= new Paginacao('produtos', 10);
 
       $title = "Beatbox ADM - Produtos";
       $produtos = App::get('database')->paginaRows('produtos',$pagination->limiteDeItens,$pagination->offset); 

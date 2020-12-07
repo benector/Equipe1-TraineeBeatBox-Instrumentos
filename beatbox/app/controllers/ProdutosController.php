@@ -65,7 +65,7 @@ class ProdutosController
 
         $categorias = App::get('database')->selectAll('categorias');
         $pagination = new PaginacaoFRONT($produtos, 12);
-        $produtos = App::get('database')->paginaRows($produtos, $pagination->limiteDeItens, $pagination->offset);
+        return array_slice($produtos,  $pagination->limiteDeItens, $pagination->offset);
 
         $parametros = [
             'categorias' => $categorias,

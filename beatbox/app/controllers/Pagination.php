@@ -12,8 +12,8 @@ class Paginacao {
     public  $limiteDeItens;
     public  $offset;
 
-    public function __construct($table = '',$limiteDeItens = 1)
-    {
+    public function __construct($table,$limiteDeItens = 1)
+    {   
         $this->limiteDeItens=$limiteDeItens;
         $this->paginaAtual=(!empty($_GET['pagina']) ? $_GET['pagina'] : '1');
         $this->totalDeProdutos = App::get('database')->numberRows($table);
@@ -23,6 +23,7 @@ class Paginacao {
 
     public function createLinks()
     {   
+        
         $host= $_SERVER['HTTP_HOST'] . $_SERVER['PATH_INFO'];
         
         $disabled= ($this->paginaAtual == 1) ? "disabled" : "";
