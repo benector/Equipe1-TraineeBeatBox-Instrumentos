@@ -84,7 +84,7 @@
                 <?php foreach ($produtos as $produto) : ?>
                 <tr>
                     <th scope="row">
-                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <button type="button" class="btn btn-primary btn-icon" data-toggle="modal"
                             data-target="#editar<?=$produto->id?>">
                             <img class="min" src="../public/img/write_edit_icon.png" alt="Editar" title="Editar" />
                         </button>
@@ -94,7 +94,7 @@
                     </td>
                     <td class="coluna-4-qtd"><?= $produto->quantidade ?></td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <button type="button" class="btn btn-primary btn-icon" data-toggle="modal"
                             data-target="#excluir<?=$produto->id?>">
                             <img class="min" src="../public/img/x-icon.png" alt="Excluir" title="Excluir">
                         </button>

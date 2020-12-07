@@ -188,11 +188,11 @@ body{
     }
     
     .card{
-        
+    
         width: 40%;
         margin-left: 25px;
         margin-right: 25px;
-
+        overflow: hidden;
     }
   
     

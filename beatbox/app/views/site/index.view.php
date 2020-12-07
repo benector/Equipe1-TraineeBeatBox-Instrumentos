@@ -44,7 +44,7 @@
           <img src="../public/img/<?= $produto->img ?>" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">
-            <h3><?= $produto->nome ?></h3><?= $produto->preco ?></p>
+            <h3><?= $produto->nome ?></h3>R$<?= $produto->preco ?></p>
           </div>
         </div>
       </div>

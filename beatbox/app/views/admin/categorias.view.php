@@ -18,7 +18,7 @@
                     <th scope="col" class="coluna-1">Editar</th>
                     <th scope="col" class="coluna-2">#</th>
                     <th scope="col" class="coluna-3">Categoria:</th>
-                    <th scope="col" class="coluna-4 col-email">Qtd</th>
+                   
                     <th scope="col" class="coluna-5">Excluir</th>
                 </tr>
             </thead>
@@ -34,7 +34,6 @@
                             </td>
                             <td> <?= $categoria->id ?> </td>
                             <td data-toggle="modal" data-target="#listar<?= $categoria->id ?>"><?= $categoria->categoria ?></td>
-                            <td class="col-email"><?= $categoria->quantidade ?></td>
                             <td>
                                 <button type="button" class="btn btn-primary btn-icon" data-toggle="modal" data-target="#excluir<?= $categoria->id ?>">
                                     <img class="min" src="../public/img/x-icon.png" alt="Excluir" title="Excluir" />
